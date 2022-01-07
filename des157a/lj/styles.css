@@ -1,0 +1,197 @@
+body {
+    width: 1300px;
+    margin: auto;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    width: 100%;
+    position: relative;
+}
+
+/* STYLES FOR HEADER */
+header {
+    margin: 20px 0;
+    padding: 0 10px;
+    background-color: rgb(223, 239, 253);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 360px;
+    max-height: 685px;
+}
+
+h1 {
+    width: 350px;  
+    font-size: 48px;
+    font-weight: 400;
+    margin: 10px 0 10px 10px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 10px 0 10px 10px;
+}
+
+.vl {
+    border-left: 2px dotted black;
+    height: 720px;
+    margin: 5px 30px;
+}
+
+/* STYLES FOR ARTICLES SECTION */
+#right-side {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    flex: 2;
+    max-height: 710px;
+    overflow: auto;
+}
+
+section {
+    display: flex;
+    border-radius: 7px;
+    border: 1px solid rgb(223, 239, 253);
+    box-shadow: 2px 2px 4px rgb(179, 176, 176);
+    padding: 15px 20px;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+img {
+    width: 250px;
+    box-shadow: 1px 1px 2px rgb(179, 176, 176);
+    border-radius: 2px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin: 5px 10px 5px 0;
+}
+
+article {
+    margin: auto;    
+}
+
+time {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px;
+    color: rgb(98, 182, 221);
+}
+
+h3 {
+    font-size: 27px;
+    margin: 1px 5px 8px 2px;
+    font-weight: 400;
+    line-height: 1.35em;
+}
+
+/* FOR PARAGRAPHS */
+article p {
+    width: 100%;
+    font-size: 13.6px;
+    line-height: 1.35em;
+    margin: 0;
+    columns: 2;
+}
+
+/* SPECIFIC TO BLOG WITH 2 FIGURES */
+#blog4 {
+    height: 610px;
+}
+
+#blog4 div {
+    display: flex;
+    flex-direction: column;
+}
+
+#blog4 figure {
+    margin: 0;
+}
+
+#blog4 figure:first-of-type {
+    margin-bottom: 15px;
+}
+
+#blog4 figcaption {
+    font-size: 12px;
+}
+
+#blog4 article {
+    margin-top: 10px;
+}
+
+#blog4 h3 {
+    margin-bottom: 5px;
+}
+
+#blog4 p:first-of-type {
+    margin-bottom: 45px;
+}
+
+/* FOR LINKS IN ARTICLE */
+article a {
+    text-decoration: none;
+    color: black;
+}
+
+article h3 a {
+    border-bottom: 2px dotted grey;
+}
+
+article h3 a:hover {
+    color: rgb(129, 166, 236);
+    border-bottom: 3px dotted grey;
+}
+
+article p a:hover {
+    text-decoration: 2px underline grey;
+    text-decoration-style: dotted;
+    color: rgb(129, 166, 236);
+}
+
+/* STYLES FOR FOOTER */
+footer {
+    display: flex;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    
+}
+
+footer div {
+    width: 33%;
+    padding: 7px 0;
+    font-weight: 700;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+footer a:hover {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+footer div:first-child {
+    display: flex;
+    justify-content: center;
+}
+
+footer div:first-of-type p {
+    margin: 0 5px;
+}
+
+footer div:first-of-type p a:hover {
+    font-weight: 400;
+    text-decoration-line: underline;
+}
