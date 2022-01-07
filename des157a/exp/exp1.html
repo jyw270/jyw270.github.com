@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Please open the console to view the functionality of the code.</h2>
+
+    <script>
+        var userInput = prompt("Enter a word.", ""); // prompts user for word
+        var newString = ""; // creates empty string
+
+        console.log(`Your word: ${userInput}`); // prints user's initial word
+
+        /* iterates through the user's word and stores the even characters as
+        uppercase and the odd ones as lowercase in newString; will also keep
+        printing out the updated newString */
+        for (var i = 0; i < userInput.length; i++) {
+            if (i % 2 == 0) {
+                newString += userInput[i].toUpperCase();
+            }
+            else {
+                newString += userInput[i].toLowerCase();
+            }
+            console.log(newString);
+        }
+
+        console.log(`Modified word: ${newString}`); // prints newly modified word
+
+    </script>
+</body>
+</html>
