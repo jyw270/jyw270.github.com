@@ -19,8 +19,12 @@ body.switch {
   max-width: 1366px;
   /* make sure the columns don't get too small and text stays readable */
   min-width: 900px;
-  margin: 1.1em auto;
-  padding-top: 2em;
+  margin: 20px auto 15px auto;
+  /* padding-top: 2em; */
+}
+
+#container.switch {
+  margin-top: 0;
 }
 
 #banner {
@@ -174,7 +178,7 @@ button.switch {
   background: none;
   border-color: #333;
   position: absolute;
-  top: 60px;
+  top: 25px;
   right: 20px;
   z-index: 1;
 }
