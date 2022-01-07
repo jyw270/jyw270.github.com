@@ -1,0 +1,292 @@
+body {
+  font-family: "Handlee", cursive;
+  margin: 0 auto;
+  width: 1366px;
+}
+
+main {
+  position: relative;
+}
+
+img:first-of-type {
+  position: absolute;
+  width: 1366px;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.showing {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* FORM */
+img:nth-of-type(2) {
+  transition-property: visibility, opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+#form {
+  width: 42%;
+  position: absolute;
+  top: 65px;
+  right: 300px;
+}
+
+form {
+  position: absolute;
+  top: 140px;
+  right: 405px;
+}
+
+form label {
+  font-size: 24px;
+  padding-bottom: 15px;
+  margin: auto;
+  display: block;
+  text-align: right;
+}
+
+input:focus {
+  outline: none;
+  background: none;
+}
+
+form input {
+  margin: 0 0 0 10px;
+  padding: 0 0 0 5px;
+  font-weight: initial;
+  font-size: 20px;
+  width: 135px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: none;
+  float: right;
+  border-radius: 0;
+}
+
+.grey::placeholder {
+  color: rgb(226, 226, 226);
+}
+
+.black::placeholder {
+  color: black;
+}
+
+/* submit button */
+#submit {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-top: 5px;
+  margin-right: 100px;
+  width: 90px;
+  height: 40px;
+  font-size: 32px;
+  border-bottom: 2px solid rgb(0, 0, 0, 0.7);
+}
+
+#submit:hover {
+  font-size: 34px;
+  border-bottom: 2.8px solid rgb(0, 0, 0, 0.7);
+}
+
+/* MADLIB RESULT */
+#madlib {
+  position: relative;
+  color: rgb(66, 66, 66);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+b {
+  color: black;
+}
+
+#journal {
+  width: 68.7%;
+  position: absolute;
+  top: 125px;
+  right: 48px;
+}
+
+/* poems */
+.poem {
+  display: none;
+  position: absolute;
+  top: 230px;
+  left: 500px;
+}
+
+.poem p {
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  line-height: 1.3em;
+}
+
+.poem b {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#januaryPoem,
+#julyPoem,
+#septemberPoem,
+#octoberPoem,
+#novemberPoem {
+  left: 475px;
+}
+
+#junePoem {
+  left: 490px;
+}
+
+#marchPoem {
+  top: 220px;
+  left: 490px;
+}
+
+#augustPoem {
+  left: 480px;
+}
+
+#decemberPoem {
+  left: 465px;
+}
+
+/* happenings */
+.happenings {
+  display: none;
+  font-size: 11.5px;
+  line-height: 1.5em;
+  position: absolute;
+  width: 93px;
+  top: 563px;
+}
+
+.happenings b {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#going {
+  left: 455px;
+}
+
+#eating {
+  left: 590px;
+}
+
+#reading {
+  left: 720px;
+}
+
+/* important dates */
+#important-dates {
+  display: none;
+  position: absolute;
+  top: 205px;
+  font-size: 13.5px;
+  line-height: 1.9em;
+  width: 138px;
+}
+
+#important-dates b {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* note to self */
+#note-to-self {
+  display: none;
+  position: absolute;
+  top: 439px;
+  right: 213px;
+  font-size: 11.5px;
+  width: 174px;
+  line-height: 1.365em;
+  letter-spacing: 0.55px;
+}
+
+#note-to-self b {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* journal again button */
+#reset-btn {
+  display: none;
+  position: absolute;
+  top: 630px;
+  right: 87px;
+  border: none;
+  background: none;
+  letter-spacing: 0.8px;
+  font-size: 14.5px;
+}
+
+#reset-btn b:first-of-type {
+  color: rgb(56, 56, 56);
+}
+
+#reset-btn b:last-of-type {
+  color: #70c3cf;
+  font-size: 15.5px;
+}
+
+#reset-btn:hover b:first-of-type {
+  font-size: 15.5px;
+  color: black;
+}
+
+#reset-btn:hover b:last-of-type {
+  font-size: 17.5px;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  top: 730px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 0 150px;
+  margin: auto;
+}
+
+footer div {
+  width: 33%;
+  padding: 7px 0;
+  font-weight: 600;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+
+footer a:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+footer div:first-child {
+  display: flex;
+}
+
+footer div:first-of-type p {
+  margin: 0 5px;
+}
+
+footer div:first-of-type p a:hover {
+  font-weight: 500;
+  text-decoration-line: underline;
+}
