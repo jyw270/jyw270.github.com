@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transition: all 2s;
+}
+
+body.switch {
+  background-color: #282828;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  max-width: 1366px;
+  /* make sure the columns don't get too small and text stays readable */
+  min-width: 900px;
+  margin: 1.1em auto;
+  padding-top: 2em;
+}
+
+#banner {
+  position: relative;
+  display: flex;
+  width: 1100px;
+  height: 250px;
+  margin: auto;
+}
+
+#title {
+  color: white;
+  position: absolute;
+  top: 65px;
+  left: 220px;
+}
+
+#title h1 {
+  font-weight: 500;
+  font-size: 58px;
+  margin: 0;
+}
+
+#title h2 {
+  font-weight: 400;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+#title.switch {
+  top: 100px;
+  left: 30px;
+}
+
+#title.switch h1 {
+  color: #a3cac7;
+}
+
+#title.switch h2 {
+  color: #c9bdd8;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1em auto;
+}
+
+main section {
+  width: 25%;
+  margin: 20px 10px;
+  padding: 20px;
+  background-color: rgba(199, 230, 214, 0.25);
+  border-radius: 15px;
+}
+
+main section.switch {
+  background-color: rgba(96, 97, 97, 0.6);
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  margin: 10px 0;
+  padding-left: 0;
+}
+
+section h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+#projects h3:last-of-type {
+  margin-top: 60px;
+}
+
+section.switch h3 {
+  color: #889dd0;
+}
+
+section a::before {
+  content: "\203A";
+  font-size: 26px;
+  padding: 0 0.3em;
+}
+
+section a {
+  font-size: 18px;
+  height: 44px;
+  display: inline-block;
+  padding: 0.63em 0.4em 0.63em 0;
+  color: black;
+}
+
+section a:hover {
+  font-weight: 500;
+  font-size: 19px;
+  margin-left: 5px;
+}
+
+/* section.switch ol,
+section.switch ul {
+  list-style-type: circle;
+  color: white;
+  margin-left: 30px;
+} */
+
+section.switch li:hover {
+  border-radius: 5px;
+  background-color: #333;
+}
+
+section.switch a::before {
+  content: "";
+  padding: 0 0.22em;
+}
+
+section.switch a {
+  color: white;
+  height: 51px;
+  padding: 0.6em 0.4em 0.6em 0;
+}
+
+section.switch a:hover {
+  font-weight: 400;
+  font-size: 18px;
+  margin-left: 0;
+}
+
+button {
+  font-size: 18px;
+  display: block;
+  margin: 0 135px 20px auto;
+  padding: 10px 18px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+button:hover {
+  color: white;
+  background-color: #282828;
+  border-color: #c4c4c4;
+  cursor: pointer;
+}
+
+button.switch {
+  background: none;
+  border-color: #333;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  z-index: 1;
+}
+
+button.switch:hover {
+  background-color: #fff;
+  color: #000;
+}
