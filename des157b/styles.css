@@ -101,6 +101,18 @@ section h3 {
   margin: 0;
 }
 
+section h3 img {
+  width: 20px;
+}
+
+.show-flower {
+  display: inline;
+}
+
+.hide-flower {
+  display: none;
+}
+
 #projects h3:last-of-type {
   margin-top: 60px;
 }

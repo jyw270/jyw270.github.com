@@ -7,7 +7,24 @@
   const banner = document.querySelector("#banner");
   const bannerimg = document.querySelector("img");
   const sections = document.querySelectorAll("section");
+  const flowers = document.querySelectorAll(".hide-flower");
   let mode = "dark";
+
+  for (let i = 0; i < sections.length; i++) {
+    sections[i].addEventListener("mouseover", function () {
+      flowers[i].className = "show-flower";
+      if (i == 1) {
+        flowers[0].className = "show-flower";
+      }
+    });
+
+    sections[i].addEventListener("mouseleave", function () {
+      flowers[i].className = "hide-flower";
+      if (i == 1) {
+        flowers[0].className = "hide-flower";
+      }
+    });
+  }
 
   button.addEventListener("click", function () {
     if (mode === "dark") {
