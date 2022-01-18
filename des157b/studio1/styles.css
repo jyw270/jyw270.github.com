@@ -5,11 +5,16 @@ body {
   margin: auto;
   position: relative;
 }
+
 video {
   display: block;
   margin: auto;
   width: 96.5%;
   filter: grayscale(100%);
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none;
 }
 
 .fa-leaf {
