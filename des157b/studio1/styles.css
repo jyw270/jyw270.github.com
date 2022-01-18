@@ -1,0 +1,79 @@
+body {
+  width: 100%;
+  max-width: 1366px;
+  min-width: 900px;
+  margin: auto;
+  position: relative;
+}
+video {
+  display: block;
+  margin: auto;
+  width: 96.5%;
+  filter: grayscale(100%);
+}
+
+.fa-leaf {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 36px;
+  color: rgb(132, 142, 28);
+  transform: translate(-50%, -50%);
+  animation: leaf 2s infinite alternate ease-in-out;
+}
+
+@keyframes leaf {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+}
+
+#poem p {
+  font-family: "Parisienne", cursive;
+  font-size: 55px;
+  color: white;
+  width: 30%;
+  padding: 10px 0 5px 20px;
+  border-radius: 5px 0 0 5px;
+  position: absolute;
+  top: 10%;
+  right: 1.75%;
+}
+
+#poem p:first-of-type {
+  background-color: rgba(119, 119, 119, 0.8);
+}
+
+#poem p:nth-of-type(2) {
+  background-color: rgba(93, 97, 68, 0.6);
+}
+
+#poem p:nth-of-type(3) {
+  background-color: rgba(123, 129, 62, 0.6);
+}
+
+#poem p:last-of-type {
+  background-color: rgba(132, 142, 28, 0.6);
+}
+
+#poem:hover p {
+  cursor: pointer;
+  color: #d20030;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.showing {
+  opacity: 1;
+}
