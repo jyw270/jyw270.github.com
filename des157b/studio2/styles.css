@@ -1,0 +1,207 @@
+body {
+  font-family: "Arima Madurai", cursive;
+  max-width: 1366px;
+  min-width: 900px;
+  margin: auto;
+}
+
+header,
+section,
+#cupofwater,
+#sliderarea,
+#time {
+  position: relative;
+}
+
+.bubble,
+#cupofwater p,
+#slider,
+#sliderarea p,
+#oz,
+#time p,
+.bar,
+.bar p {
+  position: absolute;
+}
+
+header {
+  width: fit-content;
+  margin: auto;
+  padding: 70px 0 50px 0;
+}
+
+h1 {
+  font-size: 68px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.bubble {
+  padding: 0;
+  margin: 0;
+  background-color: #d2f4f0;
+  border: 1px solid #9deadf;
+  border-radius: 50%;
+}
+
+.bubble:first-of-type {
+  width: 12px;
+  height: 12px;
+  top: 15px;
+  left: 250px;
+}
+
+.bubble:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  top: 35px;
+  left: 280px;
+}
+
+.bubble:nth-of-type(3) {
+  width: 24px;
+  height: 24px;
+  top: 70px;
+  left: 256px;
+}
+
+#content,
+#waterslider {
+  display: flex;
+}
+
+section {
+  margin: auto;
+}
+
+/* SECTION 1: WATER SLIDER */
+#waterslider {
+  width: 35%;
+  margin: 0 auto;
+}
+
+#cupofwater {
+  margin-top: auto;
+}
+
+#cupofwater p {
+  left: 30%;
+}
+
+#timestamp {
+  font-size: 36px;
+  top: -110px;
+}
+
+#totaloz {
+  font-size: 56px;
+  font-weight: 300;
+  color: #588de7;
+  top: 90px;
+}
+
+#cupofwater img {
+  width: 100%;
+}
+
+#slider {
+  -webkit-appearance: none;
+  width: 460px;
+  height: 18px;
+  background: #d2e8f4;
+  border-radius: 10px;
+  transform: rotate(270deg);
+  top: 220px;
+  left: -175px;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #588de7;
+  filter: drop-shadow(-1px 0 2px #b3b3b3);
+  cursor: pointer;
+}
+
+#sliderarea p {
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0;
+  left: 80px;
+}
+
+#sliderarea p:first-of-type {
+  bottom: 0;
+}
+
+#sliderarea p:nth-of-type(2) {
+  top: 0;
+}
+
+/* SECTION 2: GRAPH */
+#graphsection {
+  width: 45%;
+}
+
+.graphline {
+  background-color: #000000;
+}
+
+#oz {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+}
+
+#time {
+  width: 4px;
+  height: 460px;
+}
+
+#time p {
+  right: 15px;
+}
+
+.bar {
+  height: 40px;
+  background-color: #d2e8f4;
+  left: 4px;
+  transition: all 0.5s ease-in;
+}
+
+.bar:hover {
+  background-color: #588de7;
+}
+
+.bar p {
+  opacity: 0;
+  font-weight: 500;
+  font-size: 17px;
+  margin: 14px 0;
+  left: calc(100% + 7px);
+  transition: all 0.5s ease-in;
+}
+
+.bar:hover p {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1150px) {
+  #slider {
+    left: -190px;
+  }
+
+  #sliderarea p {
+    left: 65px;
+  }
+
+  #graphsection {
+    margin-left: 20%;
+    margin-right: 10px;
+  }
+}

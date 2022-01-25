@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Yourself</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="styles.css" rel="stylesheet" />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Hydrate</h1>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </header>
+
+    <div id="content">
+      <section id="waterslider">
+        <div id="cupofwater">
+          <img src="images/4oz.svg" alt="cup" />
+          <p id="timestamp"></p>
+          <p id="totaloz"></p>
+        </div>
+
+        <div id="sliderarea">
+          <input type="range" min="0" max="7" value="0" step="1" id="slider" />
+          <p></p>
+          <p></p>
+        </div>
+      </section>
+
+      <section id="graphsection">
+        <div class="graphline" id="oz">
+          <p>0</p>
+          <p>2oz</p>
+          <p>4oz</p>
+          <p>6oz</p>
+          <p>8oz</p>
+          <p>10oz</p>
+        </div>
+        <div class="graphline" id="time">
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="bar">
+          <p>4oz</p>
+        </div>
+        <div class="bar">
+          <p></p>
+        </div>
+        <div class="bar">
+          <p></p>
+        </div>
+        <div class="bar">
+          <p></p>
+        </div>
+        <div class="bar">
+          <p></p>
+        </div>
+        <div class="bar">
+          <p></p>
+        </div>
+        <div class="bar">
+          <p></p>
+        </div>
+        <div class="bar">
+          <p></p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
