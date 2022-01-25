@@ -8,15 +8,13 @@ body {
 header,
 section,
 #cupofwater,
-#sliderarea,
 #time {
   position: relative;
 }
 
 .bubble,
 #cupofwater p,
-#slider,
-#sliderarea p,
+.totaloz,
 #oz,
 #time p,
 .bar,
@@ -27,7 +25,7 @@ section,
 header {
   width: fit-content;
   margin: auto;
-  padding: 70px 0 50px 0;
+  padding: 70px 0 30px 0;
 }
 
 h1 {
@@ -76,43 +74,47 @@ section {
 
 /* SECTION 1: WATER SLIDER */
 #waterslider {
-  width: 35%;
-  margin: 0 auto;
-}
-
-#cupofwater {
-  margin-top: auto;
-}
-
-#cupofwater p {
-  left: 30%;
+  flex-direction: column;
 }
 
 #timestamp {
   font-size: 36px;
-  top: -110px;
+  text-align: center;
+  margin: 0;
 }
 
-#totaloz {
-  font-size: 56px;
-  font-weight: 300;
-  color: #588de7;
-  top: 90px;
+#cupofwater {
+  margin: 20px 0;
 }
 
 #cupofwater img {
   width: 100%;
 }
 
+.totaloz {
+  font-weight: 300;
+  margin: 0;
+  color: #588de7;
+}
+
+.totaloz:first-of-type {
+  font-size: 56px;
+  top: 125px;
+  left: 34%;
+}
+
+.totaloz:nth-of-type(2) {
+  font-size: 28px;
+  top: 190px;
+  left: 39%;
+}
+
 #slider {
   -webkit-appearance: none;
-  width: 460px;
+  width: 100%;
   height: 18px;
   background: #d2e8f4;
   border-radius: 10px;
-  transform: rotate(270deg);
-  top: 220px;
-  left: -175px;
 }
 
 #slider::-webkit-slider-thumb {
@@ -124,21 +126,6 @@ section {
   background: #588de7;
   filter: drop-shadow(-1px 0 2px #b3b3b3);
   cursor: pointer;
-}
-
-#sliderarea p {
-  font-size: 19px;
-  font-weight: 500;
-  margin: 0;
-  left: 80px;
-}
-
-#sliderarea p:first-of-type {
-  bottom: 0;
-}
-
-#sliderarea p:nth-of-type(2) {
-  top: 0;
 }
 
 /* SECTION 2: GRAPH */
@@ -189,19 +176,4 @@ section {
 
 .bar:hover p {
   opacity: 1;
-}
-
-@media only screen and (max-width: 1150px) {
-  #slider {
-    left: -190px;
-  }
-
-  #sliderarea p {
-    left: 65px;
-  }
-
-  #graphsection {
-    margin-left: 20%;
-    margin-right: 10px;
-  }
 }

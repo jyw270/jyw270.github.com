@@ -2,7 +2,7 @@
   "use strict";
 
   const timestamp = document.getElementById("timestamp");
-  const totaloz = document.getElementById("totaloz");
+  const totaloz = document.querySelector(".totaloz");
   const bars = document.querySelectorAll(".bar");
   const barinfo = document.querySelectorAll(".bar p");
   const timePtags = document.querySelectorAll("#time p");
@@ -20,6 +20,9 @@
     document.querySelector("img").src = `images/${totalwater[index]}oz.svg`;
     timestamp.textContent = `${timedata[index]}`;
     totaloz.textContent = `${totalwater[index]}oz`;
+    totalwater[index] > 9
+      ? (totaloz.style.left = "30%")
+      : (totaloz.style.left = "34%");
   });
 
   // displays the bars and times at its correct spot
@@ -56,9 +59,6 @@
     }
 
     // outputs time and oz info for left section (water graphics and slider)
-    const sliderarea = document.querySelectorAll("#sliderarea p");
-    sliderarea[0].textContent = `${timedata[0]}`;
-    sliderarea[1].textContent = `${timedata[timedata.length - 1]}`;
     timestamp.textContent = `${timedata[0]}`;
     totaloz.textContent = `${totalwater[0]}oz`;
   }
