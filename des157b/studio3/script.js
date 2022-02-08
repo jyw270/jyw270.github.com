@@ -142,6 +142,9 @@ Parse.serverURL = "https://parseapi.back4app.com/";
           document.querySelector(
             "#thoughts"
           ).textContent = `${thisExperience.get("thoughts")}`;
+        } else {
+          document.querySelector("#question").textContent = "";
+          document.querySelector("#thoughts").textContent = "";
         }
       });
 
