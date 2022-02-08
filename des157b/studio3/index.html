@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Liberty</title>
+
+    <!-- Normalize CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper API -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Conversational Form API -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js"
+      crossorigin
+    ></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500&family=Raleway:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Parse Library  -->
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+
+    <link href="styles.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <!-- GREY BACKGROUND FOR PAGE -->
+      <div id="grey-bg"></div>
+
+      <!-- HEADER TEXT -->
+      <header>
+        <h1>Reflecting on Your College Experience</h1>
+        <div id="header-line"></div>
+        <p>
+          Welcome! Feel free to read about students&#x27; college experience or
+          share your own.
+        </p>
+        <button id="sharebtn">Share Your Experience</button>
+      </header>
+
+      <!-- VERTICAL CAROUSELING SLIDES -->
+      <div class="swiper">
+        <div class="swiper-wrapper"></div>
+      </div>
+
+      <!-- STUDENT'S EXPERIENCE OVERLAY -->
+      <section id="experience-overlay" class="hidden">
+        <div>
+          <button class="close-btn">&otimes;</button>
+          <h2 class="card-content"></h2>
+          <h3 class="card-content"></h3>
+          <img class="card-content" src="images/amazing.svg" alt="rating" />
+          <p class="card-content" id="myexperience"></p>
+          <div class="card-content" id="response">
+            <h4 id="rating"></h4>
+            <p id="ratingresponse"></p>
+            <h4 id="question"></h4>
+            <p id="thoughts"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHARE EXPERIENCE CONVERSATIONAL FORM -->
+      <section class="form hidden">
+        <button class="close-btn">&otimes;</button>
+        <form id="share-experience-form" cf-form>
+          <input
+            type="text"
+            name="name"
+            maxlength="16"
+            required
+            cf-questions="Hi there, what's your name?"
+            cf-error="Sorry only 16 characters at max"
+          />
+
+          <fieldset>
+            <label>
+              <input
+                type="radio"
+                name="schoolyear"
+                value="1st Year"
+                cf-questions="Hi {previous-answer}! What year are you?"
+                cf-error="Please make a selection."
+              />
+              1st Year
+            </label>
+            <label>
+              <input type="radio" name="schoolyear" value="2nd Year" />
+              2nd Year
+            </label>
+            <label>
+              <input type="radio" name="schoolyear" value="3rd Year" />
+              3rd Year
+            </label>
+            <label>
+              <input type="radio" name="schoolyear" value="4th Year" />
+              4th Year
+            </label>
+            <label>
+              <input type="radio" name="schoolyear" value="1st Year Transfer" />
+              1st Year Transfer
+            </label>
+            <label>
+              <input type="radio" name="schoolyear" value="2nd Year Transfer" />
+              2nd Year Transfer
+            </label>
+            <label>
+              <input
+                type="radio"
+                cf-error="Please make a selection"
+                name="schoolyear"
+                value="3rd Transfer"
+              />
+              3rd Year Transfer
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <input
+              type="radio"
+              name="rating"
+              value="terrible"
+              cf-questions="How would you rate your college experience?"
+              cf-label="terrible"
+              cf-image="images/terrible.svg"
+            />
+            <input
+              type="radio"
+              name="rating"
+              value="okay"
+              cf-label="okay"
+              cf-image="images/okay.svg"
+            />
+            <input
+              type="radio"
+              name="rating"
+              value="meh"
+              cf-label="meh"
+              cf-image="images/meh.svg"
+            />
+            <input
+              type="radio"
+              name="rating"
+              value="great"
+              cf-label="great"
+              cf-image="images/great.svg"
+            />
+            <input
+              type="radio"
+              name="rating"
+              value="amazing"
+              cf-error="Please make a selection"
+              cf-label="amazing"
+              cf-image="images/amazing.svg"
+            />
+          </fieldset>
+
+          <input
+            type="text"
+            name="ratingresponse"
+            cf-questions="How was your experience {previous-answer}?"
+          />
+
+          <fieldset>
+            <label>
+              <input
+                type="radio"
+                name="question"
+                value="What are some of your biggest accomplishments?"
+                cf-questions="Would you like to share your thoughts on any of the following questions?"
+                cf-error="Please make a selection"
+              />
+              What are some of your biggest accomplishments?
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question"
+                value="What did you wish you knew before?"
+              />
+              What did you wish you knew before?
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question"
+                value="What were some of your favorite memories?"
+              />
+              What were some of your favorite memories?
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question"
+                value="What were your most stressful moments and how did you overcome them?"
+              />
+              What were your most stressful moments and how did you overcome
+              them?
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question"
+                value="Did your college experience turn out different than you expected?"
+              />
+              Did your college experience turn out different than you expected?
+            </label>
+            <label>
+              <input type="radio" name="question" value="How have you grown?" />
+              How have you grown?
+            </label>
+            <label>
+              <input type="radio" name="question" value="" />
+              No thanks
+            </label>
+          </fieldset>
+
+          <input
+            type="text"
+            name="thoughts"
+            cf-questions="{previous-answer}"
+            cf-error="Please type your response."
+            cf-conditional-question="What are some of your biggest accomplishments?||What did you wish you knew before?||What were some of your favorite memories?||What were your most stressful moments and how did you overcome them?||Did your college experience turn out different than you expected?||How have you grown?"
+            required
+          />
+
+          <input
+            type="tel"
+            name="password"
+            pattern="[0-9]{3}"
+            minlength="3"
+            maxlength="3"
+            required
+            cf-questions="Please set a password. What are the last 3 digits of your UCD ID?"
+            cf-error="Must be a 3 digit number"
+          />
+        </form>
+        <div
+          class="cf-context"
+          id="share-exp-form-context"
+          role="cf-context"
+          cf-context
+        ></div>
+      </section>
+    </div>
+  </body>
+</html>
