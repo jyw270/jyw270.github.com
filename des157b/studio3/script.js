@@ -209,7 +209,9 @@ Parse.serverURL = "https://parseapi.back4app.com/";
           // Hides conversational form when done filling out form and starts autoplay on slides
           setTimeout(function () {
             form.className = "form hidden";
-            swiper.autoplay.start();
+          }, 1500);
+          setTimeout(function () {
+            location.reload();
           }, 3000);
         },
       });
