@@ -1,0 +1,9 @@
+body {
+  background-color: #fafafa;
+}
+
+img {
+  display: block;
+  margin: auto;
+  height: 100vh;
+}
