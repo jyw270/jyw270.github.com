@@ -24,6 +24,25 @@ h2 {
   font-size: 22px;
 }
 
+img {
+  display: block;
+  margin: auto;
+  width: 400px;
+}
+
 p {
   line-height: 1.5em;
+}
+
+#storyboard-body {
+  min-width: 900px;
+  width: 1050px;
+}
+
+#storyboard-div {
+  display: flex;
+}
+
+#storyboard-div section {
+  margin: 0 15px;
 }
