@@ -44,5 +44,6 @@ p {
 }
 
 #storyboard-div section {
-  margin: 0 15px;
+  max-width: 500px;
+  margin: 0 10px;
 }
