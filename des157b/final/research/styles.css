@@ -27,13 +27,13 @@ h2 {
 img {
   display: block;
   margin: auto;
-  width: 400px;
 }
 
 p {
   line-height: 1.5em;
 }
 
+/* storyboard.html */
 #storyboard-body {
   min-width: 900px;
   width: 1050px;
@@ -46,4 +46,18 @@ p {
 #storyboard-div section {
   max-width: 500px;
   margin: 0 10px;
+}
+
+#storyboard-div img {
+  width: 400px;
+}
+
+/* analysis.html */
+#analysis img {
+  width: 800px;
+}
+
+#analysis p {
+  font-size: 17px;
+  line-height: 1.4em;
 }
