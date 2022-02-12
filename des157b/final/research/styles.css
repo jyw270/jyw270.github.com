@@ -1,5 +1,5 @@
 body {
-  width: 900px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -17,7 +17,7 @@ section {
   background-color: #f1f0f0;
   border-radius: 10px;
   padding: 10px 20px;
-  margin-bottom: 25px;
+  margin: 0 15px 25px 15px;
 }
 
 h2 {
@@ -57,7 +57,8 @@ p {
   width: 800px;
 }
 
-#analysis p {
+#analysis p,
+#brief p {
   font-size: 17px;
   line-height: 1.4em;
 }
