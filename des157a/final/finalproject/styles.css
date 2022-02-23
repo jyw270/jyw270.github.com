@@ -214,28 +214,3 @@ button:hover {
   width: 35px;
   height: 90px;
 }
-
-/* STYLES FOR FOOTER */
-
-footer {
-  position: absolute;
-  bottom: 27px;
-  left: 865px;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  padding: 6px 150px;
-  width: 230px;
-}
-
-footer a {
-  text-decoration: none;
-  font-weight: 400;
-  color: #fff;
-  font-size: 16.5px;
-}
-
-footer a:hover {
-  text-shadow: 1px 1px 2px rgb(255, 140, 217);
-  cursor: pointer;
-}
