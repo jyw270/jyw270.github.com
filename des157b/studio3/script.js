@@ -30,7 +30,7 @@ Parse.serverURL = "https://parseapi.back4app.com/";
     let total_length;
 
     try {
-      const results = await query.ascending("name").find();
+      const results = await query.descending("createdAt").find();
 
       results.forEach(function (eachExperience) {
         eachExperience.get("question") != ""
