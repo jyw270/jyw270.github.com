@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jenny Wong &#124; Portfolio</title>
+
+    <!--/ /-------- Normalize CSS --------/ /-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <!--/ /-------- Font Awesome --------/ /-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <!--/ /-------- Site Styling --------/ /-->
+    <link href="../styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <img src="../images/logo.svg" alt="logo" />
+      <h1>Jenny.</h1>
+      <i class="fas fa-bars"></i>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="../index.html#allprojects">projects</a></li>
+            <li><a href="../about.html">about</a></li>
+            <li><a href="../contact.html">contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+
+    <section>
+      <h2>Mad Libs Bullet Journaling</h2>
+      <h3>Illustrator &#124; HTML &#124; CSS &#124; Javascript</h4>
+      <hr />
+      <div>
+        <p>UX &#47; UI</p>
+        <p>development</p>
+        <p>2021</p>
+      </div>
+      <img src="../images/madlibs/computer-madlibs.svg" alt="mad libs on computer" />
+    </section>
+
+    <section>
+        <h4>Background</h4>
+        <p>This is a school project where we were required to design a simple Mad Libs webpage that takes in inputs from users and then provides them with a simple story. I designed a bullet journaling mad libs because journaling is something I enjoy doing. I addressed the storytelling part by forming the stories in small sections: poems, happenings, important dates, and a note to self. 
+        </p>
+    </section>
+
+    <section>
+        <h4>User Interface</h4>
+        <section>
+            <h5>Brainstorming</h5>
+            <img src="../images/madlibs/brainstorming.jpg" alt="sketches">
+            <p>These are some sketches I did to brainstorm some ideas. I thought of themes that could result in a story: text messaging could form a conversational story, recipe ingredients and instructions could form a fun narrative, and fortune telling could produce a fun little fortune story. But these ideas didn&#39;t seem unique enough. 
+            </p>
+            <p>After a few days of contemplating what creative theme I could do, I finally thought of bullet journaling. However, I quickly realized that bullet journaling doesn&#39;t include storytelling, so I decided to form the stories in smaller sections.</p>
+        </section>
+
+        <section>
+            <h5>Digital Sketches</h5>
+            <img src="../images/madlibs/digital-sketches.jpg" alt="digital sketch">
+            <img src="../images/madlibs/digital-sketches-2.jpg" alt="digital sketch">
+            <p>I designed two different interfaces for my mad libs game. The first interface includes the mad libs form for users to fill out and the second page presents the journal with the user&#39;s inputs.
+            </p>
+            <p>Inspired by my favorite childhood book, &#34;Chicken Soup with Rice&#34; by Maurice Sendak, I planned to write a unique poem for each month. There would be 8 lines per poem and every other line would rhyme. To fill the rest of the journal, I looked up several bullet journaling ideas on Pinterest. I wasn&#39;t too satisfied with how the right side of the journal looked: the color of the envelope and letter didn&#39;t seem cohesive with the rest of the design. I also felt like it was losing the storytelling purpose of the game.</p>
+            <img src="../images/madlibs/digital-sketches-3.jpg" alt="digital sketch">
+            <p>I imagine bullet journaling to resemble a planner, so I added a calendar and a section for important dates to the right side of the journal. I only kept the note to self section because I felt that it had the potential for a short story.</p>
+        </section>
+
+        <section>
+            <h5>Challenges</h5>
+            <img src="../images/madlibs/ui-challenges.jpg" alt="Illustrator workspace">
+            <p>We were only given one week to complete this project, so it was a challenge for me to include everything I had planned. Changing the overall design for all 12 months: writing unique poems, changing the calendar dates and important events, and exporting each design was quite tedious and time consuming, but I was able to make it work. In Illustrator, I organized my layers based on each month&#39;s theme and text content and toggled with the visibility and lock tool. Then, I went ahead and exported each design as an svg file because I wanted my graphics to look as clear as possible. </p>
+        </section>
+    </section>
+
+    <section>
+        <h4>Development</h4>
+        <p>This webpage was developed using HTML, CSS, and vanilla JavaScript. It is specifically designed at a 1366 x 768 viewport as that is the current most popular website dimension.
+        </p>
+
+        <section>
+            <h5>Challenges</h5>
+            <img src="../images/madlibs/dev-challenges.jpg" alt="mad libs screenshot">
+            <p>When coding this project, I mainly struggled with the form page. I couldn&#39;t figure out how to align the text and its corresponding input in a single line or how to align the inputs vertically. After asking for some advice from a classmate, I was able to figure it out. I placed the text and input tag inside a label tag and float: right on the input tags.</p>
+            <p>After class ended, I wasn&#39;t completely satisfied with my game. The transition from the form to the journal page was very disruptive and sudden, so I figured out how to have the form fade out and the book fade in by setting up classes in CSS, then using JavaScript to get the timing right. I also edited my code to allow users the option to submit the placeholder texts if they don&#39;t want to fill out the form. I had trouble trying to get the placeholders to turn black for a quick second when the user hits submit. I tried storing the placeholders in a variable and changing the color in Javascript, but I couldn&#39;t get it to work. I thought that my only solution was to set each input value to the placeholder text, but that felt too tedious and inefficient. I asked a design professor for advice and ended up using a class to set up and change the color with CSS and JavaScript.</p>
+        </section>
+
+        <section>
+            <h5>What Can Be Improved</h5>
+            <p>For further development, I could allow users to submit the placeholder texts for any inputs they don&#39;t fill out, instead of only enabling that option when they submit a blank form.</p>
+        </section>
+    </section>
+
+    <section>
+        <p>Given the time constraint on this project, I am most proud of being able to complete 12 unique designs for each month. I learned when CSS and JavaScript work together, it makes ideas that may seem complex to be a lot simpler. </p>
+    </section>
+
+    <button>View website</button>
+    
+    <footer>
+      <div>
+        <i class="fab fa-github"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fas fa-envelope"></i>
+      </div>
+
+      <ul>
+        <li><a href="../index.html#allprojects">projects</a></li>
+        <li><a href="../about.html">about</a></li>
+        <li><a href="../contact.html">contact</a></li>
+      </ul>
+
+      <p>Jenny Wong &#124; Portfolio 2022</p>
+    </footer>
+  </body>
+</html>
