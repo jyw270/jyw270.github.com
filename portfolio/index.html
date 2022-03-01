@@ -20,133 +20,143 @@
       crossorigin="anonymous"
     />
 
+    <!--/ /-------- Google Fonts --------/ /-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&family=Open+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <!--/ /-------- Site Styling --------/ /-->
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <img src="images/logo.svg" alt="logo" />
-      <h1>Jenny.</h1>
-      <i class="fas fa-bars"></i>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="index.html#allprojects">projects</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="contact.html">contact</a></li>
-          </ul>
-        </li>
-      </ul>
-    </header>
+    <div id="container">
+      <header>
+        <img src="images/logo.svg" alt="logo" id="logo" />
+        <h1>Jenny.</h1>
+        <i class="fas fa-bars"></i>
+        <ul>
+          <li class="submenu">
+            <ul>
+              <li><a href="index.html#allprojects">projects</a></li>
+              <li><a href="about.html">about</a></li>
+              <li><a href="contact.html">contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </header>
 
-    <section>
-      <img src="images/profile.png" alt="profile picture" />
-      <h2>Hi, I&#39;m Jenny!</h2>
-      <p>
-        I am currently an undergraduate student at UC Davis studying in Design
-        and Computer Science. I enjoy exploring Front-end web development and
-        UX/UI design. Feel work to explore my work below!
-      </p>
-      <a href="#allprojects">View projects</a>
-    </section>
+      <section>
+        <img src="images/profile.png" alt="profile picture" />
+        <h2>Hi, I&#39;m Jenny!</h2>
+        <p>
+          I am currently an undergraduate student at UC Davis studying in Design
+          and Computer Science. I enjoy exploring Front-end web development and
+          UX/UI design. Feel work to explore my work below!
+        </p>
+        <a href="#allprojects">View projects</a>
+      </section>
 
-    <section id="allprojects">
-      <button>all projects <i class="fas fa-angle-down"></i></button>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="index.html#">all projects</a></li>
-            <li><a href="">development</a></li>
-            <li><a href="">UX &#47; UI</a></li>
-          </ul>
-        </li>
-      </ul>
-      <div class="project">
-        <p>UX &#47; UI</p>
-        <p>development</p>
-        <img src="images/madlibs.jpg" alt="mad libs website" />
-        <div class="project-preview">
-          <h3>Mad Libs Bulleting Journaling</h3>
-          <p>
-            This is a school project where we were required to design a simple
-            Mad Libs webpage that...
-          </p>
-          <a href="projects/madlibs.html">view case study</a>
-          <a
-            href="https://jyw270.github.io/des157a/studio1/index.html"
-            target="_blank"
-            >visit website</a
-          >
+      <section id="allprojects">
+        <button>all projects <i class="fas fa-angle-down"></i></button>
+        <ul>
+          <li>
+            <ul>
+              <li><a href="index.html#">all projects</a></li>
+              <li><a href="">development</a></li>
+              <li><a href="">UX &#47; UI</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="project">
+          <p>UX &#47; UI</p>
+          <p>development</p>
+          <img src="images/madlibs.jpg" alt="mad libs website" />
+          <div class="project-preview">
+            <h3>Mad Libs Bulleting Journaling</h3>
+            <p>
+              This is a school project where we were required to design a simple
+              Mad Libs webpage that...
+            </p>
+            <a href="projects/madlibs.html">view case study</a>
+            <a
+              href="https://jyw270.github.io/des157a/studio1/index.html"
+              target="_blank"
+              >visit website</a
+            >
+          </div>
         </div>
-      </div>
 
-      <div class="project">
-        <p>UX &#47; UI</p>
+        <div class="project">
+          <p>UX &#47; UI</p>
 
-        <img src="images/travel-planner.jpg" alt="travel planner prototype" />
-        <div class="project-preview">
-          <h3>Travel Planner</h3>
-          <p>
-            This is an equity project I worked on for school. I designed a
-            travel planning app to help travelers...
-          </p>
-          <a href="projects/travel-planner.html">view case study</a>
-          <a
-            href="https://www.figma.com/proto/8IqLEXj9vwoDEw3Ed206YQ/Project-2?node-id=140%3A414&viewport=241%2C48%2C0.41&scaling=scale-down&starting-point-node-id=2%3A2&show-proto-sidebar=1"
-            target="_blank"
-            >view prototype</a
-          >
+          <img src="images/travel-planner.jpg" alt="travel planner prototype" />
+          <div class="project-preview">
+            <h3>Travel Planner</h3>
+            <p>
+              This is an equity project I worked on for school. I designed a
+              travel planning app to help travelers...
+            </p>
+            <a href="projects/travel-planner.html">view case study</a>
+            <a
+              href="https://www.figma.com/proto/8IqLEXj9vwoDEw3Ed206YQ/Project-2?node-id=140%3A414&viewport=241%2C48%2C0.41&scaling=scale-down&starting-point-node-id=2%3A2&show-proto-sidebar=1"
+              target="_blank"
+              >view prototype</a
+            >
+          </div>
         </div>
-      </div>
 
-      <div class="project">
-        <p>UX &#47; UI</p>
-        <p>development</p>
-        <img src="images/keychain-city.jpg" alt="keychain city website" />
-        <div class="project-preview">
-          <h3>Keychain City</h3>
-          <p>
-            This is a web page I designed for a school project, where we
-            collected documentations of...
-          </p>
-          <a href="projects/keychain-city.html">view case study</a>
-          <a
-            href="https://jyw270.github.io/des157a/final/finalproject/index.html"
-            target="_blank"
-            >visit website</a
-          >
+        <div class="project">
+          <p>UX &#47; UI</p>
+          <p>development</p>
+          <img src="images/keychain-city.jpg" alt="keychain city website" />
+          <div class="project-preview">
+            <h3>Keychain City</h3>
+            <p>
+              This is a web page I designed for a school project, where we
+              collected documentations of...
+            </p>
+            <a href="projects/keychain-city.html">view case study</a>
+            <a
+              href="https://jyw270.github.io/des157a/final/finalproject/index.html"
+              target="_blank"
+              >visit website</a
+            >
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <footer>
-      <div>
-        <a href="https://github.com/jyw270/" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/designer_jennyw/?hl=en"
-          target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/jenny-wong-7614931b8/"
-          target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a
-          href="mailto:&#106;&#121;&#119;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;"
-          ><i class="fas fa-envelope"></i
-        ></a>
-      </div>
+      <footer>
+        <div>
+          <a href="https://github.com/jyw270/" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/designer_jennyw/?hl=en"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/jenny-wong-7614931b8/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:&#106;&#121;&#119;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
 
-      <ul>
-        <li><a href="index.html#allprojects">projects</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="contact.html">contact</a></li>
-      </ul>
+        <ul>
+          <li><a href="index.html#allprojects">projects</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
 
-      <p>Jenny Wong &#124; Portfolio 2022</p>
-    </footer>
+        <p>Jenny Wong &#124; Portfolio 2022</p>
+      </footer>
+    </div>
   </body>
 </html>
