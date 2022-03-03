@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 #container {
   font-family: "Nunito", sans-serif;
 }
@@ -9,9 +13,23 @@ h5 {
   font-family: "Open Sans", sans-serif;
 }
 
-/* NAVIGATION */
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: #fff;
+}
+
+/* HEADER */
 header {
+  position: relative;
   display: flex;
+  align-items: center;
   padding: 18px 30px;
   box-shadow: 0px 4px 5px rgba(160, 160, 160, 0.2);
 }
@@ -27,8 +45,72 @@ header h1 {
   color: #cbcbcb;
 }
 
+/* HEADER NAVIGATION */
 .fa-bars {
+  font-size: 33px;
+  color: #b1b1b1;
+  padding-top: 5px;
 }
 
-header ul {
+nav ul li ul {
+  padding: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+nav ul li:hover ul {
+  bottom: -120px;
+  left: 0;
+}
+
+nav ul li ul li {
+  width: 100vw;
+  border-top: 1px solid #e5e5e5;
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+nav a {
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  width: 100vw;
+  color: #c4c2c3;
+  text-align: center;
+}
+
+/* HOME PAGE: INTRO SECTION */
+#intro {
+  margin: 30px;
+}
+
+#intro img {
+  display: block;
+  width: 54.5%;
+  margin: auto;
+}
+
+#intro h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 10px 0 5px 0;
+  color: #f2acac;
+}
+
+#intro p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #bfbfbf;
+}
+
+#intro button {
+  font-size: 20px;
+  border: 1.5px solid #d6ecdf;
+  border-radius: 10px;
+  margin: 20px 0 40px 0;
+  padding: 10px 15px;
+}
+
+#intro button a {
+  color: #f2acac;
 }

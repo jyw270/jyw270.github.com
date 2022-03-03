@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Version 1</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="styles.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div id="container">
+    <i class="fa-solid fa-volume-high"></i>
+    <section id="welcome">
+      <h1>Welcome</h1>
+      <p>
+        This is a place to record how you are feeling at this moment in time.
+        Feel free to share your thoughts.
+      </p>
+      <div id="welcome-btns">
+        <button>Participate</button>
+        <button>Gallery</button>
+      </div>
+    </section>
+    <div class="quotes">
+      <section id="intro-quote">
+        <h3>
+          “We delight in the beauty of the butterfly, but rarely admit the
+          changed it has gone through to achieve that beauty.”
+        </h3>
+        <h3>- Maya Angelou</h3>
+      </section>
+      <button>Continue</button>
+    </div>
+
+    <section id="questions">
+      <button id="exit-form"><i class="fa-solid fa-rectangle-xmark"></i></button>
+      <form>
+        <p>I am feeling...</p>
+        <label>Two words or less<input type="text" name="q1" class="responses" /></label>
+        <div class="buttons">
+          <button class="next-btn">Next</button>
+        </div>
+      </form>
+
+      <form>
+        <p>Describe how you see yourself right now</p>
+        <label>One word<input type="text" name="q2" class="responses" /></label>
+        <div class="buttons">
+          <button class="prev-btn">Prev</button>
+          <button class="next-btn">Next</button>
+        </div>
+      </form>
+      <form>
+        <p>How would someone close to you describe you?</p>
+        <label>One word<input type="text" name="q3" class="responses" /></label>
+        <div class="buttons">
+          <button class="prev-btn">Prev</button>
+          <button class="next-btn">Next</button>
+        </div>
+      </form>
+
+      <form>
+        <p>Share how you are feeling</p>
+        <!-- <p>Prompt 2&#58; Something I accomplished today...</p> comment this line -->
+        <label>Thirty words or less<textarea rows="5" cols="50" name="q4" class="responses"></textarea>
+        </label>
+        <div class="buttons">
+          <button class="prev-btn">Prev</button>
+          <button class="next-btn">Next</button>
+        </div>
+      </form>
+
+      <form>
+        <p>What is your proudest moment?</p>
+        <label>One sentence<input type="text" name="q5" class="responses" /></label>
+        <div class="buttons">
+          <button class="prev-btn">Prev</button>
+          <button id="submit-btn">Submit</button>
+        </div>
+      </form>
+    </section>
+    <div class="quotes">
+      <section id="submit-quote">
+        <h3>
+          “The world has enough beautiful mountains and meadows, spectacular
+          skies, and serene lakes. It has enough lush forests, flowered
+          fields, and sandy beaches. It has plenty of stars and the promise of
+          a new sunrise and sunset every day. What the world needs more of is
+          people to appreciate and enjoy it”
+        </h3>
+        <h3>- Michael Josephson</h3>
+      </section>
+      <button>View gallery</button>
+    </div>
+    <section id="gallery"></section>
+    <button id="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+    <footer>
+      <p>Title</p>
+    </footer>
+  </div>
+</body>
+
+</html>
