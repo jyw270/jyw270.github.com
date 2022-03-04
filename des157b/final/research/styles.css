@@ -62,3 +62,12 @@ p {
   font-size: 17px;
   line-height: 1.4em;
 }
+
+/* usability-results.html */
+#results p {
+  font-size: 17px;
+}
+
+#user2 {
+  width: 550px;
+}
