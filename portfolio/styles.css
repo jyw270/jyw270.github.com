@@ -87,25 +87,26 @@ header nav a {
 
 /* FOOTER */
 footer {
-  display: block;
-  width: 100%;
-  margin: auto;
+  text-align: center;
+  border-top: 1.5px solid #e5e5e5;
+  padding: 1.875em 0;
 }
 
 footer button {
   border: 1.5px solid #d7eae0;
   border-radius: 50%;
   padding: 0.5em;
-  margin: 0.5em;
+  margin: 0 0.5em;
 }
 
 footer i {
-  font-size: 1.375em;
+  font-size: 1.5em;
   color: #f2acac;
 }
 
 footer ul {
   display: flex;
+  justify-content: center;
   margin: 1.25em 0;
 }
 
@@ -117,6 +118,11 @@ footer ul li:nth-of-type(2) {
 footer ul a {
   font-size: 1.0625em;
   color: #c4c2c3;
+}
+
+footer p {
+  font-size: 0.75em;
+  color: #b1b1b1;
 }
 
 /* HOME PAGE: INTRO SECTION */
