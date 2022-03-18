@@ -4,6 +4,7 @@
 
 #container {
   font-family: "Nunito", sans-serif;
+  min-width: 350px;
 }
 
 h2,
@@ -11,6 +12,15 @@ h3,
 h4,
 h5 {
   font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  color: #f2acac;
+  font-weight: 400;
+}
+
+p {
+  color: #bfbfbf;
 }
 
 ul {
@@ -33,7 +43,19 @@ nav ul li ul {
   left: -9999px;
 }
 
-/* HEADER */
+.hidden {
+  display: none;
+  /* visibility: hidden; */
+  opacity: 0;
+}
+
+.showing {
+  display: block;
+  /* visibility: visible; */
+  opacity: 1;
+}
+
+/*********** HEADER NAVIGATION ***********/
 header {
   position: relative;
   display: flex;
@@ -53,7 +75,6 @@ header h1 {
   color: #cbcbcb;
 }
 
-/* HEADER NAVIGATION */
 .fa-bars {
   font-size: 1.83em;
   color: #b1b1b1;
@@ -67,6 +88,10 @@ header nav {
 header nav ul li:hover ul {
   bottom: -6.66em;
   left: 0;
+}
+
+header nav ul li ul {
+  box-shadow: 0px 4px 5px rgba(160, 160, 160, 0.2);
 }
 
 header nav ul li ul li {
@@ -85,7 +110,40 @@ header nav a {
   text-align: center;
 }
 
-/* FOOTER */
+/*********** CONTENT ***********/
+.content {
+  margin: 1.3em 1.66em 0 1.66em;
+}
+
+.intro img {
+  display: block;
+  width: 54.5%;
+  margin: auto;
+}
+
+.intro h2 {
+  font-size: 2.22em;
+  margin: 0.55em 0 0.27em 0;
+}
+
+.intro p {
+  font-size: 1.125em;
+  line-height: 1.38em;
+}
+
+.intro button {
+  font-size: 1.11em;
+  border: 1.5px solid #d6ecdf;
+  border-radius: 0.55em;
+  margin: 1.11em 0 2.22em 0;
+  padding: 0.55em 0.83em;
+}
+
+.intro button a {
+  color: #f2acac;
+}
+
+/*********** FOOTER ***********/
 footer {
   text-align: center;
   border-top: 1.5px solid #e5e5e5;
@@ -125,46 +183,7 @@ footer p {
   color: #b1b1b1;
 }
 
-/* HOME PAGE: INTRO SECTION */
-#intro {
-  margin: 1.3em 1.66em 0 1.66em;
-}
-
-#intro img {
-  display: block;
-  width: 54.5%;
-  margin: auto;
-}
-
-#intro h2 {
-  font-size: 2.22em;
-  font-weight: 400;
-  margin: 0.55em 0 0.27em 0;
-  color: #f2acac;
-}
-
-#intro p {
-  font-size: 1em;
-  line-height: 1.38em;
-  color: #bfbfbf;
-}
-
-#intro button {
-  font-size: 1.11em;
-  border: 1.5px solid #d6ecdf;
-  border-radius: 0.55em;
-  margin: 1.11em 0 2.22em 0;
-  padding: 0.55em 0.83em;
-}
-
-#intro button a {
-  color: #f2acac;
-}
-
-/* HOME PAGE: ALL PROJECTS SECTION */
-#allprojects {
-  margin: 0 1.66em;
-}
+/*********** HOME PAGE: ALL PROJECTS SECTION ***********/
 
 #allprojects nav {
   width: fit-content;
@@ -186,6 +205,30 @@ footer p {
 
 #allprojects nav ul li:hover ul {
   left: 0;
+}
+
+#allprojects .submenu {
+  width: 100%;
+  margin-top: 0.3em;
+}
+
+#allprojects .submenu button {
+  width: 100%;
+  text-align: center;
+  color: #f2acac;
+  background-color: #fff;
+  border-left: 1.5px solid #e5e5e5;
+  border-right: 1.5px solid #e5e5e5;
+  border-bottom: 1.5px solid #e5e5e5;
+}
+
+#allprojects .submenu li:first-of-type button {
+  border-top: 1.5px solid #e5e5e5;
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+#allprojects .submenu li:last-of-type button {
+  border-radius: 0 0 0.5em 0.5em;
 }
 
 .project {
@@ -245,10 +288,115 @@ footer p {
   line-height: 1.25em;
 }
 
-.project-preview button {
+.project-preview button:first-of-type {
   padding: 0 1.85em 0 0;
 }
 
 .project-preview a {
   color: #f2acac;
+}
+
+/*********** ABOUT PAGE ***********/
+#about #intro img {
+  width: 58%;
+}
+
+#about h4 {
+  font-size: 0.9375em;
+  color: #7c7c7c;
+}
+
+#about .intro p {
+  margin-bottom: 1em;
+}
+
+#categories,
+#categories div {
+  display: flex;
+}
+
+#categories {
+  margin-top: 2.2em;
+}
+
+#categories div {
+  margin-right: 4%;
+}
+
+#categories div:nth-of-type(3) {
+  margin-right: 0;
+}
+
+#categories h3 {
+  font-size: 1.0625em;
+  font-weight: 400;
+  color: #b1b1b1;
+  margin-left: 0.3em;
+}
+
+#categories img {
+  width: 1.55em;
+}
+
+.category {
+  transition: all 1s ease;
+  margin-top: 1.125em;
+}
+
+#skills h4 {
+  margin-bottom: 0.7em;
+}
+
+#skills i {
+  font-size: 4.25em;
+  color: #e5e5e5;
+  margin-right: 0.3em;
+}
+
+#skills img {
+  width: 3.65em;
+  margin-right: 1.15em;
+}
+
+#skills img:last-of-type {
+  margin-right: 0;
+}
+
+#education {
+  display: flex;
+  height: fit-content;
+}
+
+/* #education img {
+  width: 1.5em;
+  height: fit-content;
+} */
+
+#education > div:nth-of-type(2) {
+  max-width: 30em;
+  margin-top: 0.45em;
+}
+
+/* .school {
+  height: 16em;
+  margin-left: 0.2em;
+} */
+
+.school h4 {
+  font-size: 1.25em;
+}
+
+.school p:first-of-type {
+  font-size: 0.875em;
+  color: #cbcbcb;
+  margin: 0.3125em 0;
+}
+
+.school p:nth-of-type(2) {
+  line-height: 1.4em;
+}
+
+#contact img {
+  width: 100%;
+  margin-top: 2em;
 }

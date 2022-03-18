@@ -13,12 +13,10 @@
     />
 
     <!--/ /-------- Font Awesome --------/ /-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    <script
+      src="https://kit.fontawesome.com/53462d0482.js"
       crossorigin="anonymous"
-    />
+    ></script>
 
     <!--/ /-------- Google Fonts --------/ /-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,130 +30,161 @@
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <img src="images/logo.svg" alt="logo" />
-      <h1>Jenny.</h1>
-      <i class="fas fa-bars"></i>
-      <ul>
-        <li>
+    <div id="container">
+      <header>
+        <img src="images/logo.svg" alt="logo" id="logo" />
+        <h1>Jenny.</h1>
+
+        <nav>
           <ul>
-            <li><a href="index.html#allprojects">projects</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li>
+              <i class="fa-solid fa-bars"></i>
+              <ul class="submenu">
+                <li><a href="index.html#allprojects">projects</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
-    </header>
+        </nav>
+      </header>
 
-    <section>
-      <img src="images/profile.png" alt="profile picture" />
-      <h2>About Me</h2>
-      <p>
-        Hello, I&#39;m Jenny! I am currently an undergraduate student at UC
-        Davis, majoring in Design and minoring in Computer Science. I am
-        passionate about Front-end web development and UX/UI design because they
-        are a great combination of my interests.
-      </p>
-      <p>
-        My goal as a designer is to create applications and websites that can
-        make an impact on the world and create comfort for people. My design
-        aesthetic revolves around simplicity and elegance, which my logo
-        portrays as a simple flower with vibrant, delicate colors. The stem
-        represents the letter, J in my first name, while the subtle heart shape
-        in the flower represents the character 爱 (love) in my Chinese name.
-      </p>
-    </section>
-
-    <section>
-      <div>
-        <h3><img src="images/skills-icon.svg" alt="gears icon" /> Skills</h3>
-        <h3><i class="fas fa-graduation-cap"></i>Education</h3>
-        <h3><img src="images/hobbies-icon.svg" alt="cup icon" /> Hobbies</h3>
-      </div>
-
-      <div>
-        <div>
-          <p>Design</p>
-          <i class="fab fa-figma"></i>
-          <img src="images/ai-icon.svg" alt="Illustrator icon" /><img
-            src="images/ps-icon.svg"
-            alt="Photoshop icon"
-          /><img src="images/xd-icon.svg" alt="xd icon" />
-        </div>
-        <div>
-          <p>Front-end</p>
-          <i class="fab fa-html5"></i>
-          <i class="fab fa-css3-alt"></i>
-          <i class="fab fa-js-square"></i>
-        </div>
-        <div>
-          <p>Tools</p>
-          <i class="fab fa-git-square"></i>
-          <i class="fab fa-github-square"></i>
-        </div>
-      </div>
-
-      <div>
-        <img src="images/timeline-bar.svg" alt="vertical bar" />
-        <div>
-          <h4>UC Davis</h4>
-          <p>Design and Computer Science &#8212; June 2022</p>
+      <div class="content" id="about">
+        <section class="intro">
+          <img src="images/profile.jpg" alt="profile picture" />
+          <h2>About Me</h2>
           <p>
-            I am currently earning my bachelors degree for Design and Computer
-            Science. Web development really drew my attention because it became
-            a combination of what I like to do &#8212; be creative and
-            decorative, while getting to implement code.
+            Hello, I&#39;m Jenny! I am currently an undergraduate student at UC
+            Davis, majoring in Design and minoring in Computer Science. I am
+            passionate about Front-end web development and UX/UI design because
+            they are a great combination of my interests.
           </p>
-        </div>
-        <div>
-          <h4>El Cerrito High School</h4>
-          <p>Information Technology Academy &#8212; June 2018</p>
           <p>
-            I joined an Information Technology Academy, where I was introduced
-            to the idea of coding. I learned how to code simple games in
-            RubyScript and build simple websites with HTML and CSS.
+            My goal as a designer is to create applications and websites that
+            can make an impact on the world and create comfort for people. My
+            design aesthetic revolves around simplicity and elegance, which my
+            logo portrays as a simple flower with vibrant, delicate colors. The
+            stem represents the letter, J in my first name, while the subtle
+            heart shape in the flower represents the character 爱 (love) in my
+            Chinese name.
           </p>
+        </section>
+
+        <section>
+          <div id="categories">
+            <div>
+              <img src="images/skills-icon.svg" alt="gears icon" />
+              <h3>Skills</h3>
+            </div>
+            <div>
+              <img src="images/education-icon.svg" alt="grad cap icon" />
+              <h3>Education</h3>
+            </div>
+            <div>
+              <img src="images/hobbies-icon.svg" alt="cup icon" />
+              <h3>Hobbies</h3>
+            </div>
+          </div>
+
+          <div class="category" id="skills">
+            <div>
+              <h4>Design</h4>
+              <i class="fab fa-figma"></i>
+              <img src="images/ai-icon.svg" alt="Illustrator icon" /><img
+                src="images/ps-icon.svg"
+                alt="Photoshop icon"
+              /><img src="images/xd-icon.svg" alt="xd icon" />
+            </div>
+            <div>
+              <h4>Front-end</h4>
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-css3-alt"></i>
+              <i class="fab fa-js-square"></i>
+            </div>
+            <div>
+              <h4>Tools</h4>
+              <i class="fab fa-git-square"></i>
+              <i class="fab fa-github-square"></i>
+            </div>
+          </div>
+
+          <div class="category hidden" id="education">
+            <div id="line">
+              <div id="circle1"></div>
+              <div id="circle2"></div>
+            </div>
+            <!-- <img src="images/timeline-bar.svg" alt="vertical bar" /> -->
+            <div>
+              <div class="school hidden">
+                <h4>UC Davis</h4>
+                <p>Design and Computer Science &#8212; June 2022</p>
+                <p>
+                  I am currently earning my bachelors degree for Design and
+                  Computer Science. Web development really drew my attention
+                  because it became a combination of what I like to do &#8212;
+                  be creative and decorative, while getting to implement code.
+                </p>
+              </div>
+              <div class="school hidden">
+                <h4>El Cerrito High School</h4>
+                <p>Information Technology Academy &#8212; June 2018</p>
+                <p>
+                  I joined an Information Technology Academy, where I was
+                  introduced to the idea of coding. I learned how to code simple
+                  games in RubyScript and build simple websites with HTML and
+                  CSS.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="category hidden" id="hobbies">
+            <p>🛍 &#x2012; going shopping</p>
+            <p>📝 &#x2012; journaling</p>
+            <p>🍰 &#x2012; baking treats</p>
+            <p>📺 &#x2012; watching dramas</p>
+            <p>🍦 &#x2012; frozen yogurt</p>
+            <p>🐰 &#x2012; bunnies</p>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <div>
+          <button>
+            <a href="https://github.com/jyw270/" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </button>
+          <button>
+            <a
+              href="https://www.instagram.com/designer_jennyw/?hl=en"
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a></button
+          ><button>
+            <a
+              href="https://www.linkedin.com/in/jenny-wong-7614931b8/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </button>
+          <button>
+            <a
+              href="mailto:&#106;&#101;&#110;&#110;&#121;&#119;&#111;&#110;&#103;&#050;&#055;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </button>
         </div>
-      </div>
 
-      <div>
-        <p>🛍 &#x2012; going shopping</p>
-        <p>📝 &#x2012; journaling</p>
-        <p>🍰 &#x2012; baking treats</p>
-        <p>📺 &#x2012; watching dramas</p>
-        <p>🍦 &#x2012; frozen yogurt</p>
-        <p>🐰 &#x2012; bunnies</p>
-      </div>
-    </section>
+        <ul>
+          <li><a href="index.html#allprojects">projects</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
 
-    <footer>
-      <div>
-        <a href="https://github.com/jyw270/" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/designer_jennyw/?hl=en"
-          target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/jenny-wong-7614931b8/"
-          target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a
-          href="mailto:&#106;&#121;&#119;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;"
-          ><i class="fas fa-envelope"></i
-        ></a>
-      </div>
-
-      <ul>
-        <li><a href="index.html#allprojects">projects</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="contact.html">contact</a></li>
-      </ul>
-
-      <p>Jenny Wong &#124; Portfolio 2022</p>
-    </footer>
+        <p>Jenny Wong &#124; Portfolio 2022</p>
+      </footer>
+    </div>
   </body>
 </html>

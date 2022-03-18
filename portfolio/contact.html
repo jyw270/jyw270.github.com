@@ -13,12 +13,10 @@
     />
 
     <!--/ /-------- Font Awesome --------/ /-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    <script
+      src="https://kit.fontawesome.com/53462d0482.js"
       crossorigin="anonymous"
-    />
+    ></script>
 
     <!--/ /-------- Google Fonts --------/ /-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,63 +30,78 @@
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <img src="images/logo.svg" alt="logo" />
-      <h1>Jenny.</h1>
-      <i class="fas fa-bars"></i>
-      <ul>
-        <li>
+    <div id="container">
+      <header>
+        <img src="images/logo.svg" alt="logo" id="logo" />
+        <h1>Jenny.</h1>
+
+        <nav>
           <ul>
-            <li><a href="index.html#allprojects">projects</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li>
+              <i class="fa-solid fa-bars"></i>
+              <ul class="submenu">
+                <li><a href="index.html#allprojects">projects</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
-    </header>
+        </nav>
+      </header>
 
-    <section>
-      <img src="images/cup-of-tea.jpg" alt="cup of tea" />
-      <h2>Let&#39;s get in touch!</h2>
-      <p>
-        I am currently interested in new opportunities to apply my own creative
-        ideas and solutions. Please feel free to contact me if you would like to
-        collaborate and I will be sure to get back to you as soon as possible!
-      </p>
-      <a
-        href="mailto:&#106;&#121;&#119;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;"
-        >Email Me</a
-      >
-    </section>
+      <section class="content intro" id="contact">
+        <img src="images/cup-of-tea.jpg" alt="cup of tea" />
+        <h2>Let&#39;s get in touch!</h2>
+        <p>
+          I am currently interested in new opportunities to apply my own
+          creative ideas and solutions. Please feel free to contact me if you
+          would like to collaborate and I will be sure to get back to you as
+          soon as possible!
+        </p>
+        <button>
+          <a
+            href="mailto:&#106;&#121;&#119;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;"
+            >Email Me</a
+          >
+        </button>
+      </section>
 
-    <footer>
-      <div>
-        <a href="https://github.com/jyw270/" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/designer_jennyw/?hl=en"
-          target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/jenny-wong-7614931b8/"
-          target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a
-          href="mailto:&#106;&#121;&#119;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;"
-          ><i class="fas fa-envelope"></i
-        ></a>
-      </div>
+      <footer>
+        <div>
+          <button>
+            <a href="https://github.com/jyw270/" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </button>
+          <button>
+            <a
+              href="https://www.instagram.com/designer_jennyw/?hl=en"
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a></button
+          ><button>
+            <a
+              href="https://www.linkedin.com/in/jenny-wong-7614931b8/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </button>
+          <button>
+            <a
+              href="mailto:&#106;&#101;&#110;&#110;&#121;&#119;&#111;&#110;&#103;&#050;&#055;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </button>
+        </div>
 
-      <ul>
-        <li><a href="index.html#allprojects">projects</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="contact.html">contact</a></li>
-      </ul>
+        <ul>
+          <li><a href="index.html#allprojects">projects</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
 
-      <p>Jenny Wong &#124; Portfolio 2022</p>
-    </footer>
+        <p>Jenny Wong &#124; Portfolio 2022</p>
+      </footer>
+    </div>
   </body>
 </html>
