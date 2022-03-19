@@ -28,6 +28,9 @@
 
     <!--/ /-------- Site Styling --------/ /-->
     <link href="styles.css" rel="stylesheet" />
+
+    <!--/ /-------- JavaScript --------/ /-->
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div id="container">
@@ -72,18 +75,18 @@
 
         <section>
           <div id="categories">
-            <div>
+            <button>
               <img src="images/skills-icon.svg" alt="gears icon" />
               <h3>Skills</h3>
-            </div>
-            <div>
+            </button>
+            <button>
               <img src="images/education-icon.svg" alt="grad cap icon" />
               <h3>Education</h3>
-            </div>
-            <div>
+            </button>
+            <button>
               <img src="images/hobbies-icon.svg" alt="cup icon" />
               <h3>Hobbies</h3>
-            </div>
+            </button>
           </div>
 
           <div class="category" id="skills">
@@ -109,13 +112,10 @@
           </div>
 
           <div class="category hidden" id="education">
-            <div id="line">
-              <div id="circle1"></div>
-              <div id="circle2"></div>
-            </div>
-            <!-- <img src="images/timeline-bar.svg" alt="vertical bar" /> -->
-            <div>
-              <div class="school hidden">
+            <div class="school hidden">
+              <div class="line"></div>
+              <div>
+                <div id="circle1"></div>
                 <h4>UC Davis</h4>
                 <p>Design and Computer Science &#8212; June 2022</p>
                 <p>
@@ -125,7 +125,11 @@
                   be creative and decorative, while getting to implement code.
                 </p>
               </div>
-              <div class="school hidden">
+            </div>
+            <div class="school hidden">
+              <div class="line"></div>
+              <div>
+                <div id="circle2"></div>
                 <h4>El Cerrito High School</h4>
                 <p>Information Technology Academy &#8212; June 2018</p>
                 <p>

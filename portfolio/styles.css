@@ -37,6 +37,10 @@ button {
   border: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 nav ul li ul {
   padding: 0;
   position: absolute;
@@ -44,14 +48,15 @@ nav ul li ul {
 }
 
 .hidden {
-  display: none;
-  /* visibility: hidden; */
+  position: absolute;
+  top: 0;
+  visibility: hidden;
   opacity: 0;
 }
 
 .showing {
-  display: block;
-  /* visibility: visible; */
+  position: static;
+  visibility: visible;
   opacity: 1;
 }
 
@@ -60,7 +65,7 @@ header {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 1em 1.66em;
+  padding: 1em 1.25em;
   box-shadow: 0px 4px 5px rgba(160, 160, 160, 0.2);
 }
 
@@ -112,7 +117,7 @@ header nav a {
 
 /*********** CONTENT ***********/
 .content {
-  margin: 1.3em 1.66em 0 1.66em;
+  margin: 1.3em 1.25em 0 1.25em;
 }
 
 .intro img {
@@ -310,28 +315,35 @@ footer p {
   margin-bottom: 1em;
 }
 
+#about section:nth-of-type(2) {
+  margin: 2.2em 0 3.4375em 0;
+}
+
 #categories,
-#categories div {
+#categories button {
   display: flex;
 }
 
-#categories {
-  margin-top: 2.2em;
+#categories button {
+  margin-right: 6%;
+  padding: 0;
 }
 
-#categories div {
-  margin-right: 4%;
-}
-
-#categories div:nth-of-type(3) {
+#categories button:nth-of-type(3) {
   margin-right: 0;
+}
+
+#categories button:first-of-type h3,
+#categories button:hover h3 {
+  font-weight: 500;
+  color: #f2acac;
 }
 
 #categories h3 {
   font-size: 1.0625em;
   font-weight: 400;
   color: #b1b1b1;
-  margin-left: 0.3em;
+  margin-left: 0.25em;
 }
 
 #categories img {
@@ -363,24 +375,43 @@ footer p {
 }
 
 #education {
+  max-width: 680px;
+}
+
+.school {
   display: flex;
-  height: fit-content;
+  position: relative;
 }
 
-/* #education img {
-  width: 1.5em;
-  height: fit-content;
-} */
-
-#education > div:nth-of-type(2) {
-  max-width: 30em;
-  margin-top: 0.45em;
+.line {
+  margin-left: 0.45em;
+  width: 0.3125em;
+  background-color: #e5e5e5;
 }
 
-/* .school {
-  height: 16em;
-  margin-left: 0.2em;
-} */
+.school:first-of-type .line {
+  border-radius: 1em 1em 0 0;
+}
+
+.school:nth-of-type(2) .line {
+  border-radius: 0 0 1em 1em;
+}
+
+.school > div:nth-of-type(2) {
+  width: 90%;
+  padding: 0.7em 0 0.7em 1em;
+}
+
+#circle1,
+#circle2 {
+  position: absolute;
+  left: -0.01em;
+  width: 1.1875em;
+  height: 1.1875em;
+  background-color: #f2acac;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
 
 .school h4 {
   font-size: 1.25em;
@@ -394,6 +425,11 @@ footer p {
 
 .school p:nth-of-type(2) {
   line-height: 1.4em;
+}
+
+#hobbies p {
+  font-size: 1.0625em;
+  margin: 1em 0;
 }
 
 #contact img {
