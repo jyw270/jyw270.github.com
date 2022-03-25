@@ -1,10 +1,12 @@
 * {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 #container {
   font-family: "Nunito", sans-serif;
   min-width: 350px;
+  margin: auto;
 }
 
 h2,
@@ -41,12 +43,6 @@ button:hover {
   cursor: pointer;
 }
 
-nav ul li ul {
-  padding: 0;
-  position: absolute;
-  left: -9999px;
-}
-
 .hidden {
   position: absolute;
   top: 0;
@@ -63,61 +59,36 @@ nav ul li ul {
 /*********** HEADER NAVIGATION ***********/
 header {
   position: relative;
-  display: flex;
-  align-items: center;
-  padding: 1em 1.25em;
+  background-color: #fff;
   box-shadow: 0px 4px 5px rgba(160, 160, 160, 0.2);
 }
 
-#logo {
-  width: 5.8em; /* 30% */
-  margin-right: 0.66em;
+header div {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  margin: auto;
 }
 
 header h1 {
-  font-size: 2.66em;
   font-weight: 300;
   color: #cbcbcb;
-}
-
-.fa-bars {
-  font-size: 1.83em;
-  color: #b1b1b1;
-  padding-top: 0.27em;
 }
 
 header nav {
   margin-left: auto;
 }
 
-header nav ul li:hover ul {
-  bottom: -6.66em;
-  left: 0;
-}
-
-header nav ul li ul {
-  box-shadow: 0px 4px 5px rgba(160, 160, 160, 0.2);
-}
-
-header nav ul li ul li {
-  width: 100vw;
-  border-top: 1px solid #e5e5e5;
-  background-color: #fff;
-  padding: 0.55em 0;
-}
-
 header nav a {
-  font-size: 1.11em;
-  font-weight: 500;
-  display: block;
-  width: 100vw;
+  font-weight: 450;
   color: #c4c2c3;
-  text-align: center;
 }
 
-/*********** CONTENT ***********/
+/*********** GENERAL CONTENT ***********/
 .content {
-  margin: 1.3em 1.25em 0 1.25em;
+  margin: auto;
+  padding: 1.3em 1.25em 0 1.25em;
+  z-index: -2;
 }
 
 .intro img {
@@ -127,24 +98,22 @@ header nav a {
 }
 
 .intro h2 {
-  font-size: 2.22em;
   margin: 0.55em 0 0.27em 0;
 }
 
 .intro p {
-  font-size: 1.125em;
   line-height: 1.38em;
 }
 
-.intro button {
-  font-size: 1.11em;
-  border: 1.5px solid #d6ecdf;
+.intro button,
+.project-page button {
   border-radius: 0.55em;
   margin: 1.11em 0 2.22em 0;
   padding: 0.55em 0.83em;
 }
 
-.intro button a {
+.intro button a,
+.project-page button a {
   color: #f2acac;
 }
 
@@ -163,14 +132,12 @@ footer button {
 }
 
 footer i {
-  font-size: 1.5em;
   color: #f2acac;
 }
 
 footer ul {
   display: flex;
   justify-content: center;
-  margin: 1.25em 0;
 }
 
 footer ul li:first-of-type,
@@ -179,67 +146,35 @@ footer ul li:nth-of-type(2) {
 }
 
 footer ul a {
-  font-size: 1.0625em;
   color: #c4c2c3;
 }
 
 footer p {
-  font-size: 0.75em;
   color: #b1b1b1;
 }
 
 /*********** HOME PAGE: ALL PROJECTS SECTION ***********/
-
 #allprojects nav {
   width: fit-content;
   margin: auto;
-  position: relative;
 }
 
 #allprojects nav button {
-  font-size: 1.125em;
   color: #fff;
   background-color: #f2acac;
   border-radius: 0.625em;
-  padding: 0.625em;
-}
-
-#allprojects nav .fa-angle-down {
-  padding-left: 0.95em;
-}
-
-#allprojects nav ul li:hover ul {
-  left: 0;
-}
-
-#allprojects .submenu {
-  width: 100%;
-  margin-top: 0.3em;
 }
 
 #allprojects .submenu button {
-  width: 100%;
-  text-align: center;
   color: #f2acac;
   background-color: #fff;
-  border-left: 1.5px solid #e5e5e5;
-  border-right: 1.5px solid #e5e5e5;
-  border-bottom: 1.5px solid #e5e5e5;
-}
-
-#allprojects .submenu li:first-of-type button {
-  border-top: 1.5px solid #e5e5e5;
-  border-radius: 0.5em 0.5em 0 0;
-}
-
-#allprojects .submenu li:last-of-type button {
-  border-radius: 0 0 0.5em 0.5em;
 }
 
 .project {
   background-color: #fafbfc;
   border: 1.5px solid #eaecef;
   border-radius: 1.25em;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
   margin: 1.5625em 0;
 }
 
@@ -249,7 +184,6 @@ footer p {
 }
 
 .labels p {
-  font-size: 0.8125em;
   width: fit-content;
   color: #f2acac;
   background-color: #fff;
@@ -277,20 +211,15 @@ footer p {
   background-color: #fff;
   border-radius: 0 0 1.25em 1.25em;
   border-top: 1.5px solid #eaecef;
-  padding: 0.87em;
 }
 
 .project-preview h3 {
-  font-size: 1.25em;
   font-weight: 450;
   color: #7c7c7c;
 }
 
 .project-preview p {
-  font-size: 0.9375em;
   color: #b1b1b1;
-  margin: 0.5em 0;
-  line-height: 1.25em;
 }
 
 .project-preview button:first-of-type {
@@ -442,16 +371,13 @@ footer p {
 /*********** PROJECT PAGE ***********/
 .title {
   background-color: #f9f9f9;
+  padding: 0.625em;
 }
 
 .title img {
   display: block;
   margin: auto;
   width: 70%;
-}
-
-.title > div {
-  padding: 0 0.625em 0.625em 0.625em;
 }
 
 .title h2 {
@@ -487,4 +413,352 @@ footer p {
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.05);
   padding: 0.35em 0.5em;
   margin-right: 0.625em;
+}
+
+.project-page h4,
+.project-page h5 {
+  font-weight: 550;
+  color: #999999;
+}
+
+.project-page h4 {
+  font-size: 1.25em;
+  margin: 1.25em 0 0.375em 0;
+}
+
+.project-page h5,
+.project-content p {
+  font-size: 1em;
+  margin-left: 0.625em;
+}
+
+.project-page h5 {
+  margin: 0.9375em 0 0.375em 0.625em;
+}
+
+#h5-after-h4 {
+  margin-top: 0;
+}
+
+.project-content p,
+.project-page ul {
+  font-weight: 350;
+  color: #b1b1b1;
+  line-height: 1.4375em;
+}
+
+.project-content img {
+  width: 97%;
+  margin: 0.625em 0 0.625em 0.625em;
+}
+
+.project-page button {
+  display: block;
+  margin: 1.25em auto 3.4375em auto;
+}
+
+.project-page ul {
+  list-style-type: circle;
+  margin-left: 1.6em;
+}
+
+@media only screen and (max-width: 1019px) {
+  /*********** HEADER NAVIGATION ***********/
+  header {
+    padding: 0.6em 1.25em;
+  }
+
+  #logo {
+    width: 5.8em;
+    margin-right: 0.66em;
+  }
+
+  header h1 {
+    font-size: 2.66em;
+  }
+
+  .submenu {
+    padding: 0;
+    position: absolute;
+    left: -9999px;
+  }
+
+  .fa-bars {
+    font-size: 1.83em;
+    color: #b1b1b1;
+    padding-top: 0.27em;
+  }
+
+  header .submenu {
+    left: 0;
+    bottom: 10em;
+    z-index: -1;
+    box-shadow: 0px 4px 5px rgba(160, 160, 160, 0.2);
+  }
+
+  header nav ul li:hover .submenu {
+    bottom: -7.3em;
+    transition: all 1.5s ease;
+  }
+
+  header nav .submenu li {
+    width: 100vw;
+    border-top: 1px solid #e5e5e5;
+    background-color: #fff;
+    padding: 0.55em 0;
+  }
+
+  header nav a {
+    font-size: 1.11em;
+    display: block;
+    width: 100vw;
+    text-align: center;
+  }
+
+  /*********** FOOTER ***********/
+  footer button {
+    width: 2.75em;
+    height: 2.75em;
+  }
+
+  footer i {
+    font-size: 1.5em;
+  }
+
+  footer ul {
+    margin: 1.25em 0;
+  }
+
+  footer ul a {
+    font-size: 1.0625em;
+  }
+
+  footer p {
+    font-size: 0.75em;
+  }
+
+  /*********** GENERAL CONTENT ***********/
+  .content {
+    max-width: 450px;
+  }
+
+  .intro h2 {
+    font-size: 2.22em;
+  }
+
+  .intro p {
+    font-size: 1.125em;
+  }
+
+  .intro button,
+  .project-page button {
+    font-size: 1.11em;
+    border: 1.5px solid #d6ecdf;
+  }
+
+  /*********** HOME PAGE: ALL PROJECTS SECTION ***********/
+  #allprojects nav {
+    position: relative;
+  }
+
+  #allprojects nav button {
+    font-size: 1.125em;
+    padding: 0.625em;
+  }
+
+  #allprojects nav .fa-angle-down {
+    padding-left: 0.95em;
+  }
+
+  #allprojects nav ul li:hover .submenu {
+    left: 0;
+  }
+
+  #allprojects .submenu {
+    width: 100%;
+    margin-top: 0.3em;
+  }
+
+  #allprojects .submenu button {
+    width: 100%;
+    text-align: center;
+    border-left: 1.5px solid #e5e5e5;
+    border-right: 1.5px solid #e5e5e5;
+    border-bottom: 1.5px solid #e5e5e5;
+  }
+
+  #allprojects .submenu li:first-of-type button {
+    border-top: 1.5px solid #e5e5e5;
+    border-radius: 0.5em 0.5em 0 0;
+  }
+
+  #allprojects .submenu li:last-of-type button {
+    border-radius: 0 0 0.5em 0.5em;
+  }
+
+  .labels p {
+    font-size: 0.8125em;
+  }
+
+  .project-preview {
+    padding: 0.87em;
+  }
+
+  .project-preview h3 {
+    font-size: 1.25em;
+  }
+
+  .project-preview p {
+    font-size: 0.9375em;
+    margin: 0.5em 0;
+    line-height: 1.25em;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  /*********** HEADER NAVIGATION ***********/
+  header {
+    padding: 0 1.25em;
+  }
+
+  #logo {
+    width: 6.875em;
+    margin-right: 1.25em;
+  }
+
+  header h1 {
+    font-size: 4em;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  header nav .submenu {
+    display: flex;
+  }
+
+  header nav .submenu li {
+    margin-right: 4.8em;
+  }
+
+  header nav .submenu li:last-of-type {
+    margin-right: 0.9375em;
+  }
+
+  header nav a {
+    font-size: 1.5em;
+  }
+
+  /*********** FOOTER ***********/
+  footer button {
+    width: 3.75em;
+    height: 3.75em;
+  }
+
+  footer i {
+    font-size: 1.95em;
+  }
+
+  footer ul {
+    margin: 1.5625em 0;
+  }
+
+  footer ul a {
+    font-size: 1.5em;
+  }
+
+  footer p {
+    font-size: 1em;
+  }
+
+  /*********** GENERAL CONTENT ***********/
+  .content {
+    max-width: 1200px;
+    padding: 0;
+  }
+
+  .content > section {
+    margin: 0 2.5em;
+  }
+
+  .intro h2 {
+    font-size: 4em;
+  }
+
+  .intro p {
+    font-size: 1.5em;
+  }
+
+  .intro button,
+  .project-page button {
+    font-size: 1.5em;
+    border: 2px solid #d6ecdf;
+  }
+
+  /*********** HOME PAGE: INTRO SECTION ***********/
+  #home .intro {
+    display: flex;
+    margin: 0.5em 2.5em 5em 2.5em;
+  }
+
+  #home .intro img {
+    order: 2;
+    width: 17.8125em;
+  }
+
+  #home .intro div {
+    margin: 3.5em 5.5em 0 0;
+  }
+
+  /*********** HOME PAGE: ALL PROJECTS SECTION ***********/
+  #allprojects nav > ul li,
+  #allprojects nav .submenu {
+    display: flex;
+  }
+
+  #allprojects nav button {
+    font-size: 1.25em;
+    width: 8.5em;
+    margin: 0 1.5em;
+    padding: 0.55em 0;
+  }
+
+  #allprojects .submenu button {
+    border: 2px solid #e5e5e5;
+  }
+
+  #allprojects nav .fa-angle-down {
+    display: none;
+  }
+
+  #allprojects section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5em 5em 3.5em 5em;
+  }
+
+  .project {
+    width: 46.563%;
+  }
+
+  .labels p,
+  .project-preview button {
+    font-size: 1.0625em;
+  }
+
+  .project-preview {
+    padding: 1.36em;
+  }
+
+  .project-preview h3 {
+    font-size: 1.375em;
+  }
+
+  .project-preview p {
+    font-size: 1em;
+    margin: 0.75em 0;
+    line-height: 1.4em;
+  }
 }

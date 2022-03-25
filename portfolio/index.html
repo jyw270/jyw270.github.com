@@ -35,33 +35,37 @@
   <body>
     <div id="container">
       <header>
-        <img src="images/logo.svg" alt="logo" id="logo" />
-        <h1>Jenny.</h1>
+        <div>
+          <img src="images/logo.svg" alt="logo" id="logo" />
+          <h1>Jenny.</h1>
 
-        <nav>
-          <ul>
-            <li>
-              <i class="fa-solid fa-bars"></i>
-              <ul class="submenu">
-                <li><a href="index.html#allprojects">projects</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">contact</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+          <nav>
+            <ul>
+              <li>
+                <i class="fa-solid fa-bars"></i>
+                <ul class="submenu">
+                  <li><a href="index.html#allprojects">projects</a></li>
+                  <li><a href="about.html">about</a></li>
+                  <li><a href="contact.html">contact</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <div class="content" id="home">
         <section class="intro">
           <img src="images/profile.jpg" alt="profile picture" />
-          <h2>Hi, I&#39;m Jenny!</h2>
-          <p>
-            I am currently an undergraduate student at UC Davis studying in
-            Design and Computer Science. I enjoy exploring Front-end web
-            development and UX/UI design. Feel work to explore my work below!
-          </p>
-          <button><a href="#allprojects">View projects</a></button>
+          <div>
+            <h2>Hi, I&#39;m Jenny!</h2>
+            <p>
+              I am currently an undergraduate student at UC Davis studying in
+              Design and Computer Science. I enjoy exploring Front-end web
+              development and UX/UI design. Feel work to explore my work below!
+            </p>
+            <button><a href="#allprojects">View projects</a></button>
+          </div>
         </section>
 
         <section id="allprojects">
@@ -72,91 +76,94 @@
                   all projects <i class="fa-solid fa-angle-down"></i>
                 </button>
                 <ul class="submenu">
-                  <li><button>development</button></li>
-                  <li><button>UX &#47; UI</button></li>
+                  <li><button id="dev-btn">development</button></li>
+                  <li><button id="ux-btn">UX &#47; UI</button></li>
                 </ul>
               </li>
             </ul>
           </nav>
-          <div class="project">
-            <div class="labels">
-              <p>UX &#47; UI</p>
-              <p>development</p>
-            </div>
-            <img src="images/madlibs.jpg" alt="mad libs website" />
-            <div class="project-preview">
-              <h3>Mad Libs Bulleting Journaling</h3>
-              <p>
-                This is a school project where we were required to design a
-                simple Mad Libs webpage...
-              </p>
-              <button>
-                <a href="projects/madlibs.html">view case study</a>
-              </button>
-              <button>
-                <a
-                  href="https://jyw270.github.io/des157a/studio1/index.html"
-                  target="_blank"
-                  >visit website</a
-                >
-              </button>
-            </div>
-          </div>
 
-          <div class="project">
-            <div class="labels">
-              <p>UX &#47; UI</p>
+          <section>
+            <div class="project">
+              <div class="labels">
+                <p>UX &#47; UI</p>
+                <p>development</p>
+              </div>
+              <img src="images/madlibs.jpg" alt="mad libs website" />
+              <div class="project-preview">
+                <h3>Mad Libs Bulleting Journaling</h3>
+                <p>
+                  This is a school project where we were required to design a
+                  simple Mad Libs webpage...
+                </p>
+                <button>
+                  <a href="projects/madlibs.html">view case study</a>
+                </button>
+                <button>
+                  <a
+                    href="https://jyw270.github.io/des157a/studio1/index.html"
+                    target="_blank"
+                    >visit website</a
+                  >
+                </button>
+              </div>
             </div>
 
-            <img
-              src="images/travel-planner.jpg"
-              alt="travel planner prototype"
-            />
-            <div class="project-preview">
-              <h3>Travel Planner</h3>
-              <p>
-                I designed a travel planning app to help travelers with low
-                resources and make traveling...
-              </p>
-              <button>
-                <a href="projects/travel-planner.html"
-                  >view case study</a
-                ></button
-              ><button>
-                <a
-                  href="https://www.figma.com/proto/8IqLEXj9vwoDEw3Ed206YQ/Project-2?node-id=140%3A414&viewport=241%2C48%2C0.41&scaling=scale-down&starting-point-node-id=2%3A2&show-proto-sidebar=1"
-                  target="_blank"
-                  >view prototype</a
-                >
-              </button>
-            </div>
-          </div>
+            <div class="project">
+              <div class="labels">
+                <p>UX &#47; UI</p>
+              </div>
 
-          <div class="project">
-            <div class="labels">
-              <p>UX &#47; UI</p>
-              <p>development</p>
+              <img
+                src="images/travel-planner.jpg"
+                alt="travel planner prototype"
+              />
+              <div class="project-preview">
+                <h3>Travel Planner</h3>
+                <p>
+                  I designed a travel planning app to help travelers with low
+                  resources and make traveling...
+                </p>
+                <button>
+                  <a href="projects/travel-planner.html"
+                    >view case study</a
+                  ></button
+                ><button>
+                  <a
+                    href="https://www.figma.com/proto/8IqLEXj9vwoDEw3Ed206YQ/Project-2?node-id=140%3A414&viewport=241%2C48%2C0.41&scaling=scale-down&starting-point-node-id=2%3A2&show-proto-sidebar=1"
+                    target="_blank"
+                    >view prototype</a
+                  >
+                </button>
+              </div>
             </div>
-            <img src="images/keychain-city.jpg" alt="keychain city website" />
-            <div class="project-preview">
-              <h3>Keychain City</h3>
-              <p>
-                Over the years, I have collected several unique keychains, so I
-                developed a website that...
-              </p>
-              <button>
-                <a href="projects/keychain-city.html"
-                  >view case study</a
-                ></button
-              ><button>
-                <a
-                  href="https://jyw270.github.io/des157a/final/finalproject/index.html"
-                  target="_blank"
-                  >visit website</a
-                >
-              </button>
+
+            <div class="project">
+              <div class="labels">
+                <p>UX &#47; UI</p>
+                <p>development</p>
+              </div>
+              <img src="images/keychain-city.jpg" alt="keychain city website" />
+              <div class="project-preview">
+                <h3>Keychain City</h3>
+                <p>
+                  Over the years, I have collected several unique keychains, so
+                  I developed a website that...
+                </p>
+                <button>
+                  <a href="projects/keychain-city.html"
+                    >view case study</a
+                  ></button
+                ><button>
+                  <a
+                    href="https://jyw270.github.io/des157a/final/finalproject/index.html"
+                    target="_blank"
+                    >visit website</a
+                  >
+                </button>
+              </div>
             </div>
-          </div>
+          </section>
         </section>
       </div>
 

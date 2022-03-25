@@ -1,6 +1,28 @@
 (function () {
   "use strict";
 
+  // HOME PAGE
+  const devBtn = document.getElementById("dev-btn");
+  const uxBtn = document.getElementById("ux-btn");
+  const navBtn = document.querySelector("header i");
+  const content = document.querySelector(".content");
+
+  navBtn.addEventListener("mouseover", function () {
+    content.style.position = "relative";
+    setTimeout(function () {
+      document.querySelector("header").style.boxShadow = "none";
+    }, 1000);
+  });
+
+  navBtn.addEventListener("mouseleave", function () {
+    content.style.position = "static";
+    setTimeout(function () {
+      document.querySelector("header").style.boxShadow =
+        "0px 4px 5px rgba(160, 160, 160, 0.2)";
+    }, 100);
+  });
+
+  // ABOUT PAGE
   const h3categories = document.querySelectorAll("#categories h3");
   const aboutBtns = document.querySelectorAll("#categories button");
   let prevActiveBtn = 0;
