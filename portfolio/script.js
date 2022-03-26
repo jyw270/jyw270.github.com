@@ -1,6 +1,10 @@
 (function () {
   "use strict";
 
+  alert(
+    "Hello, I'm Jenny. My website is still undergoing construction, but feel free to explore!"
+  );
+
   // HOME PAGE
   const devBtn = document.getElementById("dev-btn");
   const uxBtn = document.getElementById("ux-btn");
