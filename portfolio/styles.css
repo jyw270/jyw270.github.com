@@ -330,12 +330,7 @@ footer p {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-.school h4 {
-  font-size: 1.25em;
-}
-
 .school p:first-of-type {
-  font-size: 0.875em;
   color: #cbcbcb;
   margin: 0.3125em 0;
 }
@@ -345,15 +340,7 @@ footer p {
 }
 
 #hobbies p {
-  font-size: 1.0625em;
   margin: 1em 0;
-}
-
-/*********** CONTACT PAGE ***********/
-
-#contact img {
-  width: 100%;
-  margin-top: 2em;
 }
 
 /*********** PROJECT PAGE ***********/
@@ -517,10 +504,6 @@ footer p {
     margin: 1.25em 0;
   }
 
-  footer ul a {
-    font-size: 1.0625em;
-  }
-
   footer p {
     font-size: 0.75em;
   }
@@ -542,6 +525,12 @@ footer p {
   .project-page button {
     font-size: 1.11em;
     border: 1.5px solid #d6ecdf;
+  }
+
+  #categories h3,
+  #hobbies p,
+  footer ul a {
+    font-size: 1.0625em;
   }
 
   /*********** HOME PAGE: ALL PROJECTS SECTION ***********/
@@ -607,10 +596,6 @@ footer p {
     margin: 2.2em 0 3.4375em 0;
   }
 
-  #categories h3 {
-    font-size: 1.0625em;
-  }
-
   #categories img {
     width: 1.55em;
   }
@@ -627,6 +612,20 @@ footer p {
   #skills img {
     width: 3.65em;
     margin-right: 1.15em;
+  }
+
+  .school h4 {
+    font-size: 1.25em;
+  }
+
+  .school p:first-of-type {
+    font-size: 0.875em;
+  }
+
+  /*********** CONTACT PAGE ***********/
+  #contact img {
+    width: 100%;
+    margin-top: 2em;
   }
 }
 
@@ -647,10 +646,6 @@ footer p {
 
   .fa-bars {
     display: none;
-  }
-
-  header nav .submenu {
-    display: flex;
   }
 
   header nav .submenu li {
@@ -679,15 +674,12 @@ footer p {
     margin: 1.5625em 0;
   }
 
-  footer ul a {
-    font-size: 1.5em;
-  }
-
-  footer p {
-    font-size: 1em;
-  }
-
   /*********** GENERAL CONTENT ***********/
+  header nav .submenu,
+  #hobbies {
+    display: flex;
+  }
+
   .content {
     max-width: 1200px;
     padding: 0;
@@ -708,8 +700,14 @@ footer p {
   }
 
   #home .intro p,
-  #categories h3 {
+  #categories h3,
+  footer ul a {
     font-size: 1.5em;
+  }
+
+  .school p:first-of-type,
+  footer p {
+    font-size: 1em;
   }
 
   #about .intro h2,
@@ -717,7 +715,9 @@ footer p {
     font-size: 3.5em;
   }
 
+  .project-preview h3,
   #about .intro p,
+  .school h4,
   #contact p {
     font-size: 1.375em;
   }
@@ -733,7 +733,8 @@ footer p {
   }
 
   .project-preview button,
-  #about h4 {
+  #about h4,
+  .school p:nth-of-type(2) {
     font-size: 1.125em;
   }
 
@@ -786,10 +787,6 @@ footer p {
     padding: 1.36em;
   }
 
-  .project-preview h3 {
-    font-size: 1.375em;
-  }
-
   .project-preview p {
     font-size: 1.0625em;
     margin: 0.75em 0;
@@ -810,6 +807,16 @@ footer p {
     margin-bottom: 5em;
   }
 
+  #categories button:first-of-type h3 {
+    width: 2.4em;
+    text-align: left;
+  }
+
+  #categories button:nth-of-type(2) h3 {
+    width: 5em;
+    text-align: left;
+  }
+
   #categories img {
     width: 2.1875em;
   }
@@ -821,5 +828,40 @@ footer p {
 
   #skills img {
     margin-right: 1.8em;
+  }
+
+  #hobbies div:first-of-type {
+    margin-right: 9em;
+  }
+
+  #hobbies div p:first-of-type {
+    margin-top: 0;
+  }
+
+  #hobbies p {
+    font-size: 1.3em;
+  }
+
+  /*********** CONTACT PAGE ***********/
+  #contact {
+    margin: 8em auto;
+  }
+
+  #contact img {
+    width: 26em;
+    margin-right: 1.8em;
+  }
+
+  #contact div {
+    margin: auto auto auto 0;
+    width: 55%;
+  }
+
+  #contact h2 {
+    margin-top: 0;
+  }
+
+  #contact button {
+    margin-bottom: 0;
   }
 }
