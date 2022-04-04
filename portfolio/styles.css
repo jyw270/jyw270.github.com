@@ -610,6 +610,10 @@ footer p {
     margin: auto;
   }
 
+  #travel-planner .title img {
+    width: 100%;
+  }
+
   .title h2 {
     font-size: 1.4375em;
   }
@@ -634,6 +638,17 @@ footer p {
   .project-content img {
     width: 97%;
     margin: 0.625em 0 0.625em 0.625em;
+    display: block;
+  }
+
+  #checklist-img {
+    width: 80%;
+    margin: 0.625em auto;
+  }
+
+  #welcomescrn-img {
+    width: 42%;
+    margin: 0.625em auto;
   }
 
   .project-content p {
