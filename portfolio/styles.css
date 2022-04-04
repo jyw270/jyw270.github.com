@@ -94,7 +94,6 @@ header nav a {
 
 .intro img {
   display: block;
-  width: 54.5%;
   margin: auto;
 }
 
@@ -481,6 +480,10 @@ footer p {
     max-width: 450px;
   }
 
+  .intro img {
+    width: 52%;
+  }
+
   .intro h2 {
     font-size: 2.22em;
   }
@@ -592,7 +595,7 @@ footer p {
 
   /*********** CONTACT PAGE ***********/
   #contact img {
-    width: 100%;
+    width: 90%;
     margin-top: 2em;
   }
 
