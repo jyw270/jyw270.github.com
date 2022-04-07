@@ -52,4 +52,26 @@
       prevActiveBtn = i;
     });
   }
+
+  // MOBILE / DESKTOP IMAGES
+  const images = document.querySelectorAll(".image");
+
+  window.addEventListener("load", function () {
+    changeImageSrc();
+  });
+  window.addEventListener("resize", function () {
+    changeImageSrc();
+  });
+
+  function changeImageSrc() {
+    if (window.innerWidth > 1020 && images[0].src.includes("mobile")) {
+      images.forEach(function (eachImage) {
+        eachImage.src = `${eachImage.src.replace("mobile", "desktop")}`;
+      });
+    } else if (window.innerWidth < 1020 && images[0].src.includes("desktop")) {
+      images.forEach(function (eachImage) {
+        eachImage.src = `${eachImage.src.replace("desktop", "mobile")}`;
+      });
+    }
+  }
 })();
