@@ -981,4 +981,9 @@ footer p {
     margin: 1.4em auto;
     width: 62%;
   }
+
+  #keychain-city .project-content:nth-of-type(2) img,
+  #keychain-city .project-content:nth-of-type(3) img:first-of-type {
+    width: 50%;
+  }
 }
