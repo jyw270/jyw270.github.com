@@ -66,11 +66,25 @@
   function changeImageSrc() {
     if (window.innerWidth > 1020 && images[0].src.includes("mobile")) {
       images.forEach(function (eachImage) {
-        eachImage.src = `${eachImage.src.replace("mobile", "desktop")}`;
+        if (
+          eachImage.src.includes("travel-planner/testing-2") ||
+          eachImage.src.includes("travel-planner/testing-4")
+        ) {
+          eachImage.style.display = "none";
+        } else {
+          eachImage.src = `${eachImage.src.replace("mobile", "desktop")}`;
+        }
       });
     } else if (window.innerWidth < 1020 && images[0].src.includes("desktop")) {
       images.forEach(function (eachImage) {
-        eachImage.src = `${eachImage.src.replace("desktop", "mobile")}`;
+        if (
+          eachImage.src.includes("travel-planner/testing-2") ||
+          eachImage.src.includes("travel-planner/testing-4")
+        ) {
+          eachImage.style.display = "initial";
+        } else {
+          eachImage.src = `${eachImage.src.replace("desktop", "mobile")}`;
+        }
       });
     }
   }

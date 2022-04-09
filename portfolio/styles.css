@@ -667,7 +667,7 @@ footer p {
 
   .project-content p,
   .project-page ul {
-    font-weight: 350;
+    font-weight: 390;
     line-height: 1.4375em;
   }
 }
@@ -985,5 +985,22 @@ footer p {
   #keychain-city .project-content:nth-of-type(2) img,
   #keychain-city .project-content:nth-of-type(3) img:first-of-type {
     width: 50%;
+  }
+
+  #travel-planner .project-content img {
+    width: 40%;
+  }
+
+  #travel-planner .project-content:nth-of-type(4) img,
+  #travel-planner .project-content:nth-of-type(7) img {
+    width: 75%;
+  }
+
+  #travel-planner .project-content:nth-of-type(5) img {
+    width: 37%;
+  }
+
+  #travel-planner .project-content:nth-of-type(6) > img {
+    width: 19%;
   }
 }
