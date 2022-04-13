@@ -404,7 +404,7 @@ footer p {
   list-style-type: circle;
 }
 
-@media only screen and (max-width: 1019px) {
+@media only screen and (max-width: 699px) {
   /*********** HEADER NAVIGATION ***********/
   header {
     padding: 0.6em 1.25em;
@@ -419,7 +419,7 @@ footer p {
     font-size: 2.66em;
   }
 
-  .submenu {
+  header .submenu {
     padding: 0;
     position: absolute;
     left: -9999px;
@@ -471,13 +471,100 @@ footer p {
     margin: 1.25em 0;
   }
 
+  footer ul a {
+    font-size: 1.0625em;
+  }
+
   footer p {
     font-size: 0.75em;
   }
+}
 
+@media only screen and (min-width: 700px) {
+  /*********** HEADER NAVIGATION ***********/
+  header {
+    padding: 0 1.25em;
+  }
+
+  #logo {
+    width: 6em;
+    margin-right: 1em;
+  }
+
+  header h1 {
+    font-size: 3.5em;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  header nav .submenu {
+    display: flex;
+  }
+
+  header nav .submenu li {
+    margin-right: 3.8em;
+  }
+
+  header nav .submenu li:last-of-type {
+    margin-right: 0.9375em;
+  }
+
+  header nav a {
+    font-size: 1.3em;
+  }
+
+  /*********** FOOTER ***********/
+  footer button {
+    width: 3.75em;
+    height: 3.75em;
+  }
+
+  footer i {
+    font-size: 1.95em;
+  }
+
+  footer p {
+    font-size: 1em;
+  }
+
+  footer ul {
+    margin: 1.5625em 0;
+  }
+
+  footer ul a {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  #logo {
+    width: 6.875em;
+    margin-right: 1.25em;
+  }
+
+  header h1 {
+    font-size: 4em;
+  }
+
+  header nav a {
+    font-size: 1.5em;
+  }
+
+  header nav .submenu li {
+    margin-right: 4.8em;
+  }
+
+  footer ul a {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 749px) {
   /*********** GENERAL CONTENT ***********/
   .content {
-    max-width: 450px;
+    max-width: 475px;
   }
 
   .intro img {
@@ -499,8 +586,7 @@ footer p {
   }
 
   #categories h3,
-  #hobbies p,
-  footer ul a {
+  #hobbies p {
     font-size: 1.0625em;
   }
 
@@ -525,6 +611,9 @@ footer p {
   #allprojects .submenu {
     width: 100%;
     margin-top: 0.3em;
+    padding: 0;
+    position: absolute;
+    left: -9999px;
   }
 
   #allprojects .submenu button {
@@ -672,57 +761,8 @@ footer p {
   }
 }
 
-@media only screen and (min-width: 1020px) {
-  /*********** HEADER NAVIGATION ***********/
-  header {
-    padding: 0 1.25em;
-  }
-
-  #logo {
-    width: 6.875em;
-    margin-right: 1.25em;
-  }
-
-  header h1 {
-    font-size: 4em;
-  }
-
-  .fa-bars {
-    display: none;
-  }
-
-  header nav .submenu li {
-    margin-right: 4.8em;
-  }
-
-  header nav .submenu li:last-of-type {
-    margin-right: 0.9375em;
-  }
-
-  header nav a {
-    font-size: 1.5em;
-  }
-
-  /*********** FOOTER ***********/
-  footer button {
-    width: 3.75em;
-    height: 3.75em;
-  }
-
-  footer i {
-    font-size: 1.95em;
-  }
-
-  footer ul {
-    margin: 1.5625em 0;
-  }
-
+@media only screen and (min-width: 750px) {
   /*********** GENERAL CONTENT ***********/
-  header nav .submenu,
-  #hobbies {
-    display: flex;
-  }
-
   .content {
     max-width: 1200px;
     padding: 0;
@@ -735,7 +775,7 @@ footer p {
 
   .intro {
     display: flex;
-    margin: 0.5em 2.5em 5em 2.5em;
+    margin: 0.5em 2.5em 2.2em 2.5em; /**/
   }
 
   #home .intro img,
@@ -744,39 +784,40 @@ footer p {
   }
 
   #home .intro p,
-  #categories h3,
-  footer ul a {
-    font-size: 1.5em;
-  }
-
-  .school p:first-of-type,
-  footer p {
-    font-size: 1em;
+  #categories h3 {
+    font-size: 1.1em; /**/
   }
 
   #about .intro h2,
   #contact h2 {
-    font-size: 3.5em;
+    font-size: 2.8em; /**/
   }
 
-  .project-preview h3,
-  #about .intro p,
-  .school h4,
+  .project-preview h3, /**/
+  .school h4 {
+    font-size: 1.2em; /**/
+  }
+
+  #about .intro p, /**/
   #contact p {
-    font-size: 1.375em;
+    font-size: 1.1em;
   }
 
   .intro div {
-    margin: 3.5em 5em 0 0;
+    margin: 2em 2.6em 0 0; /**/
   }
 
-  .intro button,
+  .intro button, /**/
   .project-page button {
-    font-size: 1.5em;
+    font-size: 1.2em; /**/
     border: 2px solid #d6ecdf;
   }
 
-  .project-preview button,
+  .project-preview button {
+    /**/
+    font-size: 1em;
+  }
+
   #about h4,
   .school p:nth-of-type(2) {
     font-size: 1.125em;
@@ -784,11 +825,11 @@ footer p {
 
   /*********** HOME PAGE: INTRO SECTION ***********/
   #home .intro img {
-    width: 17.8125em;
+    width: 11em; /**/
   }
 
   #home .intro h2 {
-    font-size: 4em;
+    font-size: 2.8em; /**/
   }
 
   /*********** HOME PAGE: ALL PROJECTS SECTION ***********/
@@ -798,9 +839,9 @@ footer p {
   }
 
   #allprojects nav button {
-    font-size: 1.25em;
+    font-size: 1.1em; /**/
     width: 8.5em;
-    margin: 0 1.5em;
+    margin: 0 1.1em; /**/
     padding: 0.55em 0;
   }
 
@@ -816,7 +857,7 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1.5em 5em 3.5em 5em;
+    padding: 1.1em 2.6em 2.5em 2.6em; /**/
   }
 
   .project {
@@ -824,22 +865,22 @@ footer p {
   }
 
   .labels p {
-    font-size: 1.0625em;
+    font-size: 0.9em; /**/
   }
 
   .project-preview {
-    padding: 1.36em;
+    padding: 1em; /**/
   }
 
   .project-preview p {
-    font-size: 1.0625em;
-    margin: 0.75em 0;
-    line-height: 1.4em;
+    font-size: 0.95em; /**/
+    margin: 0.65em 0; /**/
+    line-height: 1.3em; /**/
   }
 
   /*********** ABOUT PAGE ***********/
   #about .intro img {
-    width: 18.75em;
+    width: 14em; /**/
   }
 
   #about .intro h2 {
@@ -873,6 +914,14 @@ footer p {
     margin-right: 1.8em;
   }
 
+  .school p:first-of-type {
+    font-size: 1em;
+  }
+
+  #hobbies {
+    display: flex;
+  }
+
   #hobbies div:first-of-type {
     margin-right: 9em;
   }
@@ -887,12 +936,12 @@ footer p {
 
   /*********** CONTACT PAGE ***********/
   #contact {
-    margin: 8em auto;
+    margin: 8em 1.35em; /**/
   }
 
   #contact img {
-    width: 26em;
-    margin-right: 1.8em;
+    width: 20em; /**/
+    margin-right: 1.3em; /**/
   }
 
   #contact div {
@@ -911,10 +960,11 @@ footer p {
   /*********** PROJECT PAGE ***********/
   .title {
     display: flex;
-    width: 1000px;
-    height: 280px;
+    min-width: 700px; /**/
+    max-width: 1000px;
+    /* height: 280px; */
     padding: 1.5625em 1.5625em 0 1.5625em;
-    margin: 1.5625em auto 0 auto;
+    margin: 1.5625em 1.5em 0 1.5em; /**/
   }
 
   .title img {
@@ -931,16 +981,16 @@ footer p {
   }
 
   .title h2 {
-    font-size: 2.875em;
+    font-size: 2.45em; /**/
   }
 
   .title h3 {
-    font-size: 1.25em;
+    font-size: 1.12em; /**/
   }
 
   .project-content {
-    width: 940px;
-    margin: auto;
+    max-width: 940px;
+    margin: 0 2.5em; /**/
   }
 
   .project-page p,
@@ -950,19 +1000,19 @@ footer p {
   }
 
   .project-page h4 {
-    font-size: 1.75em;
-    margin: 1.35em 0 0.6em 0;
+    font-size: 1.6em; /**/
+    margin: 1.35em 0 0.5em 0; /**/
   }
 
   .project-page h5 {
-    font-size: 1.4375em;
-    margin: 1.15em 0 0.65em auto;
+    font-size: 1.3em; /**/
+    margin: 1.15em 0 0.65em 0.75em; /**/
   }
 
   .project-content p {
-    font-size: 1.25em;
+    font-size: 1.15em; /**/
     font-weight: 390;
-    margin: 0 0 0.65em auto;
+    margin: 0 0 0.65em 0.75em; /**/
   }
 
   .project-content ul {
@@ -987,6 +1037,17 @@ footer p {
     width: 50%;
   }
 
+  #travel-planner .title > div {
+    /**/
+    width: 45%;
+  }
+
+  #travel-planner .title img {
+    /**/
+    width: 50%;
+    padding-top: 2%;
+  }
+
   #travel-planner .project-content img {
     width: 40%;
   }
@@ -1002,5 +1063,127 @@ footer p {
 
   #travel-planner .project-content:nth-of-type(6) > img {
     width: 19%;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  /*********** GENERAL CONTENT ***********/
+  .intro {
+    margin: 0.5em 2.5em 5em 2.5em;
+  }
+
+  #home .intro p,
+  #categories h3 {
+    font-size: 1.5em;
+  }
+
+  #about .intro h2,
+  #contact h2 {
+    font-size: 3.5em;
+  }
+
+  .project-preview h3,
+  #about .intro p,
+  .school h4,
+  #contact p {
+    font-size: 1.375em;
+  }
+
+  .intro div {
+    margin: 3.5em 5em 0 0;
+  }
+
+  .intro button,
+  .project-page button {
+    font-size: 1.5em;
+  }
+
+  .project-preview button {
+    font-size: 1.125em;
+  }
+
+  /*********** HOME PAGE: INTRO SECTION ***********/
+  #home .intro img {
+    width: 17.8125em;
+  }
+
+  #home .intro h2 {
+    font-size: 4em;
+  }
+
+  /*********** HOME PAGE: ALL PROJECTS SECTION ***********/
+  #allprojects nav button {
+    font-size: 1.25em;
+    margin: 0 1.5em;
+  }
+
+  #allprojects section {
+    padding: 1.5em 5em 3.5em 5em;
+  }
+
+  .labels p {
+    font-size: 1.0625em;
+  }
+
+  .project-preview {
+    padding: 1.36em;
+  }
+
+  .project-preview p {
+    font-size: 1.0625em;
+    margin: 0.75em 0;
+    line-height: 1.4em;
+  }
+
+  /*********** ABOUT PAGE ***********/
+  #about .intro img {
+    width: 18.75em;
+  }
+
+  /*********** CONTACT PAGE ***********/
+  #contact {
+    margin: 8em auto;
+  }
+
+  #contact img {
+    width: 26em;
+    margin: 0 1.8em 0 1.5em; /**/
+  }
+
+  #contact div {
+    margin: auto 1.5em auto 0; /**/
+  }
+
+  /*********** PROJECT PAGE ***********/
+  .title {
+    height: 280px;
+    margin: 1.5625em auto 0 auto;
+  }
+
+  .title h2 {
+    font-size: 2.875em;
+  }
+
+  .title h3 {
+    font-size: 1.25em;
+  }
+
+  .project-content {
+    margin: auto;
+  }
+
+  .project-page h4 {
+    font-size: 1.75em;
+    margin: 1.35em 0 0.6em 0;
+  }
+
+  .project-page h5 {
+    font-size: 1.4375em;
+    margin: 1.15em 0 0.65em auto;
+  }
+
+  .project-content p {
+    font-size: 1.25em;
+    margin: 0 0 0.65em auto;
   }
 }
