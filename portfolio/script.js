@@ -2,10 +2,13 @@
   "use strict";
 
   // HOME PAGE
-  const devBtn = document.getElementById("dev-btn");
-  const uxBtn = document.getElementById("ux-btn");
   const navBtn = document.querySelector("header i");
   const content = document.querySelector(".content");
+  const allProjectsBtn = document.getElementById("all-projects-btn");
+  const devBtn = document.getElementById("dev-btn");
+  const uxBtn = document.getElementById("ux-btn");
+  const uxProjectsOnly = document.querySelectorAll(".ux-ui-only");
+  let previousBtn = allProjectsBtn;
 
   navBtn.addEventListener("mouseover", function () {
     content.style.position = "relative";
@@ -21,6 +24,47 @@
         "0px 4px 5px rgba(160, 160, 160, 0.2)";
     }, 100);
   });
+
+  allProjectsBtn.addEventListener("click", function () {
+    // changes all projects btn to highlighted btn
+    highlightBtn(allProjectsBtn);
+    previousBtn = allProjectsBtn;
+  });
+
+  devBtn.addEventListener("click", function () {
+    // changes dev btn to highlighted btn
+    highlightBtn(devBtn);
+    previousBtn = devBtn;
+  });
+
+  uxBtn.addEventListener("click", function () {
+    // changes ux btn to highlighted btn
+    highlightBtn(uxBtn);
+    previousBtn = uxBtn;
+  });
+
+  // FUNCTION: changes clicked btn to highlighted btn and removes it from the previous btn
+  function highlightBtn(activatedBtn) {
+    if (window.innerWidth >= 750) {
+      activatedBtn.style.border = "none";
+      activatedBtn.style.color = "#fff";
+      activatedBtn.style.backgroundColor = "#f2acac";
+
+      previousBtn.style.border = "2px solid #e5e5e5";
+      previousBtn.style.color = "#f2acac";
+      previousBtn.style.backgroundColor = "#fff";
+    }
+
+    if (activatedBtn == devBtn) {
+      uxProjectsOnly.forEach(function (eachproject) {
+        eachproject.style.display = "none";
+      });
+    } else {
+      uxProjectsOnly.forEach(function (eachproject) {
+        eachproject.style.display = "initial";
+      });
+    }
+  }
 
   // ABOUT PAGE
   const h3categories = document.querySelectorAll("#categories h3");
