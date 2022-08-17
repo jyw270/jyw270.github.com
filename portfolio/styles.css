@@ -4,28 +4,28 @@
   scroll-behavior: smooth;
 }
 
-#container {
-  font-family: "Nunito", sans-serif;
-  /* font-family: "Bitter", serif; */
-  min-width: 350px;
-  margin: auto;
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Open Sans", sans-serif;
+.showing {
+  visibility: visible;
+  opacity: 1;
 }
 
-h2 {
-  color: #f2acac;
-  font-weight: 400;
+body {
+  position: relative;
 }
 
-p {
-  color: #bfbfbf;
+#blue-background {
+  position: absolute;
+  width: 100vw;
+  height: 44.5vh;
+  background-color: #eef7f3;
 }
+
+/********** GENERAL **********/
 
 ul {
   list-style-type: none;
@@ -34,1157 +34,147 @@ ul {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 button {
+  font-family: "Laila", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
   background: none;
-  border: none;
+  border: 2px solid black;
+  padding: 10px 15px;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
-.hidden {
-  position: absolute;
-  top: 0;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.showing {
-  position: static;
-  visibility: visible;
-  opacity: 1;
-}
-
-/*********** HEADER NAVIGATION ***********/
-header {
+#container {
+  font-family: "Source Sans Pro", sans-serif;
+  min-width: 350px;
   position: relative;
-  background-color: #fff;
-  box-shadow: 0px 4px 5px rgba(160, 160, 160, 0.2);
-}
-
-header div {
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
   margin: auto;
+  padding: 20px;
 }
 
-header h1 {
-  font-weight: 300;
-  color: #cbcbcb;
+/********** LOGO HEADER NAVIGATION **********/
+
+header {
+  display: flex;
 }
 
 header nav {
+  font-size: 24px;
   margin-left: auto;
 }
 
-header nav a {
-  font-weight: 450;
-  color: #c4c2c3;
+header nav > ul {
+  padding-top: 15px;
 }
 
-/*********** GENERAL CONTENT ***********/
-.content {
-  margin: auto;
-  padding: 1.3em 1.25em 0 1.25em;
-  z-index: -2;
+header .submenu {
+  position: absolute;
+  right: -9999px;
+  top: 0;
+  width: 70%;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -4px 0 10px rgba(151, 151, 151, 0.5);
+  padding-top: calc(50vh - 120px);
+  transition: all 2s ease;
+}
+
+header .submenu .fa-arrow-right {
+  position: absolute;
+  top: 28px;
+  right: 25px;
+  color: #2d2d2d;
+}
+
+header .submenu a {
+  font-size: 18px;
+  margin-left: 30px;
+  line-height: 40px;
+}
+
+#transparent-background {
+  width: 30%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  z-index: 1;
+}
+
+/********** PAGE CONTENT: INTRO SECTION **********/
+
+h1 {
+  padding-left: 10px;
+  font-size: 25px;
+}
+
+h1,
+h2 {
+  font-family: "Laila", sans-serif;
+  font-weight: 450;
+  text-transform: uppercase;
 }
 
 .intro img {
   display: block;
   margin: auto;
+  width: 50%;
 }
 
-.intro h2 {
-  margin: 0.55em 0 0.27em 0;
+h2 {
+  font-size: 32px;
+  margin: 10px 0;
 }
 
 .intro p {
-  line-height: 1.38em;
+  font-size: 15px;
+  line-height: 20px;
 }
 
-.intro button,
-.project-page button {
-  border-radius: 0.55em;
-  margin: 1.11em 0 2.22em 0;
-  padding: 0.55em 0.83em;
+.intro button {
+  margin: 15px 0 50px 0;
 }
 
-.intro button a,
-.project-page button a {
-  color: #f2acac;
-}
-
-/*********** FOOTER ***********/
-footer {
-  text-align: center;
-  border-top: 1.5px solid #e5e5e5;
-  padding: 1.875em 0;
-}
-
-footer button {
-  border: 1.5px solid #d7eae0;
-  border-radius: 50%;
-  padding: 0.5em;
-  margin: 0 0.5em;
-}
-
-footer i {
-  color: #f2acac;
-}
-
-footer ul {
-  display: flex;
-  justify-content: center;
-}
-
-footer ul li:first-of-type,
-footer ul li:nth-of-type(2) {
-  margin-right: 3.125em;
-}
-
-footer ul a {
-  color: #c4c2c3;
-}
-
-footer p {
-  color: #b1b1b1;
-}
-
-/*********** HOME PAGE: ALL PROJECTS SECTION ***********/
-#allprojects nav {
-  width: fit-content;
-  margin: auto;
-}
-
-#allprojects nav button {
-  color: #fff;
-  background-color: #f2acac;
-  border-radius: 0.625em;
-}
-
-#allprojects .submenu button {
-  color: #f2acac;
-  background-color: #fff;
-}
-
-.project {
-  background-color: #fafbfc;
-  border: 1.5px solid #eaecef;
-  border-radius: 1.25em;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
-  margin: 1.5625em 0;
-}
-
-.labels {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.labels p {
-  width: fit-content;
-  color: #f2acac;
-  background-color: #fff;
-  border: 1px solid #d7eae0;
-  border-radius: 1.25em;
-  padding: 0.4em 0.8em;
-  margin: 1em 0.8em 1em 1em;
-}
-
-.labels p:last-of-type {
-  margin-left: 0;
-}
-
-.project img {
-  width: 90%;
-  display: block;
-  margin: 0.9375em auto auto auto;
-}
-
-.project:nth-of-type(2) img {
-  width: 66.82%;
-}
-
-.project-preview {
-  background-color: #fff;
-  border-radius: 0 0 1.25em 1.25em;
-  border-top: 1.5px solid #eaecef;
-}
-
-.project-preview h3 {
-  font-weight: 450;
-  color: #7c7c7c;
-}
-
-.project-preview p {
-  color: #b1b1b1;
-}
-
-.project-preview button:first-of-type {
-  padding: 0 1.85em 0 0;
-}
-
-.project-preview a {
-  color: #f2acac;
-}
-
-/*********** ABOUT PAGE ***********/
-#about #intro img {
-  width: 58%;
-}
-
-#about h4 {
-  color: #7c7c7c;
-}
-
-#about .intro p {
-  margin-bottom: 1em;
-}
-
-#categories,
-#categories button {
-  display: flex;
-}
-
-#categories button {
-  margin-right: 6%;
-  padding: 0;
-}
-
-#categories button:nth-of-type(3) {
-  margin-right: 0;
-}
-
-#categories button:first-of-type h3,
-#categories button:hover h3 {
-  font-weight: 500;
-  color: #f2acac;
-}
-
-#categories h3 {
-  font-weight: 400;
-  color: #b1b1b1;
-  margin-left: 0.25em;
-}
-
-.category {
-  transition: all 1s ease;
-  margin-top: 1.125em;
-}
-
-#skills div:first-of-type,
-#skills div:nth-of-type(2) {
-  margin-bottom: 1.82em;
-}
-
-#skills h4 {
-  margin-bottom: 0.72em;
-}
-
-#skills i {
-  color: #e5e5e5;
-}
-
-#skills img:last-of-type {
-  margin-right: 0;
-}
-
-#education {
-  max-width: 680px;
-}
-
-.school {
-  display: flex;
+#allprojects nav > ul > li {
   position: relative;
 }
 
-.line {
-  margin-left: 0.45em;
-  width: 0.3125em;
-  background-color: #e5e5e5;
-}
-
-.school:first-of-type .line {
-  border-radius: 1em 1em 0 0;
-}
-
-.school:nth-of-type(2) .line {
-  border-radius: 0 0 1em 1em;
-}
-
-.school > div:nth-of-type(2) {
-  width: 90%;
-  padding: 0.7em 0 0.7em 1em;
-}
-
-#circle1,
-#circle2 {
-  position: absolute;
-  left: -0.01em;
-  width: 1.1875em;
-  height: 1.1875em;
-  background-color: #f2acac;
-  border-radius: 50%;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-}
-
-.school p:first-of-type {
-  color: #cbcbcb;
-  margin: 0.3125em 0;
-}
-
-.school p:nth-of-type(2) {
-  line-height: 1.4em;
-}
-
-#hobbies p {
-  margin: 1em 0;
-}
-
-/*********** PROJECT PAGE ***********/
-.title {
-  background-color: #f9f9f9;
-}
-
-.title h2 {
-  font-weight: 600;
-  margin: 0.25em 0;
-}
-
-.title h3 {
-  font-family: "Nunito", sans-serif;
-  font-weight: 400;
-  color: #ababab;
-}
-
-.title .hr-line {
-  width: 100%;
-  height: 0.045em;
-  background-color: #c4c2c3;
-  margin: 0.625em 0 0.75em 0;
-}
-
-.title div div {
-  display: flex;
-}
-
-.title p {
-  color: #b1b1b1;
-  background-color: #fff;
-  border: 1px solid #d7eae0;
-  border-radius: 0.3125em;
-  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.05);
-  padding: 0.35em 0.5em;
-  margin-right: 0.625em;
-}
-
-.project-page h4,
-.project-page h5 {
-  font-weight: 550;
-  color: #999999;
-}
-
-#h5-after-h4 {
-  margin-top: 0;
-}
-
-.project-content p,
-.project-page ul {
-  color: #b1b1b1;
-}
-
-.project-page button {
+#allprojects nav button {
   display: block;
-  margin: 1.25em auto 3.4375em auto;
+  margin: auto;
+  width: 165px;
+  background-color: white;
 }
 
-.project-page ul {
-  list-style-type: circle;
+#allprojects .fa-angle-down {
+  font-size: 17px;
+  margin-left: 5px;
 }
 
-@media only screen and (max-width: 699px) {
-  /*********** HEADER NAVIGATION ***********/
-  header {
-    padding: 0.6em 1.25em;
-  }
-
-  #logo {
-    width: 5.8em;
-    margin-right: 0.66em;
-  }
-
-  header h1 {
-    font-size: 2.66em;
-  }
-
-  header .submenu {
-    padding: 0;
-    position: absolute;
-    left: -9999px;
-  }
-
-  .fa-bars {
-    font-size: 1.83em;
-    color: #b1b1b1;
-    padding-top: 0.27em;
-  }
-
-  header .submenu {
-    left: 0;
-    bottom: 10em;
-    z-index: -1;
-    box-shadow: 0px 4px 5px rgba(160, 160, 160, 0.2);
-  }
-
-  header nav ul li:hover .submenu {
-    bottom: -7.3em;
-    transition: all 1.5s ease;
-  }
-
-  header nav .submenu li {
-    width: 100vw;
-    border-top: 1px solid #e5e5e5;
-    background-color: #fff;
-    padding: 0.55em 0;
-  }
-
-  header nav a {
-    font-size: 1.11em;
-    display: block;
-    width: 100vw;
-    text-align: center;
-  }
-
-  /*********** FOOTER ***********/
-  footer button {
-    width: 2.75em;
-    height: 2.75em;
-  }
-
-  footer i {
-    font-size: 1.5em;
-  }
-
-  footer ul {
-    margin: 1.25em 0;
-  }
-
-  footer ul a {
-    font-size: 1.0625em;
-  }
-
-  footer p {
-    font-size: 0.75em;
-  }
+#allprojects .submenu li {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 2s ease;
 }
 
-@media only screen and (min-width: 700px) {
-  /*********** HEADER NAVIGATION ***********/
-  header {
-    padding: 0 1.25em;
-  }
-
-  #logo {
-    width: 6em;
-    margin-right: 1em;
-  }
-
-  header h1 {
-    font-size: 3.5em;
-  }
-
-  .fa-bars {
-    display: none;
-  }
-
-  header nav .submenu {
-    display: flex;
-  }
-
-  header nav .submenu li {
-    margin-right: 3.8em;
-  }
-
-  header nav .submenu li:last-of-type {
-    margin-right: 0.9375em;
-  }
-
-  header nav a {
-    font-size: 1.3em;
-  }
-
-  /*********** FOOTER ***********/
-  footer button {
-    width: 3.75em;
-    height: 3.75em;
-  }
-
-  footer i {
-    font-size: 1.95em;
-  }
-
-  footer p {
-    font-size: 1em;
-  }
-
-  footer ul {
-    margin: 1.5625em 0;
-  }
-
-  footer ul a {
-    font-size: 1.3em;
-  }
+#allprojects .submenu li:last-of-type {
+  z-index: -2;
 }
 
-@media only screen and (min-width: 1020px) {
-  #logo {
-    width: 6.875em;
-    margin-right: 1.25em;
-  }
-
-  header h1 {
-    font-size: 4em;
-  }
-
-  header nav a {
-    font-size: 1.5em;
-  }
-
-  header nav .submenu li {
-    margin-right: 4.8em;
-  }
-
-  footer ul a {
-    font-size: 1.5em;
-  }
+.project {
+  margin-top: 30px;
+  position: relative;
+  z-index: -3;
 }
 
-@media only screen and (max-width: 749px) {
-  /*********** GENERAL CONTENT ***********/
-  .content {
-    max-width: 475px;
-  }
-
-  .intro img {
-    width: 52%;
-  }
-
-  .intro h2 {
-    font-size: 2.22em;
-  }
-
-  .intro p {
-    font-size: 1.125em;
-  }
-
-  .intro button,
-  .project-page button {
-    font-size: 1.11em;
-    border: 1.5px solid #d6ecdf;
-  }
-
-  #categories h3,
-  #hobbies p {
-    font-size: 1.0625em;
-  }
-
-  /*********** HOME PAGE: ALL PROJECTS SECTION ***********/
-  #allprojects nav {
-    position: relative;
-  }
-
-  #allprojects nav button {
-    font-size: 1.125em;
-    padding: 0.625em;
-  }
-
-  #allprojects nav .fa-angle-down {
-    padding-left: 0.95em;
-  }
-
-  #allprojects nav ul li:hover .submenu {
-    left: 0;
-  }
-
-  #allprojects .submenu {
-    width: 100%;
-    margin-top: 0.3em;
-    padding: 0;
-    position: absolute;
-    left: -9999px;
-  }
-
-  #allprojects .submenu button {
-    width: 100%;
-    text-align: center;
-    border-left: 1.5px solid #e5e5e5;
-    border-right: 1.5px solid #e5e5e5;
-    border-bottom: 1.5px solid #e5e5e5;
-  }
-
-  #allprojects .submenu li:first-of-type button {
-    border-top: 1.5px solid #e5e5e5;
-    border-radius: 0.5em 0.5em 0 0;
-  }
-
-  #allprojects .submenu li:last-of-type button {
-    border-radius: 0 0 0.5em 0.5em;
-  }
-
-  .labels p {
-    font-size: 0.8125em;
-  }
-
-  .project-preview {
-    padding: 0.87em;
-  }
-
-  .project-preview h3 {
-    font-size: 1.25em;
-  }
-
-  .project-preview p {
-    font-size: 0.9375em;
-    margin: 0.5em 0;
-    line-height: 1.25em;
-  }
-
-  /*********** ABOUT PAGE ***********/
-  #about section:nth-of-type(2) {
-    margin: 2.2em 0 3.4375em 0;
-  }
-
-  #categories img {
-    width: 1.55em;
-  }
-
-  #about h4 {
-    font-size: 0.9375em;
-  }
-
-  #skills i {
-    font-size: 4.25em;
-    margin-right: 0.3em;
-  }
-
-  #skills img {
-    width: 3.65em;
-    margin-right: 1.15em;
-  }
-
-  .school h4 {
-    font-size: 1.25em;
-  }
-
-  .school p:first-of-type {
-    font-size: 0.875em;
-  }
-
-  /*********** CONTACT PAGE ***********/
-  #contact img {
-    width: 90%;
-    margin-top: 2em;
-  }
-
-  /*********** PROJECT PAGE ***********/
-  .title {
-    padding: 0.625em;
-  }
-
-  .title img {
-    display: block;
-    width: 70%;
-    margin: auto;
-  }
-
-  #travel-planner .title img {
-    width: 100%;
-  }
-
-  .title h2 {
-    font-size: 1.4375em;
-  }
-
-  .title h3 {
-    font-size: 0.875em;
-  }
-
-  .title p {
-    font-size: 0.8125em;
-  }
-
-  .project-page h4 {
-    font-size: 1.25em;
-    margin: 1.25em 0 0.375em 0;
-  }
-
-  .project-page h5 {
-    margin: 0.9375em 0 0.375em 0.625em;
-  }
-
-  .project-content img {
-    width: 97%;
-    margin: 0.625em 0 0.625em 0.625em;
-    display: block;
-  }
-
-  #checklist-img {
-    width: 80%;
-    margin: 0.625em auto;
-  }
-
-  #welcomescrn-img {
-    width: 42%;
-    margin: 0.625em auto;
-  }
-
-  .project-content p {
-    margin-bottom: 0.5em;
-  }
-
-  .project-page ul {
-    margin-left: 1.6em;
-  }
-
-  .project-page h5,
-  .project-content p {
-    font-size: 1em;
-    margin-left: 0.625em;
-  }
-
-  .project-content p,
-  .project-page ul {
-    font-weight: 390;
-    line-height: 1.4375em;
-  }
+.project .landscape {
+  width: 100%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (min-width: 750px) {
-  /*********** GENERAL CONTENT ***********/
-  .content {
-    max-width: 1200px;
-    padding: 0;
-  }
-
-  #home .content > section,
-  #about .content > section {
-    margin: 0 2.5em;
-  }
-
-  .intro {
-    display: flex;
-    margin: 0.5em 2.5em 2.2em 2.5em; /**/
-  }
-
-  #home .intro img,
-  #about .intro img {
-    order: 2;
-  }
-
-  #home .intro p,
-  #categories h3 {
-    font-size: 1.1em; /**/
-  }
-
-  #about .intro h2,
-  #contact h2 {
-    font-size: 2.8em; /**/
-  }
-
-  .project-preview h3, /**/
-  .school h4 {
-    font-size: 1.2em; /**/
-  }
-
-  #about .intro p, /**/
-  #contact p {
-    font-size: 1.1em;
-  }
-
-  .intro div {
-    margin: 2em 2.6em 0 0; /**/
-  }
-
-  .intro button, /**/
-  .project-page button {
-    font-size: 1.2em; /**/
-    border: 2px solid #d6ecdf;
-  }
-
-  .project-preview button {
-    /**/
-    font-size: 1em;
-  }
-
-  #about h4,
-  .school p:nth-of-type(2) {
-    font-size: 1.125em;
-  }
-
-  /*********** HOME PAGE: INTRO SECTION ***********/
-  #home .intro img {
-    width: 11em; /**/
-  }
-
-  #home .intro h2 {
-    font-size: 2.8em; /**/
-  }
-
-  /*********** HOME PAGE: ALL PROJECTS SECTION ***********/
-  #allprojects nav > ul li,
-  #allprojects nav .submenu {
-    display: flex;
-  }
-
-  #allprojects nav button {
-    font-size: 1.1em; /**/
-    width: 8.5em;
-    margin: 0 1.1em; /**/
-    padding: 0.55em 0;
-  }
-
-  #allprojects .submenu button {
-    border: 2px solid #e5e5e5;
-  }
-
-  #allprojects nav .fa-angle-down {
-    display: none;
-  }
-
-  #allprojects section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1.1em 2.6em 2.5em 2.6em; /**/
-  }
-
-  .project {
-    width: 46.563%;
-  }
-
-  .labels p {
-    font-size: 0.9em; /**/
-  }
-
-  .project-preview {
-    padding: 1em; /**/
-  }
-
-  .project-preview p {
-    font-size: 0.95em; /**/
-    margin: 0.65em 0; /**/
-    line-height: 1.3em; /**/
-  }
-
-  /*********** ABOUT PAGE ***********/
-  #about .intro img {
-    width: 14em; /**/
-  }
-
-  #about .intro h2 {
-    margin-top: 0.15em;
-  }
-
-  #about section:nth-of-type(2) {
-    margin: 3.8em 2.5em 5em 2.5em;
-  }
-
-  #categories button:first-of-type h3 {
-    width: 2.4em;
-    text-align: left;
-  }
-
-  #categories button:nth-of-type(2) h3 {
-    width: 5em;
-    text-align: left;
-  }
-
-  #categories img {
-    width: 2.1875em;
-  }
-
-  #skills i {
-    font-size: 5em;
-    margin-right: 0.4em;
-  }
-
-  #skills img {
-    margin-right: 1.8em;
-  }
-
-  .school p:first-of-type {
-    font-size: 1em;
-  }
-
-  #hobbies {
-    display: flex;
-  }
-
-  #hobbies div:first-of-type {
-    margin-right: 9em;
-  }
-
-  #hobbies div p:first-of-type {
-    margin-top: 0;
-  }
-
-  #hobbies p {
-    font-size: 1.3em;
-  }
-
-  /*********** CONTACT PAGE ***********/
-  #contact {
-    margin: 8em 1.35em; /**/
-  }
-
-  #contact img {
-    width: 20em; /**/
-    margin-right: 1.3em; /**/
-  }
-
-  #contact div {
-    margin: auto auto auto 0;
-    width: 55%;
-  }
-
-  #contact h2 {
-    margin-top: 0;
-  }
-
-  #contact button {
-    margin-bottom: 0;
-  }
-
-  /*********** PROJECT PAGE ***********/
-  .title {
-    display: flex;
-    min-width: 700px; /**/
-    max-width: 1000px;
-    /* height: 280px; */
-    padding: 1.5625em 1.5625em 0 1.5625em;
-    margin: 1.5625em 1.5em 0 1.5em; /**/
-  }
-
-  .title img {
-    order: 2;
-    margin: 0 auto;
-  }
-
-  .title > div {
-    margin: auto 1.2em 1.5625em 0;
-  }
-
-  #keychain-city .title > div {
-    width: 60%;
-  }
-
-  .title h2 {
-    font-size: 2.45em; /**/
-  }
-
-  .title h3 {
-    font-size: 1.12em; /**/
-  }
-
-  .project-content {
-    max-width: 940px;
-    margin: 0 2.5em; /**/
-  }
-
-  .project-page p,
-  .project-page h5,
-  .project-content img {
-    max-width: 890px;
-  }
-
-  .project-page h4 {
-    font-size: 1.6em; /**/
-    margin: 1.35em 0 0.5em 0; /**/
-  }
-
-  .project-page h5 {
-    font-size: 1.3em; /**/
-    margin: 1.15em 0 0.65em 0.75em; /**/
-  }
-
-  .project-content p {
-    font-size: 1.15em; /**/
-    font-weight: 390;
-    margin: 0 0 0.65em 0.75em; /**/
-  }
-
-  .project-content ul {
-    font-size: 1.25em;
-    font-weight: 390;
-    margin-left: 3.5em;
-  }
-
-  .project-content p,
-  .project-content ul {
-    line-height: 1.475em;
-  }
-
-  .project-content img {
-    display: block;
-    margin: 1.4em auto;
-    width: 62%;
-  }
-
-  #keychain-city .project-content:nth-of-type(2) img,
-  #keychain-city .project-content:nth-of-type(3) img:first-of-type {
-    width: 50%;
-  }
-
-  #travel-planner .title > div {
-    /**/
-    width: 45%;
-  }
-
-  #travel-planner .title img {
-    /**/
-    width: 50%;
-    padding-top: 2%;
-  }
-
-  #travel-planner .project-content img {
-    width: 40%;
-  }
-
-  #travel-planner .project-content:nth-of-type(4) img,
-  #travel-planner .project-content:nth-of-type(7) img {
-    width: 75%;
-  }
-
-  #travel-planner .project-content:nth-of-type(5) img {
-    width: 37%;
-  }
-
-  #travel-planner .project-content:nth-of-type(6) > img {
-    width: 19%;
-  }
-}
-
-@media only screen and (min-width: 1020px) {
-  /*********** GENERAL CONTENT ***********/
-  .intro {
-    margin: 0.5em 2.5em 5em 2.5em;
-  }
-
-  #home .intro p,
-  #categories h3 {
-    font-size: 1.5em;
-  }
-
-  #about .intro h2,
-  #contact h2 {
-    font-size: 3.5em;
-  }
-
-  .project-preview h3,
-  #about .intro p,
-  .school h4,
-  #contact p {
-    font-size: 1.375em;
-  }
-
-  .intro div {
-    margin: 3.5em 5em 0 0;
-  }
-
-  .intro button,
-  .project-page button {
-    font-size: 1.5em;
-  }
-
-  .project-preview button {
-    font-size: 1.125em;
-  }
-
-  /*********** HOME PAGE: INTRO SECTION ***********/
-  #home .intro img {
-    width: 17.8125em;
-  }
-
-  #home .intro h2 {
-    font-size: 4em;
-  }
-
-  /*********** HOME PAGE: ALL PROJECTS SECTION ***********/
-  #allprojects nav button {
-    font-size: 1.25em;
-    margin: 0 1.5em;
-  }
-
-  #allprojects section {
-    padding: 1.5em 5em 3.5em 5em;
-  }
-
-  .labels p {
-    font-size: 1.0625em;
-  }
-
-  .project-preview {
-    padding: 1.36em;
-  }
-
-  .project-preview p {
-    font-size: 1.0625em;
-    margin: 0.75em 0;
-    line-height: 1.4em;
-  }
-
-  /*********** ABOUT PAGE ***********/
-  #about .intro img {
-    width: 18.75em;
-  }
-
-  /*********** CONTACT PAGE ***********/
-  #contact {
-    margin: 8em auto;
-  }
-
-  #contact img {
-    width: 26em;
-    margin: 0 1.8em 0 1.5em; /**/
-  }
-
-  #contact div {
-    margin: auto 1.5em auto 0; /**/
-  }
-
-  /*********** PROJECT PAGE ***********/
-  .title {
-    height: 280px;
-    margin: 1.5625em auto 0 auto;
-  }
-
-  .title h2 {
-    font-size: 2.875em;
-  }
-
-  .title h3 {
-    font-size: 1.25em;
-  }
-
-  .project-content {
-    margin: auto;
-  }
-
-  .project-page h4 {
-    font-size: 1.75em;
-    margin: 1.35em 0 0.6em 0;
-  }
-
-  .project-page h5 {
-    font-size: 1.4375em;
-    margin: 1.15em 0 0.65em auto;
-  }
-
-  .project-content p {
-    font-size: 1.25em;
-    margin: 0 0 0.65em auto;
-  }
+.project .portrait {
 }
