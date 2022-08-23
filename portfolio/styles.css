@@ -4,14 +4,9 @@
   scroll-behavior: smooth;
 }
 
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.showing {
-  visibility: visible;
-  opacity: 1;
+html,
+body {
+  overflow-x: hidden;
 }
 
 body {
@@ -21,8 +16,18 @@ body {
 #blue-background {
   position: absolute;
   width: 100vw;
-  height: 44.5vh;
+  height: 47.5vh;
   background-color: #eef7f3;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.showing {
+  visibility: visible;
+  opacity: 1;
 }
 
 /********** GENERAL **********/
@@ -37,10 +42,21 @@ a {
   color: black;
 }
 
+img {
+  display: block;
+}
+
+p {
+  font-size: 15px;
+  line-height: 22px;
+  color: #313131;
+}
+
 button {
   font-family: "Laila", sans-serif;
   font-size: 15px;
   text-transform: uppercase;
+  color: #313131;
   background: none;
   border: 2px solid black;
   padding: 10px 15px;
@@ -51,13 +67,17 @@ button {
   min-width: 350px;
   position: relative;
   margin: auto;
-  padding: 20px;
 }
 
 /********** LOGO HEADER NAVIGATION **********/
 
 header {
+  width: 100%;
   display: flex;
+  position: fixed;
+  background-color: #eef7f3;
+  padding: 20px;
+  z-index: 1;
 }
 
 header nav {
@@ -96,13 +116,35 @@ header .submenu a {
 
 #transparent-background {
   width: 30%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.25);
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+}
+
+/********** FOOTER NAVIGATION **********/
+
+footer {
+  text-align: center;
+  background-color: #f1f0f0;
+  padding: 22px 0;
+}
+
+footer button {
+  font-size: 27px;
+  border: none;
+  padding: 0 20px 15px 20px;
+}
+
+footer p {
+  font-size: 11px;
 }
 
 /********** PAGE CONTENT: INTRO SECTION **********/
+
+.intro {
+  padding: 102.25px 20px 0 20px;
+}
 
 h1 {
   padding-left: 10px;
@@ -127,13 +169,14 @@ h2 {
   margin: 10px 0;
 }
 
-.intro p {
-  font-size: 15px;
-  line-height: 20px;
-}
-
 .intro button {
   margin: 15px 0 50px 0;
+}
+
+/********** HOME PAGE: ALL PROJECTS SECTION **********/
+
+#allprojects {
+  padding: 0 20px;
 }
 
 #allprojects nav > ul > li {
@@ -143,7 +186,7 @@ h2 {
 #allprojects nav button {
   display: block;
   margin: auto;
-  width: 165px;
+  width: 170px;
   background-color: white;
 }
 
@@ -158,23 +201,178 @@ h2 {
   right: 0;
   left: 0;
   z-index: -1;
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 
 #allprojects .submenu li:last-of-type {
   z-index: -2;
 }
 
-.project {
-  margin-top: 30px;
+#allprojects article {
+  margin: 30px 0 60px 0;
   position: relative;
   z-index: -3;
+  transition: all 1s ease;
 }
 
-.project .landscape {
+#allprojects article .landscape {
   width: 100%;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-.project .portrait {
+#allprojects article .portrait {
+  width: 74%;
+  margin: auto;
+}
+
+#allprojects article h3 {
+  font-family: "Laila", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: fit-content;
+  height: 17px;
+  padding: 5px 1px 0 1px;
+  background-color: #d9fbf7;
+}
+
+#allprojects article p {
+  padding: 18px 0 17px 0;
+}
+
+#allprojects article button {
+  text-transform: capitalize;
+  text-decoration: underline;
+  border: none;
+  padding: 0;
+}
+
+#allprojects article button:first-of-type {
+  padding-right: 40px;
+}
+
+/********** ABOUT PAGE **********/
+
+#about p {
+  padding-bottom: 15px;
+}
+
+/********** ABOUT PAGE: CATEGORY SELECTIONS **********/
+
+#category-selections,
+#category-selections button {
+  display: flex;
+}
+
+#category-selections button {
+  border: none;
+  margin-right: 5%;
+  padding: 3px;
+}
+
+#category-selections button:first-of-type {
+  background-color: #d9fbf7;
+}
+
+#category-selections button img {
+  margin-right: 2px;
+}
+
+#category-selections h3 {
+  text-transform: none;
+  font-size: 16px;
+  font-weight: 450;
+}
+
+/********** ABOUT PAGE: SKILLS, EDUCATION, HOBBIES CONTENT **********/
+
+#experience {
+  padding: 0 20px 60px 20px;
+}
+
+#experience .category {
+  transition: all 1s ease;
+}
+
+#experience .category + .category {
+  display: none;
+}
+
+#skills {
+  margin-top: 6px;
+}
+
+#skills h4 {
+  margin: 15px 0 5px 0;
+}
+
+#skills img {
+  display: inline;
+  height: 55px;
+  padding: 2px 20px 0 0;
+}
+
+#skills i {
+  font-size: 60px;
+  color: #e5e5e5;
+  padding-right: 20px;
+}
+
+#education {
+  max-width: 680px;
+  margin-top: 16px;
+}
+
+#education article {
+  display: flex;
+  position: relative;
+}
+
+#education article .line {
+  margin-left: 7px;
+  width: 5px;
+  background-color: #e5e5e5;
+}
+
+#education article:first-of-type .line {
+  border-radius: 16px 16px 0 0;
+}
+
+#education article:last-of-type .line {
+  border-radius: 0 0 16px 16px;
+}
+
+#education article > div:last-of-type {
+  width: 90%;
+  padding: 11px 0 11px 16px;
+}
+
+#circle1,
+#circle2 {
+  position: absolute;
+  left: -0.16px;
+  width: 19px;
+  height: 19px;
+  background-color: #d9fbf7;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+#education article h4 {
+  font-size: 19px;
+}
+
+#education article p:first-of-type {
+  font-size: 14px;
+  color: #ababab;
+  margin: 5px 0;
+}
+
+#education article p:last-of-type {
+  line-height: 1.4em;
+}
+
+#hobbies p {
+  font-size: 16px;
+  margin: 16px 0;
 }
