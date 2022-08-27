@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&family=Open+Sans:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     
@@ -33,202 +33,192 @@
     <script src="../script.js" defer></script>
   </head>
   <body>
+    <div id="blue-background"></div>
+    <div id="transparent-background" class="hidden"></div>
     <div id="container">
       <header>
-        <div>
-          <img src="../images/svg/logo.svg" alt="logo" id="logo" />
-          <h1>Jenny.</h1>
+        <img src="../images/svg/logo.svg" alt="logo" id="logo" />
+        <h1>Jenny</h1>
 
-          <nav>
-            <ul>
-              <li>
-                <i class="fa-solid fa-bars"></i>
-                <ul class="submenu">
-                  <li><a href="../index.html#allprojects">projects</a></li>
-                  <li><a href="../about.html">about</a></li>
-                  <li><a href="../contact.html">contact</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav>
+          <ul>
+            <li>
+              <i class="fa-solid fa-bars"></i>
+              <ul class="submenu">
+                <li><i class="fa-solid fa-arrow-right"></i></li>
+                <li><a href="../index.html#start-of-allprojects">projects</a></li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../contact.html">contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </header>
 
-      <div class="content project-page" id="travel-planner">  
-        <section class="title">
-          <img src="../images/mobile/travel-planner/phone-travel-planner.png" alt="travel design on phone" />
-          <div>
-            <h2>Travel Planner</h2>
-            <h3>Figma</h4>
-            <div class="hr-line"></div>
-            <div>
-              <p>UX &#47; UI</p>
-              <p>2021</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-content">
-          <h4>Background</h4>
-          <p>This is an equity project I worked on for school. I designed a travel planning app to help travelers with low resources and make traveling affordable. It focuses on helping users plan out several important details, such as knowing what they should pack, making travel arrangements, and planning their daily schedule. Additionally, it addresses problems that they may encounter by providing links to helpful resources and a specified backup plan. My goal was to help travelers create an organized plan for their trip and alleviate the amount of research and stress that they may have.
-          </p>
-        </section>
-
-        <section class="project-content">
-          <h4>Research</h4>
-          <section>
-            <h5 id="h5-after-h4">Survey</h5>
-            <p>In order to learn more about what travelers are concerned about when planning their trip, I conducted a short survey. First, I asked whether they had a budget depending on the destinations they chose. All of the respondents said yes: one said they do a lot of research in order to determine how much they will be spending and another said, although she did not have a set budget for her long trip, she tried to save up as much money as she could to pay bills and buy food.</p>
-            <p>I also wanted to know what kinds of difficulties people have encountered during their travels and what resources would&#39;ve been helpful to them. Two people mentioned that language barriers can really delay travel plans and others mentioned problems like currency exchange, health care access, housing, transportation, phone plans/sim card, and not knowing how to get around.
-            </p>
-            <p>Lastly, I wanted to know whether it is common for people to use a travel planner app, so I asked how people organize their trips. Some people said they don&#39;t really have a detailed itinerary, but they have a rough plan they follow and others said they use google docs and spreadsheets to outline everything. Surprisingly, none of the respondents mentioned anything about using an app. So, either the idea of using a travel planner app never struck them or they think that it might be too complex to learn how to use. This helped me consider how I would promote my app and make it intuitive and helpful.
-            </p>
-          </section>
-
-          <section>
-            <h5>Existing Travel Apps</h5>
-            <p>Speaking of other travel planning apps, I discovered many kinds of apps that already help travelers plan their trip. They are a very helpful reference in building my app, but there are some slight differences that I would like to promote in mine, such that mine is focused more on helping people with low resources and not just the general audience. I want my app to help people be prepared for things they could come across, such as things to pack, having a plan B, reminding them their scheduled events, and allowing them to write out a detailed schedule to help alleviate travel stress. These are all features that I did not see in the apps that I explored. They allow users to create trips and add places to their itinerary, but they don&#39;t help users with finding a good hotel or other necessities that could help them prepare. They are not as detailed and some of them have very complex interfaces. 
-            </p>
-          </section>
-        </section>
-        
-        <section class="project-content">
-          <h4>User Flow and Wire Flow</h4>
-          <img src="../images/mobile/travel-planner/user-flow.jpg" alt="user flows" class="image">
-          <img src="../images/mobile/travel-planner/wire-flow.jpg" alt="wire flows" class="image">
-          <p>I began brainstorming by designing some user flows and wire flows. I started off with a blue theme for the user flow and as I made changes, I colored the newly added parts in green and the parts that I removed in red. This way, I could quickly identify the new changes I made. I thought that my first task would be creating an account / logging in, but I realized how insignificant that was, so I removed it. Working with the user flow really allowed me to layout all of the details I imagined my app to have. The &#39;create a trip&#39; task and the &#39;plan travel arrangements&#39; task were unnecessarily long, but it made me deeply consider whether it was necessary to implement all of them as I was designing my prototype. 
-          </p>
-          <p>My wire flows were a very rough sketch of how I imagined my app to look. As I was quickly designing each screen, I realized how hard it was to know where to place every little detail, which urged me to look for inspiration and references to help me when designing the actual interfaces.
-          </p>
-        </section>
-
-        <section class="project-content">
-          <h4>Visual Design</h4>
-          <p>When thinking about the visual design of my app, I aimed for an intuitive and clean design. I didn&#39;t want it to feel so text heavy to users and I wanted to use more visuals and icons instead because I didn&#39;t want my app to feel overwhelming and be stressful to use. 
-          </p>
-          <p>First, I went online and saved several inspiration pictures of design interfaces that I liked. Then, I started off by copying a layout and slowly started to change the content. For the first task, creating a trip, I referenced existing travel apps, so I could include steps that are necessary such as selecting a location and selecting dates. 
-          </p>
-          <img src="../images/mobile/travel-planner/visual-design.jpg" alt="checklist" class="image" id="checklist-img">
-          <p>For the next three tasks, the inspirations I saved were not always helpful, but because I wrote down a list of features and details that I had in mind, it allowed me to foresee how much information I would need to include on a screen. I started adding icons, titles, and descriptions based on this list and doing so really enabled me to visualize how the layout would look.</p>
-          <p>Many testers mentioned that my app reminded them of Google&#39;s design system, so they found the interfaces very comforting and familiar.. Although that was not my intent, I went with it and started to use Google as my reference because hearing that my app was comforting means that users would possibly enjoy using this app.
-          </p>
-        </section>
-
-        <section class="project-content">
-          <h4>The Prototype</h4>
-          <p>Because we only had a few weeks to work on this project, I focused on prototyping 4 main tasks that would best showcase the purpose of my app.</p>
-          <img src="../images/mobile/travel-planner/prototype.jpg" alt="welcome screen" class="image" id="welcomescrn-img">
-          <p>One of the main things I noticed from my research is that not a lot of people use a travel planning app. On top of designing intuitive and clean interfaces, I considered how I would get returning users. So, I designed the welcome page with polaroids to give users the option to change the photos and captions. My intention was to make the app feel personalized to the user and have them form a connection with the app.  
-          </p>
-
-          <section>
-            <h5>Task 1&#58; Create a Trip</h5>
-            <img src="../images/mobile/travel-planner/prototype-2.jpg" alt="create a trip screen designs" class="image">
-            <p>The home page of this app starts on a page of created trips by the user. They are allowed to create new trips or plan what they will need for a specific trip. The user can pin one of their trips and access it through the pin icon in the bottom navigation bar, which is meant for easy access to the trip they are going on. 
-            </p>
-            <p>I didn&#39;t get very far along with designing the first task before my first usability testing, when a tester pointed out that it looked like any other travel app and he didn&#39;t see how I was addressing an equity problem. This made me realize that I was not focusing on designing the right tasks, which urged me to really consider what designs would actually present the main point. I ended up shortening the &#39;create a trip&#39; task by only requesting users to select a location, select their dates, and name their trip. I took out the long process of adding or editing attendees and selecting their budget because I realized that if the process of creating a trip got too long, users would not want to finish the task.</p>
-          </section>
-
-          <section>
-            <h5>Task 2&#58; Plan What to Pack</h5>
-            <img src="../images/mobile/travel-planner/prototype-3.jpg" alt="what to pack screen designs" class="image">
-            <p>The user can plan what they would like to pack by clicking on &#39;My Suitcase&#39;. At the top, there is a navigation bar for them to either view their own list or see the suggested items. They are allowed to create or edit categories and items to their own list and use it as a checklist when actually packing. They can also view the items that the app recommends, which is based on the location of the trip and places that the user has planned to tour. 
-            </p>
-          </section>
-
-          <section>
-            <h5>Task 3&#58; Access Health Care</h5>
-            <img src="../images/mobile/travel-planner/prototype-4.jpg" alt="access health care screen designs" class="image">
-            <p>The user can also access &#39;Helpful Resources,&#39; which is specified to the travel destination selected. Based on the research I conducted, I decided to include resources such as currency converter, translation, health care, getting a ride, and getting help for lost items. I added a simple description to which each resource does, for example translation will provide the user with simple phrases they could learn.</p>
-            <p>I focused my task on presenting how users could access health care. First, I added some helpful emergency contacts and other helplines for users. Then, I added some hospitals that users could go to and they are filtered to show users which ones are in network with the travel insurance they purchased.</p>
-          </section>
-
-          <section>
-            <h5>Task 4&#58; Edit Backup Plan</h5>
-            <img src="../images/mobile/travel-planner/prototype-5.jpg" alt="edit backup plan screen designs" class="image">
-            <p>I focused my fourth task on allowing users to view and edit their backup plan. The app generates a duplicate schedule from the user&#39;s initial plans and modifies certain activities for specific reasons like change in weather or if the activity is outside of the user&#39;s budget. The changes are made in green and users are allowed to click on the activity and learn more about why it was modified. They also have the ability to change that activity if they don&#39;t like it.</p>
-          </section>
-
-          <section>
-            <h5>Additional Features</h5>
-            <p>Other things that I didn&#39;t prototype, but can be done in the app are planning travel arrangements, which is where the app will help the user select the most suitable transportation and lodging or allow users to input their own plans. Users can specify the number of attendees going on the trip and also input specific details about each person to help with making travel plans. They can share specific sections in their itinerary with other attendees, such as the travel arrangements and the daily schedule/activities. They can also input their budget or have the app generate a range for them. The app will then use this amount to help the user stay within the range when planning. They can also plan out their daily schedule, which is where they can create their own activities or select places to go. As they are creating their initial schedule, the app will automatically generate their backup plan and add specific things to the &#39;Suggested Items&#39; list for what to pack based on the activities selected.
-            </p>
-          </section>
-        </section>
-
-        <section class="project-content">
-          <h4>Usability Testing and Revisions</h4>
-          <p>To test my prototype, I wrote a scenario for each task and had a variety of users try and complete each one. After doing multiple usability testing, I discovered how some of my designs were not as intuitive or I was focusing on or highlighting the wrong information. I also realized how small some of my hotspots were. Some of my testers were people that were familiar with how the prototype and hotspots worked, while others were not. The people that were familiar would sometimes use the hotspots to help them identify where to click, while the other set of people thought that everything was clickable.</p>
-          <p>The first task I tested was “create a trip.” There were several times when my users would get distracted by something that popped out to them more, so I fixed this by dimming down some of the colors on buttons, shrinking less important information and enlarging more important ones. Many users also had a hard time clicking on the distance filter because the hotspot was too small, so I made sure to correct all of my hotspots and make it easier for them to click on.
-          </p>
-          <img src="../images/mobile/travel-planner/testing.jpg" alt="revisions" class="image">
-          <img src="../images/mobile/travel-planner/testing-2.jpg" alt="revisions" class="image"> 
-          <p>The second task was to plan what to pack. Many users found interacting with &#39;My List&#39; very overwhelming and confusing. Having some drop down menus open and some closed made it hard for users to understand what was going on. Having them explore the list by adding/deleting an item and opening/closing categories made the user experience confusing and steered the focus on navigating to &#39;Suggested Items&#39; away. So I completely removed exploring &#39;My List&#39; and closed all of the drop down menus. I only requested users to open up the drop down menu for &#39;Electronics,&#39; so that they could see the difference after they add an item from &#39;Suggested Items.&#39;
-          </p>
-          <img src="../images/mobile/travel-planner/testing-3.jpg" alt="revisions" class="image">
-          <img src="../images/mobile/travel-planner/testing-4.jpg" alt="revisions" class="image">
-          <p>The third task was to access health care. Many users didn&#39;t know that they were supposed to filter the hospitals by type because the type of hospital written on each container did not stand out to them. They were also getting distracted or misled by specific words that I mentioned in the scenario. I rephrased my scenario and made sure to mention the word &#39;type,&#39; so that users hopefully know to click on the filter. I also bolded the type of hospital, so that it stood out more.
-          </p>
-          <p>The fourth task was to edit your backup plan. The main thing that people found confusing was the three dots icon that showed up when users were trying to edit the modified activity. Because the task asked them to change the activity, they assumed that the three dots were what they were supposed to click, when it was actually supposed to be the “change activity” button located at the bottom. So, I removed the check box and three dots on the modified activity page, so that users wouldn&#39;t get confused. 
-          </p>
-        </section>
-
-        <section class="project-content">
-          <h4>Conclusion</h4>
-          <p>This travel app prototype was designed in Figma with a total of 49 screens. I am quite satisfied with the final product, although there are still aspects I would have liked to work on further. Overall, I learned how to use many features in Figma and I am most proud of the designs I created and how gender neutral it is. I found it rewarding that I was able to include many features I had in mind without making the interface look overwhelming and text-heavy. 
-          </p>
-
-          <section>
-            <h5>Challenges</h5>
-            <img src="../images/mobile/travel-planner/challenges.jpg" alt="Figma workspace" class="image">
-            <p>This app was difficult for me to create and required a lot of research because I am not someone that travels often enough, but I learned a lot about how traveling works and what are the essentials. In terms of design, I found it quite challenging and time consuming to design a single screen as well as organizing my layers. Being able to copy and paste a screen and modify it was really helpful, but I had to remember to organize the layers first or else I would end up repetitively organizing each screen.</p>
-          </section>
-
-          <section>
-            <h5>What Can Be Improved</h5>
-            <ul>
-                <li>Additional usability tests needed after revisions</li>
-                <li>Design a logo and choose a suitable app name</li>
-            </ul>
-          </section>
-        </section>
-
-        <button><a href="https://www.figma.com/proto/8IqLEXj9vwoDEw3Ed206YQ/Project-2?node-id=140%3A414&viewport=241%2C48%2C0.41&scaling=scale-down&starting-point-node-id=2%3A2&show-proto-sidebar=1" target="_blank">View prototype</a></button>
-      </div>
-          
-      <footer>
+      <section class="project-title" id="travel-planner">
+        <img src="../images/mobile/travel-planner/phone-travel-planner.png" alt="travel design on phone" />
+  
+        <h2>Travel Planner</h2>
+        <h3>Figma</h4>
+        <div class="hr-line"></div>
         <div>
-          <button>
-            <a href="https://github.com/jyw270/" target="_blank"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </button>
-          <button>
-            <a
-              href="https://www.instagram.com/designer_jennyw/?hl=en"
-              target="_blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a></button
-          ><button>
-            <a
-              href="https://www.linkedin.com/in/jenny-wong-7614931b8/"
-              target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-          </button>
-          <button>
-            <a
-              href="mailto:&#106;&#101;&#110;&#110;&#121;&#119;&#111;&#110;&#103;&#050;&#055;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
-              ><i class="fa-solid fa-envelope"></i
-            ></a>
-          </button>
+          <p>UX &#47; UI</p>
+          <p>2021</p>
+        </div>
+      </section>
+
+      <section class="project-content">
+        <h4>Background</h4>
+        <p>This is an equity project I worked on for school. I designed a travel planning app to help travelers with low resources and make traveling affordable. It focuses on helping users plan out several important details, such as knowing what they should pack, making travel arrangements, and planning their daily schedule. Additionally, it addresses problems that they may encounter by providing links to helpful resources and a specified backup plan. My goal was to help travelers create an organized plan for their trip and alleviate the amount of research and stress that they may have.
+        </p>
+      </section>
+
+      <section class="project-content">
+        <h4>Research</h4>
+        <div>
+          <h5>Survey</h5>
+          <p>In order to learn more about what travelers are concerned about when planning their trip, I conducted a short survey. First, I asked whether they had a budget depending on the destinations they chose. All of the respondents said yes: one said they do a lot of research in order to determine how much they will be spending and another said, although she did not have a set budget for her long trip, she tried to save up as much money as she could to pay bills and buy food.</p>
+          <p>I also wanted to know what kinds of difficulties people have encountered during their travels and what resources would&#39;ve been helpful to them. Two people mentioned that language barriers can really delay travel plans and others mentioned problems like currency exchange, health care access, housing, transportation, phone plans/sim card, and not knowing how to get around.
+          </p>
+          <p>Lastly, I wanted to know whether it is common for people to use a travel planner app, so I asked how people organize their trips. Some people said they don&#39;t really have a detailed itinerary, but they have a rough plan they follow and others said they use google docs and spreadsheets to outline everything. Surprisingly, none of the respondents mentioned anything about using an app. So, either the idea of using a travel planner app never struck them or they think that it might be too complex to learn how to use. This helped me consider how I would promote my app and make it intuitive and helpful.
+          </p>
         </div>
 
-        <ul>
-          <li><a href="../index.html#allprojects">projects</a></li>
-          <li><a href="../about.html">about</a></li>
-          <li><a href="../contact.html">contact</a></li>
-        </ul>
+        <div>
+          <h5>Existing Travel Apps</h5>
+          <p>Speaking of other travel planning apps, I discovered many kinds of apps that already help travelers plan their trip. They are a very helpful reference in building my app, but there are some slight differences that I would like to promote in mine, such that mine is focused more on helping people with low resources and not just the general audience. I want my app to help people be prepared for things they could come across, such as things to pack, having a plan B, reminding them their scheduled events, and allowing them to write out a detailed schedule to help alleviate travel stress. These are all features that I did not see in the apps that I explored. They allow users to create trips and add places to their itinerary, but they don&#39;t help users with finding a good hotel or other necessities that could help them prepare. They are not as detailed and some of them have very complex interfaces. 
+          </p>
+        </div>
+      </section>
+      
+      <section class="project-content">
+        <h4>User Flow and Wire Flow</h4>
+        <img src="../images/mobile/travel-planner/user-flow.jpg" alt="user flows">
+        <img src="../images/mobile/travel-planner/wire-flow.jpg" alt="wire flows">
+        <p>I began brainstorming by designing some user flows and wire flows. I started off with a blue theme for the user flow and as I made changes, I colored the newly added parts in green and the parts that I removed in red. This way, I could quickly identify the new changes I made. I thought that my first task would be creating an account / logging in, but I realized how insignificant that was, so I removed it. Working with the user flow really allowed me to layout all of the details I imagined my app to have. The &#39;create a trip&#39; task and the &#39;plan travel arrangements&#39; task were unnecessarily long, but it made me deeply consider whether it was necessary to implement all of them as I was designing my prototype. 
+        </p>
+        <p>My wire flows were a very rough sketch of how I imagined my app to look. As I was quickly designing each screen, I realized how hard it was to know where to place every little detail, which urged me to look for inspiration and references to help me when designing the actual interfaces.
+        </p>
+      </section>
+
+      <section class="project-content">
+        <h4>Visual Design</h4>
+        <p>When thinking about the visual design of my app, I aimed for an intuitive and clean design. I didn&#39;t want it to feel so text heavy to users and I wanted to use more visuals and icons instead because I didn&#39;t want my app to feel overwhelming and be stressful to use. 
+        </p>
+        <p>First, I went online and saved several inspiration pictures of design interfaces that I liked. Then, I started off by copying a layout and slowly started to change the content. For the first task, creating a trip, I referenced existing travel apps, so I could include steps that are necessary such as selecting a location and selecting dates. 
+        </p>
+        <img src="../images/mobile/travel-planner/visual-design.jpg" alt="checklist" id="checklist-img">
+        <p>For the next three tasks, the inspirations I saved were not always helpful, but because I wrote down a list of features and details that I had in mind, it allowed me to foresee how much information I would need to include on a screen. I started adding icons, titles, and descriptions based on this list and doing so really enabled me to visualize how the layout would look.</p>
+        <p>Many testers mentioned that my app reminded them of Google&#39;s design system, so they found the interfaces very comforting and familiar.. Although that was not my intent, I went with it and started to use Google as my reference because hearing that my app was comforting means that users would possibly enjoy using this app.
+        </p>
+      </section>
+
+      <section class="project-content">
+        <h4>The Prototype</h4>
+        <p>Because we only had a few weeks to work on this project, I focused on prototyping 4 main tasks that would best showcase the purpose of my app.</p>
+        <img src="../images/mobile/travel-planner/prototype.jpg" alt="welcome screen" id="welcomescrn-img">
+        <p>One of the main things I noticed from my research is that not a lot of people use a travel planning app. On top of designing intuitive and clean interfaces, I considered how I would get returning users. So, I designed the welcome page with polaroids to give users the option to change the photos and captions. My intention was to make the app feel personalized to the user and have them form a connection with the app.  
+        </p>
+
+        <div>
+          <h5>Task 1&#58; Create a Trip</h5>
+          <img src="../images/mobile/travel-planner/prototype-2.jpg" alt="create a trip screen designs">
+          <p>The home page of this app starts on a page of created trips by the user. They are allowed to create new trips or plan what they will need for a specific trip. The user can pin one of their trips and access it through the pin icon in the bottom navigation bar, which is meant for easy access to the trip they are going on. 
+          </p>
+          <p>I didn&#39;t get very far along with designing the first task before my first usability testing, when a tester pointed out that it looked like any other travel app and he didn&#39;t see how I was addressing an equity problem. This made me realize that I was not focusing on designing the right tasks, which urged me to really consider what designs would actually present the main point. I ended up shortening the &#39;create a trip&#39; task by only requesting users to select a location, select their dates, and name their trip. I took out the long process of adding or editing attendees and selecting their budget because I realized that if the process of creating a trip got too long, users would not want to finish the task.</p>
+        </div>
+
+        <div>
+          <h5>Task 2&#58; Plan What to Pack</h5>
+          <img src="../images/mobile/travel-planner/prototype-3.jpg" alt="what to pack screen designs">
+          <p>The user can plan what they would like to pack by clicking on &#39;My Suitcase&#39;. At the top, there is a navigation bar for them to either view their own list or see the suggested items. They are allowed to create or edit categories and items to their own list and use it as a checklist when actually packing. They can also view the items that the app recommends, which is based on the location of the trip and places that the user has planned to tour. 
+          </p>
+        </div>
+
+        <div>
+          <h5>Task 3&#58; Access Health Care</h5>
+          <img src="../images/mobile/travel-planner/prototype-4.jpg" alt="access health care screen designs">
+          <p>The user can also access &#39;Helpful Resources,&#39; which is specified to the travel destination selected. Based on the research I conducted, I decided to include resources such as currency converter, translation, health care, getting a ride, and getting help for lost items. I added a simple description to which each resource does, for example translation will provide the user with simple phrases they could learn.</p>
+          <p>I focused my task on presenting how users could access health care. First, I added some helpful emergency contacts and other helplines for users. Then, I added some hospitals that users could go to and they are filtered to show users which ones are in network with the travel insurance they purchased.</p>
+        </div>
+
+        <div>
+          <h5>Task 4&#58; Edit Backup Plan</h5>
+          <img src="../images/mobile/travel-planner/prototype-5.jpg" alt="edit backup plan screen designs">
+          <p>I focused my fourth task on allowing users to view and edit their backup plan. The app generates a duplicate schedule from the user&#39;s initial plans and modifies certain activities for specific reasons like change in weather or if the activity is outside of the user&#39;s budget. The changes are made in green and users are allowed to click on the activity and learn more about why it was modified. They also have the ability to change that activity if they don&#39;t like it.</p>
+        </div>
+
+        <div>
+          <h5>Additional Features</h5>
+          <p>Other things that I didn&#39;t prototype, but can be done in the app are planning travel arrangements, which is where the app will help the user select the most suitable transportation and lodging or allow users to input their own plans. Users can specify the number of attendees going on the trip and also input specific details about each person to help with making travel plans. They can share specific sections in their itinerary with other attendees, such as the travel arrangements and the daily schedule/activities. They can also input their budget or have the app generate a range for them. The app will then use this amount to help the user stay within the range when planning. They can also plan out their daily schedule, which is where they can create their own activities or select places to go. As they are creating their initial schedule, the app will automatically generate their backup plan and add specific things to the &#39;Suggested Items&#39; list for what to pack based on the activities selected.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-content">
+        <h4>Usability Testing and Revisions</h4>
+        <p>To test my prototype, I wrote a scenario for each task and had a variety of users try and complete each one. After doing multiple usability testing, I discovered how some of my designs were not as intuitive or I was focusing on or highlighting the wrong information. I also realized how small some of my hotspots were. Some of my testers were people that were familiar with how the prototype and hotspots worked, while others were not. The people that were familiar would sometimes use the hotspots to help them identify where to click, while the other set of people thought that everything was clickable.</p>
+        <p>The first task I tested was “create a trip.” There were several times when my users would get distracted by something that popped out to them more, so I fixed this by dimming down some of the colors on buttons, shrinking less important information and enlarging more important ones. Many users also had a hard time clicking on the distance filter because the hotspot was too small, so I made sure to correct all of my hotspots and make it easier for them to click on.
+        </p>
+        <img src="../images/mobile/travel-planner/testing.jpg" alt="revisions">
+        <img src="../images/mobile/travel-planner/testing-2.jpg" alt="revisions"> 
+        <p>The second task was to plan what to pack. Many users found interacting with &#39;My List&#39; very overwhelming and confusing. Having some drop down menus open and some closed made it hard for users to understand what was going on. Having them explore the list by adding/deleting an item and opening/closing categories made the user experience confusing and steered the focus on navigating to &#39;Suggested Items&#39; away. So I completely removed exploring &#39;My List&#39; and closed all of the drop down menus. I only requested users to open up the drop down menu for &#39;Electronics,&#39; so that they could see the difference after they add an item from &#39;Suggested Items.&#39;
+        </p>
+        <img src="../images/mobile/travel-planner/testing-3.jpg" alt="revisions">
+        <img src="../images/mobile/travel-planner/testing-4.jpg" alt="revisions">
+        <p>The third task was to access health care. Many users didn&#39;t know that they were supposed to filter the hospitals by type because the type of hospital written on each container did not stand out to them. They were also getting distracted or misled by specific words that I mentioned in the scenario. I rephrased my scenario and made sure to mention the word &#39;type,&#39; so that users hopefully know to click on the filter. I also bolded the type of hospital, so that it stood out more.
+        </p>
+        <p>The fourth task was to edit your backup plan. The main thing that people found confusing was the three dots icon that showed up when users were trying to edit the modified activity. Because the task asked them to change the activity, they assumed that the three dots were what they were supposed to click, when it was actually supposed to be the “change activity” button located at the bottom. So, I removed the check box and three dots on the modified activity page, so that users wouldn&#39;t get confused. 
+        </p>
+      </section>
+
+      <section class="project-content">
+        <h4>Conclusion</h4>
+        <p>This travel app prototype was designed in Figma with a total of 49 screens. I am quite satisfied with the final product, although there are still aspects I would have liked to work on further. Overall, I learned how to use many features in Figma and I am most proud of the designs I created and how gender neutral it is. I found it rewarding that I was able to include many features I had in mind without making the interface look overwhelming and text-heavy. 
+        </p>
+
+        <div>
+          <h5>Challenges</h5>
+          <img src="../images/mobile/travel-planner/challenges.jpg" alt="Figma workspace">
+          <p>This app was difficult for me to create and required a lot of research because I am not someone that travels often enough, but I learned a lot about how traveling works and what are the essentials. In terms of design, I found it quite challenging and time consuming to design a single screen as well as organizing my layers. Being able to copy and paste a screen and modify it was really helpful, but I had to remember to organize the layers first or else I would end up repetitively organizing each screen.</p>
+        </div>
+
+        <div>
+          <h5>What Can Be Improved</h5>
+          <ul>
+              <li>Additional usability tests needed after revisions</li>
+              <li>Design a logo and choose a suitable app name</li>
+          </ul>
+        </div>
+      </section>
+
+      <button id="view-site-btn"><a href="https://www.figma.com/proto/8IqLEXj9vwoDEw3Ed206YQ/Project-2?node-id=140%3A414&viewport=241%2C48%2C0.41&scaling=scale-down&starting-point-node-id=2%3A2&show-proto-sidebar=1" target="_blank">View prototype</a></button>
+        
+      <footer>
+        <button>
+          <a href="https://github.com/jyw270/" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </button>
+        <button>
+          <a
+            href="https://www.instagram.com/designer_jennyw/?hl=en"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a></button
+        ><button>
+          <a
+            href="https://www.linkedin.com/in/jenny-wong-7614931b8/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </button>
+        <button>
+          <a
+            href="mailto:&#106;&#101;&#110;&#110;&#121;&#119;&#111;&#110;&#103;&#050;&#055;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </button>
 
         <p>Jenny Wong &#124; Portfolio 2022</p>
       </footer>
