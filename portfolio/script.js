@@ -97,34 +97,45 @@
 
   // ---------------------------- HOME PAGE ----------------------------
 
+  const mobileView = window.matchMedia("(max-width: 599px)");
   const selectedBtn = document.querySelector("#selected-btn");
   const submenuItems = document.querySelectorAll("#allprojects .submenu li");
   const submenuButtons = document.querySelectorAll(
     "#allprojects .submenu button"
   );
-  let temp;
+  const allButtons = document.querySelectorAll("#allprojects nav button");
+  let currentButton;
+  let buttonNumber = 0;
 
   // Open and closes the all projects drop down menu
   function dropDownMenu() {
     selectedBtn.style.pointerEvents = "none";
+    allprojects[0].style.zIndex = -3;
+
     if (submenuItems[0].style.top != "41.25px") {
-      submenuItems[0].style.top = "41.25px";
-      submenuItems[1].style.top = "80.9px";
       setTimeout(function () {
-        submenuItems[0].style.zIndex = 0;
-        submenuItems[1].style.zIndex = 0;
-      }, 1000);
+        submenuItems[0].style.top = "41.25px";
+        submenuItems[1].style.top = "80.9px";
+
+        setTimeout(function () {
+          submenuItems[0].style.zIndex = 0;
+          submenuItems[1].style.zIndex = 0;
+        }, 1000);
+      }, 250);
     } else {
       submenuItems[0].style.zIndex = -1;
       submenuItems[1].style.zIndex = -2;
       setTimeout(function () {
         submenuItems[0].style.top = "0";
         submenuItems[1].style.top = "0";
+        setTimeout(function () {
+          allprojects[0].style.zIndex = 0;
+        }, 200);
       }, 300);
     }
     setTimeout(function () {
       selectedBtn.style.pointerEvents = "auto";
-    }, 100);
+    }, 80);
   }
 
   // Displays projects in the category that user selected
@@ -149,7 +160,11 @@
           if (devProjectsBtn && eachProject.className.includes("ux-ui-only")) {
             eachProject.style.display = "none";
           } else {
-            eachProject.style.display = "block";
+            if (window.matchMedia("(max-width: 849px)").matches) {
+              eachProject.style.display = "block";
+            } else {
+              eachProject.style.display = "flex";
+            }
           }
           eachProject.className = eachProject.className.replace(
             "hidden",
@@ -167,38 +182,141 @@
     });
   }
 
-  // When the selector button in the all projects section is clicked, open or close drop down
-  if (selectedBtn != null) {
-    selectedBtn.addEventListener("click", function () {
-      dropDownMenu();
-    });
+  function allProjectsMobileNav(mobileView) {
+    if (mobileView.matches) {
+      // submenuItems[0].style.zIndex = -1;
+      // submenuItems[1].style.zIndex = -2;
+
+      // When the selector button in the all projects section is clicked, open or close drop down
+      if (selectedBtn != null) {
+        selectedBtn.addEventListener("click", function () {
+          dropDownMenu();
+        });
+      }
+      // For each submenu button that is clicked, switches the text with the selector button text and closes the drop down menu
+      for (let i = 1; i < allButtons.length; i++) {
+        allButtons[i].addEventListener("click", function () {
+          currentButton = selectedBtn.textContent;
+          // buttonNumber = i;
+          // allButtons[i].style.backgroundColor = "#fff";
+          // allButtons[i].style.color = "#000";
+
+          // currentButton.style.backgroundColor = "#000";
+          // currentButton.style.color = "#fff";
+
+          if (allButtons[i].textContent == "all projects") {
+            selectedBtn.textContent = "all projects";
+            displayProjects(false);
+            // If the user selected development
+          } else if (allButtons[i].textContent == "development") {
+            selectedBtn.textContent = "development";
+            displayProjects(true);
+            // If the user selected UX / UI
+          } else {
+            selectedBtn.textContent = "UX / UI";
+            displayProjects(false);
+          }
+          allButtons[i].textContent = currentButton;
+
+          setTimeout(function () {
+            dropDownMenu();
+          }, 100);
+        });
+      }
+      // submenuButtons.forEach(function (eachButton) {
+      //   eachButton.addEventListener("click", function () {
+      //     currentButton = selectedBtn.textContent;
+      //     // If the user selected all projects
+      //     if (eachButton.textContent == "all projects") {
+      //       selectedBtn.textContent = "all projects";
+      //       displayProjects(false);
+      //       // If the user selected development
+      //     } else if (eachButton.textContent == "development") {
+      //       selectedBtn.textContent = "development";
+      //       displayProjects(true);
+      //       // If the user selected UX / UI
+      //     } else {
+      //       selectedBtn.textContent = "UX / UI";
+      //       displayProjects(false);
+      //     }
+      //     eachButton.textContent = currentButton;
+      //     setTimeout(function () {
+      //       dropDownMenu();
+      //     }, 100);
+      //   });
+      // });
+    } else {
+      currentButton = allButtons[buttonNumber];
+
+      currentButton.style.backgroundColor = "#000";
+      currentButton.style.color = "#fff";
+      submenuItems[0].style.zIndex = 0;
+      submenuItems[1].style.zIndex = 0;
+      selectedBtn.textContent = "all projects";
+      allButtons[1].textContent = "development";
+      allButtons[2].textContent = "UX / UI";
+      for (let i = 0; i < allButtons.length; i++) {
+        allButtons[i].addEventListener("click", function () {
+          allButtons[i].style.backgroundColor = "#000";
+          allButtons[i].style.color = "#fff";
+          currentButton.style.backgroundColor = "#fff";
+          currentButton.style.color = "#000";
+          currentButton = allButtons[i];
+          // selectedBtn.textContent = selectedBtn.textContent;
+          // allButtons[i].textContent = allButtons[i].textContent;
+          if (allButtons[i].textContent == "all projects") {
+            displayProjects(false);
+            // If the user selected development
+          } else if (allButtons[i].textContent == "development") {
+            displayProjects(true);
+            // If the user selected UX / UI
+          } else {
+            displayProjects(false);
+          }
+        });
+      }
+      // allButtons.forEach(function (eachButton) {
+      //   eachButton.addEventListener("click", function () {
+      //     eachButton.style.backgroundColor = "#000";
+      //     eachButton.style.color = "#fff";
+      //     currentButton.style.backgroundColor = "#fff";
+      //     currentButton.style.color = "#000";
+      //     currentButton = eachButton;
+      //     if (eachButton.textContent == "all projects") {
+      //       displayProjects(false);
+      //       // If the user selected development
+      //     } else if (eachButton.textContent == "development") {
+      //       displayProjects(true);
+      //       // If the user selected UX / UI
+      //     } else {
+      //       displayProjects(false);
+      //     }
+      //   });
+      // });
+    }
   }
 
-  // For each submenu button that is clicked, switches the text with the selector button text and closes the drop down menu
-  submenuButtons.forEach(function (eachButton) {
-    eachButton.addEventListener("click", function () {
-      temp = selectedBtn.textContent;
-      // If the user selected all projects
-      if (eachButton.textContent == "all projects") {
-        selectedBtn.textContent = "all projects";
-        displayProjects(false);
+  // allProjectsMobileNav(mobileView);
+  mobileView.addEventListener("change", function () {
+    // allProjectsMobileNav(mobileView);
 
-        // If the user selected development
-      } else if (eachButton.textContent == "development") {
-        selectedBtn.textContent = "development";
-        displayProjects(true);
-
-        // If the user selected UX / UI
+    // displays travel planner project properly depending on the size of the viewport
+    if (allprojects[1] != null) {
+      if (window.matchMedia("(max-width: 849px)").matches) {
+        allprojects[1].style.display = "block";
       } else {
-        selectedBtn.textContent = "UX / UI";
-        displayProjects(false);
+        allprojects[1].style.display = "flex";
       }
+    }
 
-      eachButton.textContent = temp;
-      setTimeout(function () {
-        dropDownMenu();
-      }, 100);
-    });
+    // checks whether hobbies category is being viewed, so it can display it for the right viewport size
+    if (categories[2] != null) {
+      if (window.matchMedia("(max-width: 599px)").matches) {
+        categories[2].style.display = "block";
+      } else {
+        categories[2].style.display = "flex";
+      }
+    }
   });
 
   // ---------------------------- ABOUT PAGE ----------------------------
@@ -214,8 +332,15 @@
       categories[prevActiveBtn].style.display = "none";
       categorySelectionBtns[prevActiveBtn].style.background = "none";
 
-      // displays selected button content and highlights button in blue
-      categories[i].style.display = "block";
+      // displays selected button content and highlights button in blue; checks whether hobbies category is being viewed, so it can display it for the right viewport size
+      if (
+        window.matchMedia("(max-width: 599px)").matches ||
+        categories[i] != categories[2]
+      ) {
+        categories[i].style.display = "block";
+      } else {
+        categories[i].style.display = "flex";
+      }
       categorySelectionBtns[i].style.backgroundColor = "#d9fbf7";
       prevActiveBtn = i;
     });

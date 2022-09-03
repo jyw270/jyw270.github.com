@@ -62,11 +62,32 @@ button {
   padding: 10px 15px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+.intro button:hover,
+#allprojects nav button:hover,
+#view-site-btn:hover {
+  background-color: #000;
+}
+
+.intro button:hover a,
+#allprojects nav button:hover,
+#view-site-btn:hover a {
+  color: #fff;
+}
+
 #container {
   font-family: "Source Sans Pro", sans-serif;
   min-width: 350px;
   position: relative;
   margin: auto;
+}
+
+#container > section {
+  margin: auto;
+  max-width: 500px;
 }
 
 /********** LOGO HEADER NAVIGATION **********/
@@ -78,6 +99,18 @@ header {
   background-color: #eef7f3;
   padding: 20px;
   z-index: 1;
+}
+
+header > a {
+  display: flex;
+}
+
+header h1 {
+  font-family: "Laila", sans-serif;
+  font-size: 25px;
+  font-weight: 450;
+  text-transform: uppercase;
+  padding-left: 10px;
 }
 
 header nav {
@@ -110,7 +143,7 @@ header .submenu .fa-arrow-right {
 
 header .submenu a {
   font-size: 18px;
-  margin-left: 30px;
+  margin-left: 15%;
   line-height: 40px;
 }
 
@@ -146,27 +179,19 @@ footer p {
   padding: 102.25px 20px 0 20px;
 }
 
-h1 {
-  padding-left: 10px;
-  font-size: 25px;
-}
-
-h1,
 h2 {
   font-family: "Laila", sans-serif;
   font-weight: 450;
+  font-size: 32px;
   text-transform: uppercase;
+  margin: 10px 0;
 }
 
 .intro img {
   display: block;
   margin: auto;
   width: 50%;
-}
-
-h2 {
-  font-size: 32px;
-  margin: 10px 0;
+  max-width: 220px;
 }
 
 .intro button {
@@ -186,7 +211,7 @@ h2 {
 #allprojects nav button {
   display: block;
   margin: auto;
-  width: 170px;
+  width: 175px;
   background-color: white;
 }
 
@@ -380,6 +405,7 @@ h2 {
 
 #contact img {
   width: 90%;
+  max-width: none;
   border-radius: 20px;
   border: 3px solid #fff;
 }
@@ -401,6 +427,7 @@ h2 {
 .project-title img {
   width: 100%;
   margin-top: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .project-title h2 {
@@ -420,7 +447,7 @@ h2 {
   margin: 10px 0;
 }
 
-.project-title div {
+.project-title div div {
   display: flex;
 }
 
@@ -429,11 +456,12 @@ h2 {
   border: 1px solid black;
   padding: 2px 8px;
   margin-right: 10px;
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .project-content {
-  margin: 18px 20px 0 20px;
+  padding: 18px 20px 0 20px;
 }
 
 .project-content img {
@@ -473,6 +501,7 @@ h2 {
 
 #travel-planner img {
   margin-top: 2px;
+  box-shadow: none;
 }
 
 #checklist-img {
@@ -483,4 +512,357 @@ h2 {
 #welcomescrn-img {
   width: 45%;
   margin: 8px auto;
+}
+
+@media only screen and (min-width: 600px) {
+  /********** GENERAL **********/
+  p,
+  .project-content ul {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+
+  #container > section {
+    max-width: 1000px;
+  }
+
+  /********** LOGO HEADER NAVIGATION **********/
+
+  header .fa-bars,
+  header .submenu .fa-arrow-right,
+  #transparent-background {
+    display: none;
+  }
+
+  header img {
+    width: 70px;
+  }
+
+  header h1 {
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  header nav > ul {
+    padding: 18px 0;
+  }
+
+  header .submenu {
+    position: static;
+    height: fit-content;
+    background: none;
+    box-shadow: none;
+    padding-top: 0;
+    transition: none;
+    display: flex;
+  }
+
+  header .submenu a {
+    font-family: "Laila", sans-serif;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-left: 45px;
+  }
+
+  header .submenu li:last-of-type a {
+    margin-right: 15px;
+  }
+
+  /********** FOOTER NAVIGATION **********/
+
+  footer button {
+    font-size: 38px;
+    padding: 0 24px 15px 24px;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+
+  /********** PAGE CONTENT: INTRO SECTION **********/
+
+  .intro {
+    padding-top: 115px;
+  }
+
+  h2 {
+    font-size: 55px;
+  }
+
+  .intro button {
+    margin-bottom: 80px;
+  }
+
+  /********** HOME PAGE: ALL PROJECTS SECTION **********/
+
+  #allprojects article {
+    max-width: 675px;
+    margin: 30px auto 60px auto;
+  }
+
+  #allprojects article h3 {
+    font-size: 22px;
+    height: 21px;
+  }
+
+  #allprojects .fa-angle-down {
+    display: none;
+  }
+
+  #allprojects nav > ul > li {
+    display: flex;
+    justify-content: center;
+  }
+
+  #allprojects nav button {
+    font-size: 17px;
+    width: 170px;
+    margin: 0 15px 0 0;
+    padding: 15px 18px;
+  }
+
+  #allprojects .submenu li:last-of-type button {
+    margin: 0;
+  }
+
+  #allprojects .submenu {
+    display: flex;
+  }
+
+  #allprojects .submenu li {
+    position: static;
+  }
+
+  /********** ABOUT PAGE: CATEGORY SELECTIONS **********/
+
+  #category-selections button img {
+    width: 30px;
+    margin-right: 4px;
+  }
+
+  #category-selections h3 {
+    font-size: 20px;
+  }
+
+  /********** ABOUT PAGE: SKILLS, EDUCATION, HOBBIES CONTENT **********/
+
+  #skills h4 {
+    font-size: 18px;
+  }
+
+  #skills img {
+    height: 65px;
+    padding-right: 25px;
+  }
+
+  #skills i {
+    font-size: 70px;
+    padding-right: 25px;
+  }
+
+  #education article h4 {
+    font-size: 24px;
+  }
+
+  #education article p:first-of-type {
+    font-size: 18px;
+  }
+
+  #hobbies {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+  }
+
+  #hobbies p {
+    font-size: 18px;
+  }
+
+  /********** PROJECT PAGE **********/
+
+  .project-title {
+    padding-top: 125px;
+  }
+
+  .project-title img {
+    max-width: 550px;
+    margin: auto;
+  }
+
+  .project-title h2 {
+    font-size: 34px;
+  }
+
+  .project-title h3 {
+    font-size: 18px;
+  }
+
+  .project-title .hr-line {
+    margin: 15px 0;
+  }
+
+  .project-title p {
+    font-size: 16px;
+  }
+
+  .project-content img {
+    margin: 10px auto;
+    max-width: 550px;
+  }
+
+  .project-content .small-landscape {
+    width: 72%;
+  }
+
+  .project-content .portrait {
+    width: 60%;
+  }
+
+  .project-content h4 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .project-content h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .project-content p {
+    margin: 11px 0;
+  }
+
+  /********** CONTACT PAGE **********/
+
+  #contact img {
+    width: 76%;
+  }
+
+  /********** TRAVEL PLANNER PROJECT PAGE **********/
+
+  #travel-planner .project-content .landscape {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  }
+
+  #checklist-img {
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  #blue-background {
+    height: 50vh;
+  }
+
+  /********** PAGE CONTENT: INTRO SECTION **********/
+
+  #container .intro {
+    margin-bottom: 110px;
+  }
+
+  .intro {
+    display: flex;
+    padding-top: 215px;
+  }
+
+  .intro img {
+    order: 2;
+    margin-left: 90px;
+    max-width: 250px;
+  }
+
+  .intro h2 {
+    margin-top: 50px;
+  }
+
+  .intro button {
+    margin-bottom: 0;
+  }
+
+  /********** HOME PAGE: ALL PROJECTS SECTION **********/
+
+  #allprojects nav {
+    margin-bottom: 60px;
+  }
+
+  #allprojects nav button {
+    font-size: 18px;
+    width: 180px;
+    margin: 0 60px 0 0;
+  }
+
+  #allprojects article {
+    display: flex;
+    max-width: 1000px;
+  }
+
+  #allprojects article .landscape {
+    width: 50%;
+    max-width: 480px;
+  }
+
+  #allprojects article .portrait {
+    width: 45%;
+    max-width: 360px;
+  }
+
+  #allprojects article div {
+    width: 50%;
+    margin-left: 20px;
+    align-self: center;
+  }
+
+  /********** PROJECT PAGE **********/
+
+  .project-title {
+    display: flex;
+    padding-top: 175px;
+    padding-bottom: 50px;
+  }
+
+  .project-title img {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .project-title > div {
+    width: 50%;
+    align-self: center;
+  }
+
+  #container .project-content {
+    width: 850px;
+  }
+
+  .project-content .small-landscape {
+    width: 65%;
+  }
+
+  .project-content .portrait {
+    width: 50%;
+  }
+
+  /********** CONTACT PAGE **********/
+
+  #contact img {
+    width: 50%;
+    margin: auto 20px auto 0;
+  }
+
+  #contact div {
+    order: 2;
+  }
+
+  #contact h2 {
+    margin-top: 0;
+  }
+
+  #contact button {
+    margin-bottom: 0;
+  }
 }
