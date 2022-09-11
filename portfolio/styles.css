@@ -502,6 +502,32 @@ h2 {
   box-shadow: none;
 }
 
+.travel-planner .flows {
+  max-width: 550px;
+  margin: auto;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease;
+}
+
+.travel-planner .flows img {
+  visibility: hidden;
+  width: 100%;
+}
+
+.travel-planner .flows:hover {
+  cursor: zoom-in;
+}
+
+#user-flow-zoom {
+  background-image: url("images/mobile/travel-planner/user-flow.jpg");
+}
+
+#wire-flow-zoom {
+  background-image: url("images/mobile/travel-planner/wire-flow.jpg");
+}
+
 #checklist-img {
   width: 80%;
   margin: 8px auto;
@@ -747,31 +773,8 @@ h2 {
     width: 63%;
   }
 
-  .travel-planner .flows {
-    max-width: 550px;
-    margin: auto;
-    background-position: center;
-    background-size: cover;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    transition: all 1s ease;
-  }
-
-  .travel-planner .flows img {
-    visibility: hidden;
-    width: 100%;
-  }
-
   .travel-planner .flows:hover {
-    cursor: zoom-in;
     transform: scale(1.2);
-  }
-
-  #user-flow-zoom {
-    background-image: url("images/mobile/travel-planner/user-flow.jpg");
-  }
-
-  #wire-flow-zoom {
-    background-image: url("images/mobile/travel-planner/wire-flow.jpg");
   }
 
   #checklist-img {
