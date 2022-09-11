@@ -67,13 +67,11 @@ button:hover {
 }
 
 .intro button:hover,
-#allprojects nav button:hover,
 #view-site-btn:hover {
   background-color: #000;
 }
 
 .intro button:hover a,
-#allprojects nav button:hover,
 #view-site-btn:hover a {
   color: #fff;
 }
@@ -745,12 +743,43 @@ h2 {
 
   /********** TRAVEL PLANNER PROJECT PAGE **********/
 
-  #travel-planner .project-content .landscape {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  .travel-planner img {
+    width: 63%;
+  }
+
+  .travel-planner .flows {
+    max-width: 550px;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    transition: all 1s ease;
+  }
+
+  .travel-planner .flows img {
+    visibility: hidden;
+    width: 100%;
+  }
+
+  .travel-planner .flows:hover {
+    cursor: zoom-in;
+    transform: scale(1.2);
+  }
+
+  #user-flow-zoom {
+    background-image: url("images/mobile/travel-planner/user-flow.jpg");
+  }
+
+  #wire-flow-zoom {
+    background-image: url("images/mobile/travel-planner/wire-flow.jpg");
   }
 
   #checklist-img {
-    width: 65%;
+    width: 55%;
+  }
+
+  #welcomescrn-img {
+    width: 30%;
   }
 }
 
@@ -864,5 +893,13 @@ h2 {
 
   #contact button {
     margin-bottom: 0;
+  }
+
+  #checklist-img {
+    width: 47%;
+  }
+
+  #welcomescrn-img {
+    width: 25%;
   }
 }
