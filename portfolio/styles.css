@@ -464,7 +464,15 @@ h2 {
 
 .project-content img {
   width: 100%;
-  margin: 8px 0;
+  margin: 8px auto;
+}
+
+.project-content .small-landscape {
+  width: 78%;
+}
+
+.project-content .portrait {
+  width: 67%;
 }
 
 .project-content h4 {
