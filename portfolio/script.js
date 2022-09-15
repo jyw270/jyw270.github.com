@@ -367,8 +367,7 @@
     img.src = imgsrc;
     img.onload = () => {
       // (B1) CALCULATE ZOOM RATIO
-      let ratio = img.naturalHeight / img.naturalWidth,
-        percentage = ratio * 100 + "%";
+      let ratio = img.naturalHeight / img.naturalWidth;
 
       // (B2) ATTACH ZOOM ON MOUSE MOVE
       container.onmousemove = (e) => {
@@ -396,8 +395,15 @@
 
   // (C) ATTACH FOLLOW ZOOM
   window.onload = () => {
-    addZoom("user-flow-zoom");
-    addZoom("wire-flow-zoom");
+    if (document.getElementById("ui-challenges-zoom") != null) {
+      addZoom("ui-challenges-zoom");
+    }
+    if (document.getElementById("user-flow-zoom") != null) {
+      addZoom("user-flow-zoom");
+    }
+    if (document.getElementById("wire-flow-zoom") != null) {
+      addZoom("wire-flow-zoom");
+    }
   };
 
   // // MOBILE / DESKTOP IMAGES

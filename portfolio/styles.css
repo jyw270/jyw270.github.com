@@ -503,14 +503,9 @@ h2 {
   margin: 35px auto 60px auto;
 }
 
-/********** TRAVEL PLANNER PROJECT PAGE **********/
+/********** PROJECT PAGE IMAGE ZOOM **********/
 
-#travel-planner img {
-  margin-top: 2px;
-  box-shadow: none;
-}
-
-.travel-planner .flows {
+.project-content .zoom {
   max-width: 550px;
   margin: auto;
   background-position: center;
@@ -519,21 +514,20 @@ h2 {
   transition: all 1s ease;
 }
 
-.travel-planner .flows img {
+.project-content .zoom img {
   visibility: hidden;
   width: 100%;
 }
 
-.travel-planner .flows:hover {
+.project-content .zoom:hover {
   cursor: zoom-in;
 }
 
-#user-flow-zoom {
-  background-image: url("images/mobile/travel-planner/user-flow.jpg");
-}
+/********** TRAVEL PLANNER PROJECT PAGE **********/
 
-#wire-flow-zoom {
-  background-image: url("images/mobile/travel-planner/wire-flow.jpg");
+#travel-planner img {
+  margin-top: 2px;
+  box-shadow: none;
 }
 
 #checklist-img {
@@ -755,6 +749,10 @@ h2 {
     width: 60%;
   }
 
+  .project-content .zoom:hover {
+    transform: scale(1.2);
+  }
+
   .project-content h4 {
     font-size: 24px;
     margin: 10px 0;
@@ -777,12 +775,17 @@ h2 {
 
   /********** TRAVEL PLANNER PROJECT PAGE **********/
 
-  .travel-planner img {
-    width: 63%;
+  .travel-planner .wide-landscape {
+    width: 100%;
+    max-width: 700px;
   }
 
-  .travel-planner .flows:hover {
-    transform: scale(1.2);
+  .travel-planner .testing-imgs {
+    display: none;
+  }
+
+  .travel-planner img {
+    width: 63%;
   }
 
   #checklist-img {
