@@ -101,11 +101,8 @@
   const mobileView = window.matchMedia("(max-width: 599px)");
   const selectedBtn = document.querySelector("#selected-btn");
   const submenuItems = document.querySelectorAll("#allprojects .submenu li");
-  const submenuButtons = document.querySelectorAll(
-    "#allprojects .submenu button"
-  );
   const allButtons = document.querySelectorAll("#allprojects nav button");
-  let currentButton;
+  let currentButton = allButtons[0];
   let buttonNumber = 0;
 
   // Open and closes the all projects drop down menu
@@ -116,7 +113,7 @@
     if (submenuItems[0].style.top != "41.25px") {
       setTimeout(function () {
         submenuItems[0].style.top = "41.25px";
-        submenuItems[1].style.top = "80.9px";
+        submenuItems[1].style.top = "80.8px";
 
         setTimeout(function () {
           submenuItems[0].style.zIndex = 0;
@@ -145,6 +142,8 @@
     allprojects.forEach(function (eachProject) {
       // If the project class name includes ux-ui-only or dev-only
       if (eachProject.className.length > 7) {
+        eachProject.removeAttribute("data-aos");
+        eachProject.classList.remove("aos-init");
         // Checks if 'hidden' and/or showing' is in the project's class name before adding 'hidden'
         if (!eachProject.className.includes("hidden")) {
           eachProject.className.includes("showing")
@@ -159,13 +158,11 @@
         setTimeout(function () {
           // If devProjectsBtn is selected, then will hide the UX only projects
           if (devProjectsBtn && eachProject.className.includes("ux-ui-only")) {
+            eachProject.removeAttribute("data-aos");
             eachProject.style.display = "none";
           } else {
-            if (window.matchMedia("(max-width: 849px)").matches) {
-              eachProject.style.display = "block";
-            } else {
-              eachProject.style.display = "flex";
-            }
+            eachProject.setAttribute("data-aos", "zoom-in");
+            eachProject.style.removeProperty("display");
           }
           eachProject.className = eachProject.className.replace(
             "hidden",
@@ -183,146 +180,137 @@
     });
   }
 
-  function allProjectsMobileNav(mobileView) {
-    if (mobileView.matches) {
-      // submenuItems[0].style.zIndex = -1;
-      // submenuItems[1].style.zIndex = -2;
+  // Changes the all projects nav and displays the matching content for mobile view
+  function allProjectsMobileNav(event) {
+    // Checks if the selected button is 'development' , set the button number to 1, else means the the selected button is 'ux /ui' , so set to 2
+    event.target.textContent == allButtons[1].textContent
+      ? (buttonNumber = 1)
+      : (buttonNumber = 2);
 
-      // When the selector button in the all projects section is clicked, open or close drop down
-      if (selectedBtn != null) {
-        selectedBtn.addEventListener("click", function () {
-          dropDownMenu();
-        });
-      }
-      // For each submenu button that is clicked, switches the text with the selector button text and closes the drop down menu
-      for (let i = 1; i < allButtons.length; i++) {
-        allButtons[i].addEventListener("click", function () {
-          currentButton = selectedBtn.textContent;
-          // buttonNumber = i;
-          // allButtons[i].style.backgroundColor = "#fff";
-          // allButtons[i].style.color = "#000";
+    // Stores the original selectedBtn in currentButton
+    currentButton = selectedBtn.textContent;
 
-          // currentButton.style.backgroundColor = "#000";
-          // currentButton.style.color = "#fff";
-
-          if (allButtons[i].textContent == "all projects") {
-            selectedBtn.textContent = "all projects";
-            displayProjects(false);
-            // If the user selected development
-          } else if (allButtons[i].textContent == "development") {
-            selectedBtn.textContent = "development";
-            displayProjects(true);
-            // If the user selected UX / UI
-          } else {
-            selectedBtn.textContent = "UX / UI";
-            displayProjects(false);
-          }
-          allButtons[i].textContent = currentButton;
-
-          setTimeout(function () {
-            dropDownMenu();
-          }, 100);
-        });
-      }
-      // submenuButtons.forEach(function (eachButton) {
-      //   eachButton.addEventListener("click", function () {
-      //     currentButton = selectedBtn.textContent;
-      //     // If the user selected all projects
-      //     if (eachButton.textContent == "all projects") {
-      //       selectedBtn.textContent = "all projects";
-      //       displayProjects(false);
-      //       // If the user selected development
-      //     } else if (eachButton.textContent == "development") {
-      //       selectedBtn.textContent = "development";
-      //       displayProjects(true);
-      //       // If the user selected UX / UI
-      //     } else {
-      //       selectedBtn.textContent = "UX / UI";
-      //       displayProjects(false);
-      //     }
-      //     eachButton.textContent = currentButton;
-      //     setTimeout(function () {
-      //       dropDownMenu();
-      //     }, 100);
-      //   });
-      // });
-    } else {
-      currentButton = allButtons[buttonNumber];
-
-      currentButton.style.backgroundColor = "#000";
-      currentButton.style.color = "#fff";
-      submenuItems[0].style.zIndex = 0;
-      submenuItems[1].style.zIndex = 0;
+    // For whichever submenu button that is clicked, replaces the newly selected button text with the selectedBtn text and closes the drop down menu
+    if (allButtons[buttonNumber].textContent == "all projects") {
       selectedBtn.textContent = "all projects";
-      allButtons[1].textContent = "development";
-      allButtons[2].textContent = "UX / UI";
-      for (let i = 0; i < allButtons.length; i++) {
-        allButtons[i].addEventListener("mouseover", function () {
-          allButtons[i].backgroundColor = "#000";
-          allButtons[i].color = "#fff";
-        });
-        allButtons[i].addEventListener("click", function () {
-          allButtons[i].style.backgroundColor = "#000";
-          allButtons[i].style.color = "#fff";
-          currentButton.style.backgroundColor = "#fff";
-          currentButton.style.color = "#000";
-          currentButton = allButtons[i];
-          // selectedBtn.textContent = selectedBtn.textContent;
-          // allButtons[i].textContent = allButtons[i].textContent;
-          if (allButtons[i].textContent == "all projects") {
-            displayProjects(false);
-            // If the user selected development
-          } else if (allButtons[i].textContent == "development") {
-            displayProjects(true);
-            // If the user selected UX / UI
-          } else {
-            displayProjects(false);
-          }
-        });
-      }
-      // allButtons.forEach(function (eachButton) {
-      //   eachButton.addEventListener("click", function () {
-      //     eachButton.style.backgroundColor = "#000";
-      //     eachButton.style.color = "#fff";
-      //     currentButton.style.backgroundColor = "#fff";
-      //     currentButton.style.color = "#000";
-      //     currentButton = eachButton;
-      //     if (eachButton.textContent == "all projects") {
-      //       displayProjects(false);
-      //       // If the user selected development
-      //     } else if (eachButton.textContent == "development") {
-      //       displayProjects(true);
-      //       // If the user selected UX / UI
-      //     } else {
-      //       displayProjects(false);
-      //     }
-      //   });
-      // });
+      displayProjects(false);
+      // If the user selected development
+    } else if (allButtons[buttonNumber].textContent == "development") {
+      selectedBtn.textContent = "development";
+      displayProjects(true);
+      // If the user selected UX / UI
+    } else {
+      selectedBtn.textContent = "UX / UI";
+      displayProjects(false);
+    }
+
+    // Takes the previous selected button text and places it's new spot
+    allButtons[buttonNumber].textContent = currentButton;
+    setTimeout(dropDownMenu, 100);
+  }
+
+  // Changes the all projects nav and displays the matching content for desktop view
+  function allProjectsDesktopNav(event) {
+    // Checks the selected button text and sets the buttonNumber to match
+    if (event.target.textContent == "all projects") {
+      buttonNumber = 0;
+    } else if (event.target.textContent == "development") {
+      buttonNumber = 1;
+    } else {
+      buttonNumber = 2;
+    }
+
+    // Removes the black highlight on the previous button and adds it to the newly selected button
+    allButtons[buttonNumber].style.backgroundColor = "#000";
+    allButtons[buttonNumber].style.color = "#fff";
+    currentButton.style.backgroundColor = "#fff";
+    currentButton.style.color = "#000";
+
+    // Updates the currentButton and checks which category was selected and displays it
+    currentButton = allButtons[buttonNumber];
+    if (currentButton.textContent == "all projects") {
+      displayProjects(false);
+      // If the user selected development
+    } else if (currentButton.textContent == "development") {
+      displayProjects(true);
+      // If the user selected UX / UI
+    } else {
+      displayProjects(false);
     }
   }
 
-  // allProjectsMobileNav(mobileView);
-  mobileView.addEventListener("change", function () {
-    // allProjectsMobileNav(mobileView);
+  // Checks whether the viewport is in mobile or desktop and changes the all projects nav and displays the matching content
+  function allProjectsNav() {
+    if (mobileView.matches) {
+      submenuItems[0].style.zIndex = -1;
+      submenuItems[1].style.zIndex = -2;
 
-    // displays travel planner project properly depending on the size of the viewport
-    if (allprojects[1] != null) {
-      if (window.matchMedia("(max-width: 849px)").matches) {
-        allprojects[1].style.display = "block";
-      } else {
-        allprojects[1].style.display = "flex";
+      // Sets the selectedBtn to the currentButton (that was from the desktop version) and checks if the currentButton from the desktop version is development or ux/ui, so that it can switch 'all projects' (which is the selectedBtn) with it
+      selectedBtn.textContent = currentButton.textContent;
+      if (currentButton.textContent == "development") {
+        allButtons[1].textContent = "all projects";
+      } else if (currentButton.textContent == "UX / UI") {
+        allButtons[2].textContent = "all projects";
+      }
+
+      // Removes the black highlight on the currentButton that was from the desktop version
+      if (currentButton != null) {
+        currentButton.style.backgroundColor = "#fff";
+        currentButton.style.color = "#000";
+      }
+
+      // Removes the event listeners from the desktop version
+      for (let i = 0; i < allButtons.length; i++) {
+        allButtons[i].removeEventListener("click", allProjectsDesktopNav);
+      }
+
+      // When the selector button in the all projects section is clicked, open or close drop down
+      if (selectedBtn != null) {
+        allButtons[0].addEventListener("click", dropDownMenu);
+      }
+      // For each submenu button that is clicked, switches the text with the selector button text and closes the drop down menu
+      for (let i = 1; i < allButtons.length; i++) {
+        allButtons[i].addEventListener("click", allProjectsMobileNav);
+      }
+    } else {
+      submenuItems[0].style.zIndex = 0;
+      submenuItems[1].style.zIndex = 0;
+
+      // Removes the event listeners from the mobile version
+      allButtons[0].removeEventListener("click", dropDownMenu);
+      for (let i = 1; i < allButtons.length; i++) {
+        allButtons[i].removeEventListener("click", allProjectsMobileNav);
+      }
+
+      // Checks what is the selectedBtn text from mobile version and sets the currentButton to match for the desktop version
+      if (selectedBtn.textContent == "all projects") {
+        currentButton = allButtons[0];
+      } else if (selectedBtn.textContent == "development") {
+        currentButton = allButtons[1];
+      } else if (selectedBtn.textContent == "UX / UI") {
+        currentButton = allButtons[2];
+      }
+
+      // Sets the black highlight on the current button and sets each button's text content to it's proper text for the desktop version
+      currentButton.style.backgroundColor = "#000";
+      currentButton.style.color = "#fff";
+      selectedBtn.textContent = "all projects";
+      allButtons[1].textContent = "development";
+      allButtons[2].textContent = "UX / UI";
+
+      // For each submenu button that is clicked, switches the text with the selector button text and closes the drop down menu
+      for (let i = 0; i < allButtons.length; i++) {
+        allButtons[i].addEventListener("click", allProjectsDesktopNav);
       }
     }
+  }
 
-    // checks whether hobbies category is being viewed, so it can display it for the right viewport size
-    if (categories[2] != null) {
-      if (window.matchMedia("(max-width: 599px)").matches) {
-        categories[2].style.display = "block";
-      } else {
-        categories[2].style.display = "flex";
-      }
-    }
-  });
+  if (allButtons.length != 0) {
+    allProjectsNav();
+    mobileView.addEventListener("change", function () {
+      allProjectsNav();
+    });
+  }
 
   // ---------------------------- ABOUT PAGE ----------------------------
   let prevActiveBtn = 0;
@@ -331,21 +319,19 @@
   );
   const categories = document.querySelectorAll("#experience .category");
 
+  if (categories.length != 0) {
+    categories[1].style.display = "none";
+    categories[2].style.display = "none";
+  }
+
   for (let i = 0; i < categorySelectionBtns.length; i++) {
     categorySelectionBtns[i].addEventListener("click", function () {
-      // hides previous selected content and unhighlights the button
+      // Hides previous selected content and unhighlights the button
       categories[prevActiveBtn].style.display = "none";
       categorySelectionBtns[prevActiveBtn].style.background = "none";
 
-      // displays selected button content and highlights button in blue; checks whether hobbies category is being viewed, so it can display it for the right viewport size
-      if (
-        window.matchMedia("(max-width: 599px)").matches ||
-        categories[i] != categories[2]
-      ) {
-        categories[i].style.display = "block";
-      } else {
-        categories[i].style.display = "flex";
-      }
+      // Displays selected button content by removing the inline style display none and highlights button in blue
+      categories[i].style.removeProperty("display");
       categorySelectionBtns[i].style.backgroundColor = "#d9fbf7";
       prevActiveBtn = i;
     });
@@ -405,40 +391,4 @@
       addZoom("wire-flow-zoom");
     }
   };
-
-  // // MOBILE / DESKTOP IMAGES
-  // const images = document.querySelectorAll(".image");
-
-  // window.addEventListener("load", function () {
-  //   changeImageSrc();
-  // });
-  // window.addEventListener("resize", function () {
-  //   changeImageSrc();
-  // });
-
-  // function changeImageSrc() {
-  //   if (window.innerWidth > 1020 && images[0].src.includes("mobile")) {
-  //     images.forEach(function (eachImage) {
-  //       if (
-  //         eachImage.src.includes("travel-planner/testing-2") ||
-  //         eachImage.src.includes("travel-planner/testing-4")
-  //       ) {
-  //         eachImage.style.display = "none";
-  //       } else {
-  //         eachImage.src = `${eachImage.src.replace("mobile", "desktop")}`;
-  //       }
-  //     });
-  //   } else if (window.innerWidth < 1020 && images[0].src.includes("desktop")) {
-  //     images.forEach(function (eachImage) {
-  //       if (
-  //         eachImage.src.includes("travel-planner/testing-2") ||
-  //         eachImage.src.includes("travel-planner/testing-4")
-  //       ) {
-  //         eachImage.style.display = "initial";
-  //       } else {
-  //         eachImage.src = `${eachImage.src.replace("desktop", "mobile")}`;
-  //       }
-  //     });
-  //   }
-  // }
 })();

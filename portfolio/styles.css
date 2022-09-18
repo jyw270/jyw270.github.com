@@ -316,10 +316,6 @@ h2 {
   transition: all 1s ease;
 }
 
-#experience .category + .category {
-  display: none;
-}
-
 #skills {
   margin-top: 6px;
 }
@@ -341,6 +337,7 @@ h2 {
 }
 
 #education {
+  display: block;
   max-width: 680px;
   margin-top: 16px;
 }
@@ -392,6 +389,10 @@ h2 {
 
 #education article p:last-of-type {
   line-height: 1.4em;
+}
+
+#hobbies {
+  display: block;
 }
 
 #hobbies p {
@@ -628,6 +629,7 @@ h2 {
 
   #allprojects article {
     max-width: 675px;
+    display: block;
     margin: 30px auto 60px auto;
   }
 
@@ -650,6 +652,11 @@ h2 {
     width: 170px;
     margin: 0 15px 0 0;
     padding: 15px 18px;
+  }
+
+  #allprojects nav button:hover {
+    color: #fff;
+    background-color: #000;
   }
 
   #allprojects .submenu li:last-of-type button {
@@ -703,6 +710,10 @@ h2 {
     display: flex;
     justify-content: space-between;
     width: 400px;
+  }
+
+  #hobbies {
+    display: flex;
   }
 
   #hobbies p {
