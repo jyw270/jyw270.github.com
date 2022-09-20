@@ -614,7 +614,7 @@ h2 {
   /********** PAGE CONTENT: INTRO SECTION **********/
 
   .intro {
-    padding-top: 115px;
+    padding-top: 120px;
   }
 
   h2 {
@@ -782,6 +782,7 @@ h2 {
 
   #contact img {
     width: 76%;
+    max-width: 500px;
   }
 
   /********** TRAVEL PLANNER PROJECT PAGE **********/
@@ -903,9 +904,13 @@ h2 {
 
   /********** CONTACT PAGE **********/
 
-  #contact img {
-    width: 50%;
+  #contact picture {
     margin: auto 20px auto 0;
+  }
+
+  #contact img {
+    width: 400px;
+    margin: 0;
   }
 
   #contact div {
@@ -919,6 +924,14 @@ h2 {
   #contact button {
     margin-bottom: 0;
   }
+
+  /********** PORTFOLIO PROJECT PAGE **********/
+
+  .portfolio img {
+    max-width: 500px;
+  }
+
+  /********** TRAVEL PLANNER PROJECT PAGE **********/
 
   #checklist-img {
     width: 47%;
