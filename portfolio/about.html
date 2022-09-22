@@ -30,6 +30,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- Popper Library -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
     <!--/ /-------- Site Styling --------/ /-->
     <link href="styles.css" rel="stylesheet" />
 
@@ -102,20 +105,96 @@
 
         <div class="category" id="skills">
           <h4>Design</h4>
-          <i class="fab fa-figma"></i>
-          <img src="images/svg/ai-icon.svg" alt="illustrator icon" /><img
+
+          <i class="fab fa-figma icons" aria-describedby="tooltip"></i>
+          <span class="message" role="tooltip"
+            >Figma
+            <div class="arrow" data-popper-arrow></div>
+          </span>
+
+          <img
+            class="icons"
+            aria-describedby="tooltip"
+            src="images/svg/ai-icon.svg"
+            alt="illustrator icon"
+          />
+          <span class="message" role="tooltip"
+            >Illustrator
+            <div class="arrow" data-popper-arrow></div>
+          </span>
+
+          <img
+            class="icons"
+            aria-describedby="tooltip"
             src="images/svg/ps-icon.svg"
             alt="Photoshop icon"
-          /><img src="images/svg/xd-icon.svg" alt="xd icon" />
+          />
+          <span class="message" role="tooltip"
+            >Photoshop
+            <div class="arrow" data-popper-arrow></div>
+          </span>
 
-          <h4>Front-end</h4>
-          <i class="fab fa-html5"></i>
-          <i class="fab fa-css3-alt"></i>
-          <i class="fab fa-js-square"></i>
+          <img
+            class="icons"
+            aria-describedby="tooltip"
+            src="images/svg/xd-icon.svg"
+            alt="xd icon"
+          />
+          <span class="message" role="tooltip"
+            >Adobe XD
+            <div class="arrow" data-popper-arrow></div>
+          </span>
+
+          <h4>Languages</h4>
+          <div class="language-skills">
+            <i class="fab fa-html5 icons" aria-describedby="tooltip"></i>
+            <span class="message" role="tooltip"
+              >HTML
+              <div class="arrow" data-popper-arrow></div>
+            </span>
+
+            <i class="fab fa-css3-alt icons" aria-describedby="tooltip"></i>
+            <span class="message" role="tooltip"
+              >CSS
+              <div class="arrow" data-popper-arrow></div>
+            </span>
+
+            <i class="fab fa-js-square icons" aria-describedby="tooltip"></i>
+            <span class="message" role="tooltip"
+              >JavaScript
+              <div class="arrow" data-popper-arrow></div>
+            </span>
+
+            <i class="fa-brands fa-python icons" aria-describedby="tooltip"></i>
+            <span class="message" role="tooltip"
+              >Python
+              <div class="arrow" data-popper-arrow></div>
+            </span>
+
+            <img
+              class="icons"
+              aria-describedby="tooltip"
+              src="images/svg/c++-icon.svg"
+              alt="c++ icon"
+            />
+            <span class="message" role="tooltip"
+              >C / C++
+              <div class="arrow" data-popper-arrow></div>
+            </span>
+          </div>
 
           <h4>Tools</h4>
-          <i class="fab fa-git-square"></i>
-          <i class="fab fa-github-square"></i>
+          <i class="fab fa-git-square icons" aria-describedby="tooltip"></i>
+          <span class="message" role="tooltip"
+            >Git
+            <div class="arrow" data-popper-arrow></div>
+          </span>
+
+          <i class="fab fa-github-square icons" aria-describedby="tooltip"></i>
+          <span class="message" role="tooltip"
+            >Github
+            <div class="arrow" data-popper-arrow></div>
+          </span>
         </div>
 
         <div class="category" id="education">

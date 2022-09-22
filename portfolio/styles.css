@@ -326,14 +326,56 @@ h2 {
 
 #skills img {
   display: inline;
-  height: 55px;
+  height: 56.5px;
   padding: 2px 20px 0 0;
+}
+
+@media only screen and (max-width: 395px) {
+  #skills .language-skills:last-of-type img {
+    margin-top: 18px;
+  }
 }
 
 #skills i {
   font-size: 60px;
   color: #e5e5e5;
   padding-right: 20px;
+}
+
+#skills .message {
+  font-size: 14px;
+  font-weight: 600;
+  display: none;
+  background: rgb(67, 67, 67);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+#skills .message[data-show] {
+  display: block;
+}
+
+#skills .arrow,
+#skills .arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+#skills .arrow {
+  visibility: hidden;
+}
+
+#skills .arrow::before {
+  visibility: visible;
+  content: "";
+  transform: rotate(45deg);
+}
+
+#skills .message[data-popper-placement^="top"] > .arrow {
+  bottom: -4px;
 }
 
 #education {
@@ -689,7 +731,7 @@ h2 {
   }
 
   #skills img {
-    height: 65px;
+    height: 63px;
     padding-right: 25px;
   }
 

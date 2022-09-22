@@ -318,6 +318,79 @@
     "#category-selections button"
   );
   const categories = document.querySelectorAll("#experience .category");
+  const skills = document.querySelectorAll("#skills .icons");
+  const messages = document.querySelectorAll("#skills .message");
+  const showEvents = ["mouseenter", "focus"];
+  const hideEvents = ["mouseleave", "blur"];
+  let popperInstances = {};
+  popperInstances[0] = Popper.createPopper(skills[0], messages[0], {
+    modifiers: [
+      {
+        name: "offset",
+        options: {
+          offset: () => [-5, mobileView.matches ? -94 : -105],
+        },
+      },
+    ],
+  });
+
+  // Create dynamic variables for popperInstance
+  for (let i = 1; i < skills.length; i++) {
+    popperInstances[i] = Popper.createPopper(skills[i], messages[i], {
+      modifiers: [
+        {
+          name: "offset",
+          options: {
+            offset: () => [-5, mobileView.matches ? -90 : -100],
+          },
+        },
+      ],
+    });
+  }
+
+  // POPPER REFERENCE: https://popper.js.org/docs/v2/tutorial/
+  function show(i, popperInstance) {
+    // Make the tooltip visible
+    messages[i].setAttribute("data-show", "");
+
+    // Enable the event listeners
+    popperInstance.setOptions((options) => ({
+      ...options,
+      modifiers: [
+        ...options.modifiers,
+        { name: "eventListeners", enabled: true },
+      ],
+    }));
+
+    // Update its position
+    popperInstance.update();
+  }
+
+  function hide(i, popperInstance) {
+    // Hide the tooltip
+    messages[i].removeAttribute("data-show");
+
+    // Disable the event listeners
+    popperInstance.setOptions((options) => ({
+      ...options,
+      modifiers: [
+        ...options.modifiers,
+        { name: "eventListeners", enabled: false },
+      ],
+    }));
+  }
+
+  showEvents.forEach((event) => {
+    for (let i = 0; i < skills.length; i++) {
+      skills[i].addEventListener(event, show.bind(null, i, popperInstances[i]));
+    }
+  });
+
+  hideEvents.forEach((event) => {
+    for (let i = 0; i < skills.length; i++) {
+      skills[i].addEventListener(event, hide.bind(null, i, popperInstances[i]));
+    }
+  });
 
   if (categories.length != 0) {
     categories[1].style.display = "none";
