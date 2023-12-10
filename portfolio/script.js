@@ -140,43 +140,49 @@
   function displayProjects(devProjectsBtn) {
     // For each project set the class name to hidden, then showing to create fading effect
     allprojects.forEach(function (eachProject) {
-      // If the project class name includes ux-ui-only or dev-only
-      if (eachProject.className.length > 7) {
-        eachProject.removeAttribute("data-aos");
-        eachProject.classList.remove("aos-init");
-        // Checks if 'hidden' and/or showing' is in the project's class name before adding 'hidden'
-        if (!eachProject.className.includes("hidden")) {
-          eachProject.className.includes("showing")
-            ? (eachProject.className = eachProject.className.replace(
-                "showing",
-                "hidden"
-              ))
-            : (eachProject.className = `${eachProject.className} hidden`);
-        }
-
-        // Waits a few seconds and then sets the project class name to showing
-        setTimeout(function () {
-          // If devProjectsBtn is selected, then will hide the UX only projects
-          if (devProjectsBtn && eachProject.className.includes("ux-ui-only")) {
-            eachProject.removeAttribute("data-aos");
-            eachProject.style.display = "none";
-          } else {
-            eachProject.setAttribute("data-aos", "zoom-in");
-            eachProject.style.removeProperty("display");
-          }
-          eachProject.className = eachProject.className.replace(
-            "hidden",
-            "showing"
-          );
-        }, 750);
-
-        // If the project is a ux-ui and dev project
-      } else {
-        eachProject.className = "hidden";
-        setTimeout(function () {
-          eachProject.className = "showing";
-        }, 750);
+      // eachProject.removeAttribute("data-aos");
+      // eachProject.classList.remove("aos-init");
+      // Checks if 'hidden' and/or showing' is in the project's class name before adding 'hidden'
+      if (!eachProject.className.includes("hidden")) {
+        eachProject.className.includes("showing")
+          ? (eachProject.className = eachProject.className.replace(
+              "showing",
+              "hidden"
+            ))
+          : (eachProject.className = `${eachProject.className} hidden`);
       }
+
+      // Waits a few seconds and then sets the project class name to showing
+      setTimeout(function () {
+        eachProject.style.removeProperty("display");
+        eachProject.setAttribute("data-aos", "zoom-in");
+
+        // If allProjectsBtn is selected, then will show all projects
+        if (
+          allButtons[buttonNumber].textContent != "development" &&
+          allButtons[buttonNumber].textContent != "UX / UI"
+        ) {
+          eachProject.style.removeProperty("display");
+          eachProject.setAttribute("data-aos", "zoom-in");
+          // If devProjectsBtn is selected, then will only hide ux-ui projects
+        } else if (
+          devProjectsBtn &&
+          eachProject.className.includes("ux-ui-only")
+        ) {
+          eachProject.style.display = "none";
+          // If UXProjectsBtn is selected, then will only hide dev projects
+        } else if (
+          !devProjectsBtn &&
+          eachProject.className.includes("dev-only")
+        ) {
+          eachProject.style.display = "none";
+        }
+        eachProject.className = eachProject.className.replace(
+          "hidden",
+          "showing"
+        );
+        AOS.init();
+      }, 750);
     });
   }
 
@@ -193,7 +199,7 @@
     // For whichever submenu button that is clicked, replaces the newly selected button text with the selectedBtn text and closes the drop down menu
     if (allButtons[buttonNumber].textContent == "all projects") {
       selectedBtn.textContent = "all projects";
-      displayProjects(false);
+      displayProjects();
       // If the user selected development
     } else if (allButtons[buttonNumber].textContent == "development") {
       selectedBtn.textContent = "development";
@@ -462,6 +468,9 @@
     }
     if (document.getElementById("wire-flow-zoom") != null) {
       addZoom("wire-flow-zoom");
+    }
+    if (document.getElementById("survey-zoom") != null) {
+      addZoom("survey-zoom");
     }
   };
 })();

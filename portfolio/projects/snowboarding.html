@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jenny Wong &#124; Portfolio</title>
+
+    <!--/ /-------- Normalize CSS --------/ /-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <!--/ /-------- Font Awesome --------/ /-->
+    <script
+      src="https://kit.fontawesome.com/53462d0482.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--/ /-------- Google Fonts --------/ /-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--/ /-------- AOS Library --------/ /-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Popper Library -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+    <!--/ /-------- Site Styling --------/ /-->
+    <link href="../styles.css" rel="stylesheet" />
+
+    <!--/ /-------- JavaScript --------/ /-->
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <div id="blue-background"></div>
+    <div id="transparent-background" class="hidden"></div>
+    <div id="container">
+      <header>
+        <a href="../index.html">
+          <img src="../images/svg/logo.svg" alt="logo" id="logo" />
+          <h1>Jenny</h1>
+        </a>
+
+        <nav>
+          <ul>
+            <li>
+              <i class="fa-solid fa-bars"></i>
+              <ul class="submenu">
+                <li><i class="fa-solid fa-arrow-right"></i></li>
+                <li>
+                  <a href="../index.html#start-of-allprojects">projects</a>
+                </li>
+                <li><a href="../about.html">about</a></li>
+                <li><a href="../contact.html">contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="project-title" id="travel-planner">
+        <img
+          src="../images/snowboarding/snowboarding-phone.png"
+          alt="snowboarding app"
+        />
+
+        <div>
+          <h2>Snowboarding App</h2>
+          <h3>Flutterflow &#124; Firebase</h3>
+          <div class="hr-line"></div>
+          <div>
+            <p>development</p>
+            <p>2023</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-content">
+        <h4>Background</h4>
+        <p>
+          This is a snowboarding app that I helped my student develop in
+          FlutterFlow when I was working as a coding instructor. The goal was to
+          create an app for users interested in snowboarding to learn new and
+          useful tips, purchase good quality and affordable gear, book resorts,
+          and stay up to date on snowboarding current events.
+        </p>
+      </section>
+
+      <section class="project-content">
+        <h4>User Interface</h4>
+        <img
+          src="../images/snowboarding/user-interface.jpg"
+          alt="interface sketches"
+        />
+        <p>
+          These are the wireframes my student proposed to me. Given the time
+          constraint on this project, we used the templates provided in
+          FlutterFlow to design similar interfaces that my student had in mind.
+        </p>
+      </section>
+
+      <section class="project-content">
+        <h4>Development</h4>
+        <div>
+          <h5>Overview</h5>
+          <p>
+            This app is called Woohoo. It was developed in FlutterFlow and uses
+            Google Firebase to collect and stream data. It is an app that is
+            published on
+            <a
+              href="https://play.google.com/store/apps/details?id=com.mycompany.snow&hl=en_US&gl=US"
+              target="_blank"
+              >Google Play</a
+            >
+            and the
+            <a
+              href="https://apps.apple.com/us/app/lichengs-woohoo/id6467347394"
+              target="_blank"
+              >App Store</a
+            >.
+          </p>
+        </div>
+
+        <div>
+          <h5>Challenges</h5>
+          <img
+            src="../images/snowboarding/challenges-1.jpg"
+            alt="Firstore database"
+          />
+          <p>
+            One of the challenges about this project was figuring out how to
+            organize the Firestore database. Since we were using the ListView
+            widget, we created a collection for every different category and
+            added a document for each item. Each document has the same fields,
+            but different information. We found this method to be the most
+            efficient, since the ListView widget streams each document&#39;s
+            content within a collection based on the same fields.
+          </p>
+          <div class="snowboarding-imgs">
+            <img
+              src="../images/snowboarding/challenges-2.jpg"
+              alt="edit profile interface"
+              id="edit-profile"
+            />
+            <img
+              src="../images/snowboarding/challenges-3.jpg"
+              alt="Flutterflow code"
+            />
+          </div>
+          <p>
+            Another challenge was implementing the functionality for the edit
+            profile screen. This was an interface that I helped my student
+            design from scratch. I helped figure out how to allow the user to
+            upload a new profile picture, change their information, save their
+            changes to FireStore, and display the new changes on their current
+            profile. Without permanently saving a user&#39;s uploaded photo in
+            the database yet, in case they cancel their changes, I had my
+            student create an app state, so that the image is saved in a
+            variable and will only update to FireStore if the user saves their
+            changes.
+          </p>
+          <div class="snowboarding-imgs">
+            <img
+              src="../images/snowboarding/challenges-4.jpg"
+              alt="interface"
+            />
+            <img
+              src="../images/snowboarding/challenges-5.jpg"
+              alt="interface"
+            />
+            <img
+              src="../images/snowboarding/challenges-6.jpg"
+              alt="interface"
+            />
+          </div>
+          <img
+            src="../images/snowboarding/challenges-7.jpg"
+            alt="Flutterflow code"
+          />
+          <p>
+            For the home page, my student wanted to display different categories
+            of information for the users: general information about
+            snowboarding, different snowboarding shapes, and some useful tips.
+            To keep this design clean and simple, we used the PageView widget,
+            so that the user can slide through the images. Since there were two
+            other categories, I had my student create two buttons beneath that
+            would change the content of the PageView images when clicked. My
+            student also wanted the images to revert back to the general
+            information if the user clicked that same button twice. In order to
+            accomplish all of these goals, I had him create an app state called
+            &#39;buttonname&#39;, which would update when a button is clicked.
+            We wrote an if/else statement that would either update to the button
+            name or null. Then, for the PageView widget, we wrote if/else
+            if/else statements that would display the corresponding images based
+            on the updated app state.
+          </p>
+          <p>
+            There were other minor challenges I had when working on this project
+            with my student because it was my first time working with
+            FlutterFlow, so it took me some time to figure out how to use many
+            of the features such as using simple search to implement the
+            functionality of the search video bar and using form widgets to
+            allow users to filter the resorts data generated from FireStore.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-content">
+        <h4>Conclusion</h4>
+        <p>
+          Overall, I learned so much about how to use the available features in
+          FlutterFlow to build such a fun app. I am proud of how this project
+          turned out and it was interesting to learn how to implement the
+          functionality of an interface without actually coding.
+        </p>
+      </section>
+
+      <button id="view-site-btn">
+        <a href="#" target="_blank">View Demo</a>
+      </button>
+
+      <footer>
+        <button>
+          <a href="https://github.com/jyw270/" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </button>
+        <button>
+          <a
+            href="https://www.instagram.com/designer_jennyw/?hl=en"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a></button
+        ><button>
+          <a
+            href="https://www.linkedin.com/in/jenny-wong-7614931b8/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </button>
+        <button>
+          <a
+            href="mailto:&#106;&#101;&#110;&#110;&#121;&#119;&#111;&#110;&#103;&#050;&#055;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </button>
+
+        <p>Jenny Wong &#124; Portfolio 2022</p>
+      </footer>
+    </div>
+  </body>
+</html>

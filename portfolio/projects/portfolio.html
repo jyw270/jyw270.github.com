@@ -26,13 +26,13 @@
       rel="stylesheet"
     />
 
-     <!--/ /-------- AOS Library --------/ /-->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--/ /-------- AOS Library --------/ /-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-     <!-- Popper Library -->
+    <!-- Popper Library -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
-    
+
     <!--/ /-------- Site Styling --------/ /-->
     <link href="../styles.css" rel="stylesheet" />
 
@@ -55,7 +55,9 @@
               <i class="fa-solid fa-bars"></i>
               <ul class="submenu">
                 <li><i class="fa-solid fa-arrow-right"></i></li>
-                <li><a href="../index.html#start-of-allprojects">projects</a></li>
+                <li>
+                  <a href="../index.html#start-of-allprojects">projects</a>
+                </li>
                 <li><a href="../about.html">about</a></li>
                 <li><a href="../contact.html">contact</a></li>
               </ul>
@@ -64,16 +66,14 @@
         </nav>
       </header>
 
-  
       <section class="project-title">
-        <img src="../images/portfolio.jpg" alt="portfolio website">
-    
+        <img src="../images/portfolio/portfolio.jpg" alt="portfolio website" />
+
         <div>
           <h2>My Portfolio</h2>
-          <h3>Figma &#124; HTML &#124; CSS &#124; JavaScript</h4>
+          <h3>Figma &#124; HTML &#124; CSS &#124; JavaScript</h3>
           <div class="hr-line"></div>
           <div>
-            <p>UX &#47; UI</p>
             <p>development</p>
             <p>2022</p>
           </div>
@@ -82,44 +82,100 @@
 
       <section class="project-content portfolio">
         <h4>User Interface</h4>
-        <p>I wanted my portfolio to resemble my resume &#8212; look personalized yet professional and simple &#8212; and be subtly elegant to match my logo.  
+        <p>
+          I wanted my portfolio to resemble my resume &#8212; look personalized
+          yet professional and simple &#8212; and be subtly elegant to match my
+          logo.
         </p>
-  
+
         <div>
           <h5>Digital Sketches</h5>
-          <img src="../images/portfolio/digital-sketches-1.jpg" alt="first design">
-          <p>This was the first theme I designed. It was very colorful and pink, but also too plain and white. The paragraph texts were faded gray and in Nunito font. It didn&#39;t feel like a professional website and the font choice didn&#39;t feel right. Each project&#39;s design also felt too complicated and the entire page felt quite delicate.
+          <img
+            src="../images/portfolio/digital-sketches-1.jpg"
+            alt="first design"
+          />
+          <p>
+            This was the first theme I designed. It was very colorful and pink,
+            but also too plain and white. The paragraph texts were faded gray
+            and in Nunito font. It didn&#39;t feel like a professional website
+            and the font choice didn&#39;t feel right. Each project&#39;s design
+            also felt too complicated and the entire page felt quite delicate.
           </p>
-          
-          <img src="../images/portfolio/digital-sketches-2.jpg" alt="second design">
-          <p>For my revised design, I minimized the amount of pink and mainly used black and turquoise. I chose a more standard font for the paragraph texts, Source Sans and used Laila for the headings and buttons to add some elegance. I sharpened the corners for the buttons and images and simplified each project&#39;s layout. These choices made my portfolio look a lot simpler, professional, and legible.</p>
-         
+
+          <img
+            src="../images/portfolio/digital-sketches-2.jpg"
+            alt="second design"
+          />
+          <p>
+            For my revised design, I minimized the amount of pink and mainly
+            used black and turquoise. I chose a more standard font for the
+            paragraph texts, Source Sans and used Laila for the headings and
+            buttons to add some elegance. I sharpened the corners for the
+            buttons and images and simplified each project&#39;s layout. These
+            choices made my portfolio look a lot simpler, professional, and
+            legible.
+          </p>
         </div>
       </section>
 
       <section class="project-content portfolio">
         <h4>Development</h4>
-        <p>My portfolio website is responsive and was developed using HTML, CSS, and JavaScript. 
+        <p>
+          My portfolio website is responsive and was developed using HTML, CSS,
+          and JavaScript.
         </p>
 
         <div>
           <h5>Challenges</h5>
-          <img src="../images/portfolio/challenges-1.jpg" alt="codde screenshot">
-          <img src="../images/portfolio/challenges-2.jpg" alt="code screenshot">
-          <p>The biggest part I struggled with was getting the &#34;all projects&#34;, &#34;development&#34;, and &#34;UX/UI&#34; button on the home page to function responsively. I wrote different JavaScript code for the mobile version and desktop version, but I couldn&#39;t figure out how to get each set of code to work for their certain viewport size. I discovered that there were JavaScript media queries I could use. But soon after I tried it out, I learned that you can&#39;t have different lines of code in different media queries because those code will get mixed up with one another. </p>
-          <p>My first solution was to add the different lines of mobile version code to the desktop version and vice versa, but this approach kept on causing errors. My second approach was to use the add and remove event listener methods by placing the desired function in the listener parameter. Originally the allPRojectsMobileNav( ) and allProjectsDesktopNav( ) functions had parameters, but because of this, I struggled to get the event listeners to work properly. I eventually worked around this by using the &#39;event&#39; variable to grab what I needed.
-        </p>
+          <img
+            src="../images/portfolio/challenges-1.jpg"
+            alt="codde screenshot"
+          />
+          <img
+            src="../images/portfolio/challenges-2.jpg"
+            alt="code screenshot"
+          />
+          <p>
+            The biggest part I struggled with was getting the &#34;all
+            projects&#34;, &#34;development&#34;, and &#34;UX/UI&#34; button on
+            the home page to function responsively. I wrote different JavaScript
+            code for the mobile version and desktop version, but I couldn&#39;t
+            figure out how to get each set of code to work for their certain
+            viewport size. I discovered that there were JavaScript media queries
+            I could use. But soon after I tried it out, I learned that you
+            can&#39;t have different lines of code in different media queries
+            because those code will get mixed up with one another.
+          </p>
+          <p>
+            My first solution was to add the different lines of mobile version
+            code to the desktop version and vice versa, but this approach kept
+            on causing errors. My second approach was to use the add and remove
+            event listener methods by placing the desired function in the
+            listener parameter. Originally the allPRojectsMobileNav( ) and
+            allProjectsDesktopNav( ) functions had parameters, but because of
+            this, I struggled to get the event listeners to work properly. I
+            eventually worked around this by using the &#39;event&#39; variable
+            to grab what I needed.
+          </p>
         </div>
       </section>
 
       <section class="project-content">
         <h4>Conclusion</h4>
-        <p>I&#39;ve learned so many new things about HTML, CSS, and JavaScript working on this portfolio. The JavaScript struggles I had allowed me to learn that two anonymous functions are two totally different functions and that media queries in JavaScript work differently than in CSS. I learned how to switch images depending on the viewport with HTML and how to set a background image without fixed dimensions.
+        <p>
+          I&#39;ve learned so many new things about HTML, CSS, and JavaScript
+          working on this portfolio. The JavaScript struggles I had allowed me
+          to learn that two anonymous functions are two totally different
+          functions and that media queries in JavaScript work differently than
+          in CSS. I learned how to switch images depending on the viewport with
+          HTML and how to set a background image without fixed dimensions.
         </p>
       </section>
 
-      <button id="view-site-btn"><a href="https://jyw270.github.io/portfolio/index.html">Go home</a></button>
-      
+      <button id="view-site-btn">
+        <a href="https://jyw270.github.io/portfolio/index.html">Go home</a>
+      </button>
+
       <footer>
         <button>
           <a href="https://github.com/jyw270/" target="_blank"

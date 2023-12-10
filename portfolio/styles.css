@@ -37,6 +37,12 @@ ul {
   padding: 0;
 }
 
+ul li,
+ol li {
+  font-size: 18px;
+  line-height: 27px;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -583,6 +589,63 @@ h2 {
   margin: 8px auto;
 }
 
+/********** BAKERSMILE PROJECT PAGE **********/
+
+.bakersmile img {
+  width: 90%;
+}
+
+.bakersmile-div div {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+#final-draft div:last-of-type {
+  width: 50%;
+}
+
+/********** CONNECTME PROJECT PAGE **********/
+
+.connectMe {
+  display: flex;
+  justify-content: center;
+}
+
+.project-content .connectMe img {
+  margin: 0 2px;
+}
+
+.connectMe img,
+#task2 {
+  width: 32.5%;
+}
+
+.connectMe-hyperlinks {
+  text-decoration: underline;
+}
+
+.connectMe-hyperlinks:hover {
+  color: #60aca3;
+}
+
+/********** SNOWBOARDING PROJECT PAGE **********/
+
+.snowboarding-imgs:last-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-content .snowboarding-imgs:last-of-type img {
+  width: 33%;
+  margin: 0 1px;
+}
+
+#edit-profile {
+  width: 33%;
+}
+
 @media only screen and (min-width: 600px) {
   /********** GENERAL **********/
   p,
@@ -849,6 +912,66 @@ h2 {
   #welcomescrn-img {
     width: 30%;
   }
+
+  /********** BAKERSMILE PROJECT PAGE **********/
+
+  .bakersmile img {
+    width: 50%;
+  }
+
+  .bakersmile-div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .bakersmile-div div {
+    width: 44%;
+  }
+
+  #final-draft div:first-of-type {
+    width: 68%;
+  }
+
+  #final-draft div:last-of-type {
+    width: 22%;
+  }
+
+  /********** COLLEGE EXPERIENCES PROJECT PAGE **********/
+
+  .college-exps {
+    display: flex;
+  }
+
+  .college-exps img {
+    align-self: center;
+    width: 49%;
+  }
+
+  /********** CONNECTME PROJECT PAGE **********/
+
+  .connectMe {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-content .connectMe img {
+    margin: 0 5px;
+  }
+
+  .connectMe img,
+  #task2 {
+    width: 30%;
+  }
+
+  /********** SNOWBOARDING PROJECT PAGE **********/
+
+  .project-content .snowboarding-imgs:last-of-type img {
+    width: 25%;
+  }
+
+  #edit-profile {
+    width: 25%;
+  }
 }
 
 @media only screen and (min-width: 850px) {
@@ -981,5 +1104,13 @@ h2 {
 
   #welcomescrn-img {
     width: 25%;
+  }
+
+  /********** SNOWBOARDING PROJECT PAGE **********/
+
+  .snowboarding-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
