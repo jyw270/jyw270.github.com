@@ -646,6 +646,14 @@ h2 {
   width: 33%;
 }
 
+#snowboarding a {
+  text-decoration: underline;
+}
+
+#snowboarding a:hover {
+  color: #60aca3;
+}
+
 @media only screen and (min-width: 600px) {
   /********** GENERAL **********/
   p,
