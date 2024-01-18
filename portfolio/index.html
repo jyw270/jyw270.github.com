@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jenny Wong &#124; Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
     <!--/ /-------- Normalize CSS --------/ /-->
     <link
@@ -22,7 +23,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -40,13 +45,10 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div id="blue-background"></div>
-    <div id="transparent-background" class="hidden"></div>
     <div id="container">
       <header>
         <a href="index.html">
           <img src="images/svg/logo.svg" alt="logo" id="logo" />
-          <h1>Jenny</h1>
         </a>
 
         <nav>
@@ -54,28 +56,54 @@
             <li>
               <i class="fa-solid fa-bars"></i>
               <ul class="submenu">
-                <li><i class="fa-solid fa-arrow-right"></i></li>
-                <li><a href="index.html#start-of-allprojects">projects</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">contact</a></li>
+                <li>
+                  <a href="index.html#start-of-allprojects"
+                    ><i class="fa-solid fa-folder-open"></i>
+                    <p>projects</p></a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#about-starter"
+                    ><i class="fa-solid fa-user"></i>
+                    <p>about</p></a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#contact-starter"
+                    ><i class="fa-solid fa-comments"></i>
+                    <p>contact</p></a
+                  >
+                </li>
+                <li>
+                  <a href="Jenny_Wong_Resume.pdf" target="_blank"
+                    ><i class="fa-solid fa-file-lines"></i>
+                    <p>resume</p></a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
         </nav>
       </header>
 
-      <section class="intro">
-        <img src="images/profile.png" alt="profile picture" />
+      <section id="intro">
+        <picture>
+          <source
+            srcset="images/profile-tablet.png"
+            media="(min-width: 550px)"
+          />
+          <img src="images/profile.png" alt="profile picture" />
+        </picture>
 
         <div>
-          <h2>Hi, I&#39;m Jenny!</h2>
+          <h1>Hi, I&#39;m Jenny!</h1>
           <p>
-            I am a recent UC Davis graduate who studied in Design and Computer
-            Science. I mainly focus on Front-end web development, but I enjoy
-            exploring UX/UI design. Feel work to explore my work below!
+            I am a UC Davis graduate who studied in Design and Computer Science.
+            I focus on both front-end web development and UX/UI design. Feel
+            work to explore my work below!
           </p>
           <div id="start-of-allprojects"></div>
-          <button>
+          <button class="cta-btn">
             <a href="#start-of-allprojects">View projects</a>
           </button>
         </div>
@@ -85,20 +113,29 @@
         <nav>
           <ul>
             <li>
-              <button>
-                <span id="selected-btn">all projects</span>
-                <i class="fa-solid fa-angle-down"></i>
-              </button>
+              <div>
+                <button id="first-btn">
+                  <span id="first-btn-name">all projects</span>
+                  <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="green-line"></div>
+              </div>
               <ul class="submenu">
-                <li><button>development</button></li>
-                <li><button>UX &#47; UI</button></li>
+                <li>
+                  <button>development</button>
+                  <div class="green-line"></div>
+                </li>
+                <li>
+                  <button>UX &#47; UI</button>
+                  <div class="green-line"></div>
+                </li>
               </ul>
             </li>
           </ul>
         </nav>
 
         <section>
-          <article class="dev-only" data-aos="zoom-in">
+          <!-- <article class="dev-only" data-aos="zoom-in">
             <img
               src="images/snowboarding/snowboarding.png"
               alt="snowboarding app"
@@ -121,9 +158,9 @@
                 <a href="projects/snowboarding.html">read more</a>
               </button>
             </div>
-          </article>
+          </article> -->
 
-          <article class="dev-only" data-aos="zoom-in">
+          <!-- <article class="dev-only" data-aos="zoom-in">
             <img
               src="images/portfolio/portfolio.jpg"
               alt="portfolio website"
@@ -141,9 +178,9 @@
                 <a href="projects/portfolio.html">read more</a>
               </button>
             </div>
-          </article>
+          </article> -->
 
-          <article class="ux-ui-only" data-aos="zoom-in">
+          <!-- <article class="ux-ui-only" data-aos="zoom-in">
             <img
               src="images/connectMe/connectMe.png"
               alt="connectMe app"
@@ -168,9 +205,9 @@
                 <a href="projects/connectMe.html">read more</a>
               </button>
             </div>
-          </article>
+          </article> -->
 
-          <article class="dev-only" data-aos="zoom-in">
+          <!-- <article class="dev-only" data-aos="zoom-in">
             <img
               src="images/college-experiences/college-experiences.jpg"
               alt="sharing college experiences website"
@@ -195,7 +232,7 @@
                 <a href="projects/college-experiences.html">read more</a>
               </button>
             </div>
-          </article>
+          </article> -->
 
           <article class="ux-ui-only" data-aos="zoom-in">
             <img
@@ -207,8 +244,8 @@
             <div>
               <h3>Travel Planner</h3>
               <p>
-                I designed a travel planning app to help travelers with low
-                resources and make traveling...
+                An app that focuses on helping users plan out several important
+                details, such as knowing...
               </p>
               <button>
                 <a
@@ -223,7 +260,7 @@
             </div>
           </article>
 
-          <article class="ux-ui-only" data-aos="zoom-in">
+          <!-- <article class="ux-ui-only" data-aos="zoom-in">
             <img
               src="images/bakersmile/bakersmile.jpg"
               alt="bakersmile prototype"
@@ -248,9 +285,9 @@
                 <a href="projects/bakersmile.html">read more</a>
               </button>
             </div>
-          </article>
+          </article> -->
 
-          <article class="dev-only" data-aos="zoom-in">
+          <!-- <article class="dev-only" data-aos="zoom-in">
             <img
               src="images/keychain-city/keychain-city.jpg"
               alt="keychain city website"
@@ -273,7 +310,7 @@
                 <a href="projects/keychain-city.html">read more</a>
               </button>
             </div>
-          </article>
+          </article> -->
 
           <article class="dev-only" data-aos="zoom-in">
             <img
@@ -285,8 +322,8 @@
             <div>
               <h3>Mad Libs Bullet Journaling</h3>
               <p>
-                This is a school project where we were required to design a
-                simple Mad Libs webpage...
+                I designed two different interfaces for my mad libs game. The
+                first interface includes...
               </p>
 
               <button>
@@ -301,7 +338,233 @@
               </button>
             </div>
           </article>
+          <div id="about-starter"></div>
+
+          <button class="cta-btn">
+            <a href="#">View more</a>
+          </button>
         </section>
+      </section>
+
+      <!-- ABOUT ME -->
+
+      <section id="about">
+        <div>
+          <h2>About</h2>
+          <div class="green-line"></div>
+        </div>
+        <div class="content">
+          <p>
+            Hello, I'm Jenny! I graduated from UC Davis with a Bachelor's degree
+            in Design and Computer Science. I am passionate about front-end web
+            development and UX/UI design because they are a great combination of
+            my interests.
+          </p>
+          <p>
+            My goal as a designer and developer is to create applications and
+            websites that bring comfort and happiness to people. I genuinely
+            value the importance of empathizing with users in order to create
+            effective products that are familiar and satisfying. My design
+            aesthetics revolves around simplicity and elegance, which my logo
+            portrays as a simple flower with vibrant, delicate colors. The stem
+            represents the letter, J in my first name, while the subtle heart
+            shape in the flower represents the word 爱 (love) in my Chinese
+            name.
+          </p>
+
+          <section id="resume-content" data-aos="fade-up">
+            <div id="category-selections">
+              <button>
+                <img src="images/svg/skills-icon.svg" alt="gears icon" />
+                <div>
+                  <h3>Skills</h3>
+                  <div class="green-line"></div>
+                </div>
+              </button>
+              <button>
+                <img src="images/svg/education-icon.svg" alt="grad cap icon" />
+                <div>
+                  <h3>Experience</h3>
+                  <div class="green-line"></div>
+                </div>
+              </button>
+            </div>
+
+            <div class="category" id="skills">
+              <h4>Design</h4>
+
+              <i class="fab fa-figma icons" aria-describedby="tooltip"></i>
+              <span class="message" role="tooltip"
+                >Figma
+                <div class="arrow" data-popper-arrow></div>
+              </span>
+
+              <img
+                class="icons"
+                aria-describedby="tooltip"
+                src="images/svg/ai-icon.svg"
+                alt="illustrator icon"
+              />
+              <span class="message" role="tooltip"
+                >Illustrator
+                <div class="arrow" data-popper-arrow></div>
+              </span>
+
+              <img
+                class="icons"
+                aria-describedby="tooltip"
+                src="images/svg/ps-icon.svg"
+                alt="Photoshop icon"
+              />
+              <span class="message" role="tooltip"
+                >Photoshop
+                <div class="arrow" data-popper-arrow></div>
+              </span>
+
+              <img
+                class="icons"
+                aria-describedby="tooltip"
+                src="images/svg/xd-icon.svg"
+                alt="xd icon"
+              />
+              <span class="message" role="tooltip"
+                >Adobe XD
+                <div class="arrow" data-popper-arrow></div>
+              </span>
+
+              <h4>Programming</h4>
+              <div class="language-skills">
+                <i class="fab fa-html5 icons" aria-describedby="tooltip"></i>
+                <span class="message" role="tooltip"
+                  >HTML
+                  <div class="arrow" data-popper-arrow></div>
+                </span>
+
+                <i class="fab fa-css3-alt icons" aria-describedby="tooltip"></i>
+                <span class="message" role="tooltip"
+                  >CSS
+                  <div class="arrow" data-popper-arrow></div>
+                </span>
+
+                <i
+                  class="fab fa-js-square icons"
+                  aria-describedby="tooltip"
+                ></i>
+                <span class="message" role="tooltip"
+                  >JavaScript
+                  <div class="arrow" data-popper-arrow></div>
+                </span>
+
+                <!-- <i class="fa-brands fa-python icons" aria-describedby="tooltip"></i>
+            <span class="message" role="tooltip"
+              >Python
+              <div class="arrow" data-popper-arrow></div>
+            </span>
+
+            <img
+              class="icons"
+              aria-describedby="tooltip"
+              src="images/svg/c++-icon.svg"
+              alt="c++ icon"
+            />
+            <span class="message" role="tooltip"
+              >C / C++
+              <div class="arrow" data-popper-arrow></div>
+            </span> -->
+              </div>
+              <div class="contact-starter" id="contact-starter"></div>
+              <h4>Tools</h4>
+              <i class="fab fa-git-square icons" aria-describedby="tooltip"></i>
+              <span class="message" role="tooltip"
+                >Git
+                <div class="arrow" data-popper-arrow></div>
+              </span>
+
+              <i
+                class="fab fa-github-square icons"
+                aria-describedby="tooltip"
+              ></i>
+              <span class="message" role="tooltip"
+                >Github
+                <div class="arrow" data-popper-arrow></div>
+              </span>
+
+              <img
+                class="icons"
+                aria-describedby="tooltip"
+                src="images/svg/flutterflow-icon.svg"
+                alt="flutterflow icon"
+              />
+              <span class="message" role="tooltip"
+                >FlutterFlow
+                <div class="arrow" data-popper-arrow></div>
+              </span>
+            </div>
+
+            <div class="category" id="experience">
+              <article>
+                <div class="line"></div>
+                <div>
+                  <div id="circle1"></div>
+                  <h4>Coding Instructor</h4>
+                  <p>Coding Minds Academy | Jun 2022–Sep 2023</p>
+                  <p>
+                    Managed multiple different programming classes and designed
+                    lessons and projects to help students recognize and
+                    demonstrate their potential. Responsible for creating
+                    improved curriculums by combining previous lesson plan with
+                    additional research. Collaborated with a team of developers
+                    to design a programming exercise website that aligned with
+                    the academy’s visual identity.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <div class="line"></div>
+                <div>
+                  <div id="circle2"></div>
+                  <h4>Undergraduate Tutor</h4>
+                  <p>UC Davis | Jun–Jul 2021 & Sep–Dec 2021</p>
+                  <div class="contact-starter"></div>
+                  <p>
+                    Conducted tutoring sessions to assist students in
+                    understanding HTML and CSS and inform them of design and
+                    development decisions when building their websites. Provided
+                    feedback on how to organize and condense their code.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- CONTACT ME -->
+      <section id="contact">
+        <div>
+          <h2>Contact</h2>
+          <div class="green-line"></div>
+        </div>
+        <div class="content">
+          <p>
+            I am currently working full-time as a Paraprofessional at ProCare
+            Therapy helping students with special needs stay focused in a
+            classroom setting and understand academic material assigned because
+            I am passionate about being empathetic and assisting when working
+            with clients. Nonetheless, I am highly interested in opportunities
+            related to web development and Ux/UI. I look forward to applying my
+            own creative ideas and solutions to benefit and help a company
+            prosper. Please feel free to contact me if you would like to
+            collaborate and I will be sure to get back to you as soon as
+            possible!
+          </p>
+          <button class="cta-btn">
+            <a
+              href="mailto:&#106;&#101;&#110;&#110;&#121;&#119;&#111;&#110;&#103;&#050;&#055;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+              >Let's chat</a
+            >
+          </button>
+        </div>
       </section>
 
       <footer>
@@ -330,7 +593,7 @@
           ></a>
         </button>
 
-        <p>Jenny Wong &#124; Portfolio 2022</p>
+        <p>Jenny Wong | &#169; Portfolio 2022</p>
       </footer>
     </div>
   </body>

@@ -4,20 +4,14 @@
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 body {
   position: relative;
+  color: #262626;
+  min-width: 350px;
 }
 
-#blue-background {
-  position: absolute;
-  width: 100vw;
-  height: 47.5vh;
-  background-color: #eef7f3;
+#container {
+  max-width: 1500px;
 }
 
 .hidden {
@@ -32,138 +26,96 @@ body {
 
 /********** GENERAL **********/
 
+h1,
+h2,
+h3,
+button {
+  font-family: "Laila", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h4,
+p {
+  font-family: "Assistant", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
 }
 
-ul li,
-ol li {
-  font-size: 18px;
-  line-height: 27px;
-}
-
 a {
   text-decoration: none;
-  color: black;
-}
-
-img {
-  display: block;
-}
-
-p {
-  font-size: 15px;
-  line-height: 22px;
-  color: #313131;
+  color: #262626;
 }
 
 button {
-  font-family: "Laila", sans-serif;
-  font-size: 15px;
-  text-transform: uppercase;
-  color: #313131;
   background: none;
-  border: 2px solid black;
-  padding: 10px 15px;
+  border: none;
 }
 
 button:hover {
   cursor: pointer;
 }
 
-.intro button:hover,
-#view-site-btn:hover {
-  background-color: #000;
+.cta-btn {
+  font-family: "Laila", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid #b0c08e;
+  border-radius: 5px;
+  padding: 9px 17px;
 }
 
-.intro button:hover a,
-#view-site-btn:hover a {
-  color: #fff;
+.cta-btn:hover {
+  font-weight: 500;
 }
 
-#container {
-  font-family: "Source Sans Pro", sans-serif;
-  min-width: 350px;
-  position: relative;
-  margin: auto;
+.green-line {
+  background-color: #b0c08e;
+  border-radius: 5px;
+  height: 4px;
 }
 
-#container > section {
-  margin: auto;
-  max-width: 500px;
-}
-
-/********** LOGO HEADER NAVIGATION **********/
+/********** NAVIGATION **********/
 
 header {
-  width: 100%;
-  display: flex;
+  background-color: #b0c08e;
+  box-shadow: 0px 4px 5px rgba(160, 160, 160, 0.2);
+  padding: 5px 0;
   position: fixed;
-  background-color: #eef7f3;
-  padding: 20px;
-  z-index: 1;
-}
-
-header > a {
-  display: flex;
-}
-
-header h1 {
-  font-family: "Laila", sans-serif;
-  font-size: 25px;
-  font-weight: 450;
-  text-transform: uppercase;
-  padding-left: 10px;
-}
-
-header nav {
-  font-size: 24px;
-  margin-left: auto;
-}
-
-header nav > ul {
-  padding-top: 15px;
-}
-
-header .submenu {
-  position: absolute;
-  right: -9999px;
-  top: 0;
-  width: 70%;
-  height: 100vh;
-  background-color: white;
-  box-shadow: -4px 0 10px rgba(151, 151, 151, 0.5);
-  padding-top: calc(50vh - 120px);
-  transition: all 2s ease;
-}
-
-header .submenu .fa-arrow-right {
-  position: absolute;
-  top: 28px;
-  right: 25px;
-  color: #2d2d2d;
-}
-
-header .submenu a {
-  font-size: 18px;
-  margin-left: 15%;
-  line-height: 40px;
-}
-
-#transparent-background {
-  width: 30%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
-  position: absolute;
+  width: 100%;
   z-index: 2;
 }
 
-/********** FOOTER NAVIGATION **********/
+header > a {
+  width: fit-content;
+  display: block;
+  margin: auto;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav .submenu a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Laila", sans-serif;
+  text-transform: uppercase;
+}
+
+/********** FOOTER **********/
 
 footer {
   text-align: center;
-  background-color: #f1f0f0;
   padding: 22px 0;
 }
 
@@ -177,68 +129,44 @@ footer p {
   font-size: 11px;
 }
 
-/********** PAGE CONTENT: INTRO SECTION **********/
+/********** HOME PAGE: INTRO **********/
 
-.intro {
-  padding: 102.25px 20px 0 20px;
+#intro {
+  padding-top: 75px;
 }
 
-h2 {
-  font-family: "Laila", sans-serif;
-  font-weight: 450;
-  font-size: 32px;
-  text-transform: uppercase;
-  margin: 10px 0;
+#intro div {
+  margin: 0 15px;
 }
 
-.intro img {
+#intro img {
+  width: 75%;
+  max-width: 450px;
   display: block;
-  margin: auto;
-  width: 50%;
-  max-width: 220px;
+  margin-left: auto;
 }
 
-.intro button {
-  margin: 15px 0 50px 0;
+#intro h1 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 5px 0;
 }
 
-/********** HOME PAGE: ALL PROJECTS SECTION **********/
+#intro .cta-btn {
+  margin-top: 10px;
+}
 
+/********** HOME PAGE: PROJECTS **********/
 #allprojects {
-  padding: 0 20px;
+  margin: 60px 15px;
 }
 
-#allprojects nav > ul > li {
-  position: relative;
-}
-
-#allprojects nav button {
-  display: block;
-  margin: auto;
-  width: 175px;
-  background-color: white;
-}
-
-#allprojects .fa-angle-down {
-  font-size: 17px;
-  margin-left: 5px;
-}
-
-#allprojects .submenu li {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 1s ease;
-}
-
-#allprojects .submenu li:last-of-type {
-  z-index: -2;
+#allprojects nav .green-line {
+  height: 0;
 }
 
 #allprojects article {
-  margin: 30px 0 60px 0;
+  margin: 40px 0;
   position: relative;
   transition: all 1s ease;
 }
@@ -250,28 +178,24 @@ h2 {
 
 #allprojects article .portrait {
   width: 74%;
+  display: block;
   margin: auto;
 }
 
 #allprojects article h3 {
-  font-family: "Laila", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
-  width: fit-content;
-  height: 17px;
-  padding: 5px 1px 0 1px;
-  background-color: #d9fbf7;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 15px;
 }
 
 #allprojects article p {
-  padding: 18px 0 17px 0;
+  margin: 9px 0;
 }
 
 #allprojects article button {
+  font-size: 15px;
   text-transform: capitalize;
   text-decoration: underline;
-  border: none;
   padding: 0;
 }
 
@@ -279,46 +203,62 @@ h2 {
   padding-right: 40px;
 }
 
-/********** ABOUT PAGE **********/
+#allprojects .cta-btn {
+  display: block;
+  margin: auto;
+}
+
+/********** HOME PAGE: ABOUT **********/
+
+#about {
+  margin: 0 15px;
+}
+
+#about .green-line {
+  width: 70px;
+  margin: 3px 0 10px 9px;
+}
 
 #about p {
-  padding-bottom: 15px;
+  margin: 5px 0;
 }
 
-/********** ABOUT PAGE: CATEGORY SELECTIONS **********/
+#resume-content {
+  margin: 15px 0;
+}
 
-#category-selections,
-#category-selections button {
+#resume-content #category-selections,
+#resume-content button {
   display: flex;
+  padding: 0 30px 0 0;
 }
 
-#category-selections button {
-  border: none;
-  margin-right: 5%;
-  padding: 3px;
+#resume-content #category-selections {
+  margin-top: 30px;
 }
 
-#category-selections button:first-of-type {
-  background-color: #d9fbf7;
+#resume-content button:first-of-type .green-line {
+  width: 50px;
+  margin-left: 5px;
 }
 
-#category-selections button img {
-  margin-right: 2px;
+#resume-content button:last-of-type .green-line {
+  height: 0;
+  width: 100px;
+  margin-left: 5px;
 }
 
-#category-selections h3 {
-  text-transform: none;
-  font-size: 16px;
-  font-weight: 450;
+#resume-content h3 {
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-left: 4px;
 }
 
-/********** ABOUT PAGE: SKILLS, EDUCATION, HOBBIES CONTENT **********/
-
-#experience {
-  padding: 0 20px 60px 20px;
+#resume-content h4 {
+  font-weight: 600;
 }
 
-#experience .category {
+#resume-content .category {
   transition: all 1s ease;
 }
 
@@ -327,7 +267,7 @@ h2 {
 }
 
 #skills h4 {
-  margin: 15px 0 5px 0;
+  margin: 13px 0 5px 0;
 }
 
 #skills img {
@@ -336,10 +276,8 @@ h2 {
   padding: 2px 20px 0 0;
 }
 
-@media only screen and (max-width: 395px) {
-  #skills .language-skills:last-of-type img {
-    margin-top: 18px;
-  }
+#skills .language-skills:last-of-type img {
+  margin-top: 18px;
 }
 
 #skills i {
@@ -349,6 +287,7 @@ h2 {
 }
 
 #skills .message {
+  font-family: "Assistant", sans-serif;
   font-size: 14px;
   font-weight: 600;
   display: none;
@@ -384,32 +323,32 @@ h2 {
   bottom: -4px;
 }
 
-#education {
+#experience {
   display: block;
   max-width: 680px;
   margin-top: 16px;
 }
 
-#education article {
+#experience article {
   display: flex;
   position: relative;
 }
 
-#education article .line {
+#experience article .line {
   margin-left: 7px;
   width: 5px;
   background-color: #e5e5e5;
 }
 
-#education article:first-of-type .line {
+#experience article:first-of-type .line {
   border-radius: 16px 16px 0 0;
 }
 
-#education article:last-of-type .line {
+#experience article:last-of-type .line {
   border-radius: 0 0 16px 16px;
 }
 
-#education article > div:last-of-type {
+#experience article > div:last-of-type {
   width: 90%;
   padding: 11px 0 11px 16px;
 }
@@ -420,613 +359,208 @@ h2 {
   left: -0.16px;
   width: 19px;
   height: 19px;
-  background-color: #d9fbf7;
+  background-color: #b0c08e;
   border-radius: 50%;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-#education article h4 {
-  font-size: 19px;
+#experience article h4 {
+  font-size: 17px;
 }
 
-#education article p:first-of-type {
+#experience article p:first-of-type {
+  color: #c4c2c3;
   font-size: 14px;
-  color: #ababab;
-  margin: 5px 0;
+  font-weight: 600;
+  margin: 2px 0;
 }
 
-#education article p:last-of-type {
-  line-height: 1.4em;
+/********** HOME PAGE: CONTACT **********/
+#contact {
+  margin: 60px 15px;
 }
 
-#hobbies {
-  display: block;
+#contact .green-line {
+  width: 97px;
+  margin: 3px 0 10px 10px;
 }
 
-#hobbies p {
-  font-size: 16px;
-  margin: 16px 0;
+#contact p {
+  margin: 15px 0;
 }
 
-/********** CONTACT PAGE **********/
+@media only screen and (max-width: 670px) {
+  /********** NAVIGATION **********/
 
-#contact img {
-  width: 90%;
-  max-width: none;
-  border-radius: 20px;
-  border: 3px solid #fff;
+  header nav .fa-bars {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 35%;
+    right: 20px;
+  }
+
+  header nav .fa-bars:hover {
+    cursor: pointer;
+  }
+
+  header nav .submenu {
+    background-color: #b0c08e;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    top: -9999px;
+  }
+
+  header nav .submenu li {
+    padding: 12px 0;
+  }
+
+  header nav .submenu i {
+    padding-right: 7px;
+    font-size: 18px;
+  }
+
+  header nav .submenu a {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /********** HOME PAGE: PROJECTS **********/
+
+  #allprojects nav > ul > li {
+    position: relative;
+  }
+
+  #allprojects nav button {
+    display: block;
+    margin: auto;
+    width: 175px;
+    padding: 7px;
+    background-color: #fff;
+  }
+
+  #allprojects nav button span {
+    font-weight: 500;
+  }
+
+  #allprojects .fa-angle-down {
+    font-size: 17px;
+    margin-left: 5px;
+  }
+
+  #allprojects .submenu {
+    position: absolute;
+    top: -9999px;
+    left: calc(50% - 82px);
+    z-index: 1;
+    box-shadow: 0px 4px 5px rgba(160, 160, 160, 0.2);
+  }
 }
 
-#contact h2 {
-  margin: 20px 0 15px 0;
-}
-
-#contact button {
-  margin: 25px 0 60px 0;
-}
-
-/********** PROJECT PAGE **********/
-
-.project-title {
-  padding: 102.25px 20px 0 20px;
-}
-
-.project-title img {
-  width: 100%;
-  margin-top: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.project-title h2 {
-  font-size: 26px;
-  margin-top: 20px;
-}
-
-.project-title h3 {
-  font-size: 15px;
-  font-weight: 400;
-}
-
-.project-title .hr-line {
-  width: 100%;
-  height: 0.7px;
-  background-color: #c4c2c3;
-  margin: 10px 0;
-}
-
-.project-title div div {
-  display: flex;
-}
-
-.project-title p {
-  font-size: 14px;
-  border: 1px solid black;
-  padding: 2px 8px;
-  margin-right: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.project-content {
-  padding: 18px 20px 0 20px;
-}
-
-.project-content img {
-  width: 100%;
-  margin: 8px auto;
-}
-
-.project-content .small-landscape {
-  width: 78%;
-}
-
-.project-content .portrait {
-  width: 67%;
-}
-
-.project-content h4 {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.project-content h5 {
-  font-size: 16px;
-  margin: 8px 0;
-}
-
-.project-content p {
-  margin: 9px 0;
-}
-
-.project-content ul {
-  list-style-type: circle;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 15px;
-  line-height: 22px;
-  color: #313131;
-  margin-left: 20px;
-}
-
-#view-site-btn {
-  display: block;
-  margin: 35px auto 60px auto;
-}
-
-/********** PROJECT PAGE IMAGE ZOOM **********/
-
-.project-content .zoom {
-  max-width: 550px;
-  margin: auto;
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  transition: all 1s ease;
-}
-
-.project-content .zoom img {
-  visibility: hidden;
-  width: 100%;
-}
-
-.project-content .zoom:hover {
-  cursor: zoom-in;
-}
-
-/********** TRAVEL PLANNER PROJECT PAGE **********/
-
-#travel-planner img {
-  margin-top: 2px;
-  box-shadow: none;
-}
-
-#checklist-img {
-  width: 80%;
-  margin: 8px auto;
-}
-
-#welcomescrn-img {
-  width: 45%;
-  margin: 8px auto;
-}
-
-/********** BAKERSMILE PROJECT PAGE **********/
-
-.bakersmile img {
-  width: 90%;
-}
-
-.bakersmile-div div {
-  width: 80%;
-  display: block;
-  margin: auto;
-}
-
-#final-draft div:last-of-type {
-  width: 50%;
-}
-
-/********** CONNECTME PROJECT PAGE **********/
-
-.connectMe {
-  display: flex;
-  justify-content: center;
-}
-
-.project-content .connectMe img {
-  margin: 0 2px;
-}
-
-.connectMe img,
-#task2 {
-  width: 32.5%;
-}
-
-.connectMe-hyperlinks {
-  text-decoration: underline;
-}
-
-.connectMe-hyperlinks:hover {
-  color: #60aca3;
-}
-
-/********** SNOWBOARDING PROJECT PAGE **********/
-
-.snowboarding-imgs:last-of-type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-content .snowboarding-imgs:last-of-type img {
-  width: 33%;
-  margin: 0 1px;
-}
-
-#edit-profile {
-  width: 33%;
-}
-
-#snowboarding a {
-  text-decoration: underline;
-}
-
-#snowboarding a:hover {
-  color: #60aca3;
-}
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 671px) {
   /********** GENERAL **********/
-  p,
-  .project-content ul {
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  button {
-    font-size: 18px;
-    padding: 15px 20px;
-  }
 
   #container > section {
-    max-width: 1000px;
+    margin-left: 110px;
   }
 
-  /********** LOGO HEADER NAVIGATION **********/
+  #container #intro,
+  footer {
+    margin-left: 95px;
+  }
 
-  header .fa-bars,
-  header .submenu .fa-arrow-right,
-  #transparent-background {
+  /********** NAVIGATION **********/
+
+  header {
+    width: 95px;
+    height: 100vh;
+  }
+
+  header > a {
+    margin: 100% auto 35px auto;
+  }
+
+  header .fa-bars {
     display: none;
   }
 
-  header img {
-    width: 70px;
+  header nav {
+    text-align: center;
   }
 
-  header h1 {
-    font-size: 32px;
-    font-weight: 400;
+  header nav .submenu li {
+    margin: 22px 0;
   }
 
-  header nav > ul {
-    padding: 18px 0;
+  header nav .submenu i {
+    font-size: 20px;
   }
 
-  header .submenu {
-    position: static;
-    height: fit-content;
-    background: none;
-    box-shadow: none;
-    padding-top: 0;
-    transition: none;
+  header .submenu p {
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+
+  /********** HOME PAGE: INTRO **********/
+
+  #intro {
     display: flex;
+    padding-top: 0;
+    margin-left: 95px;
   }
 
-  header .submenu a {
-    font-family: "Laila", sans-serif;
-    font-size: 18px;
-    text-transform: capitalize;
-    margin-left: 45px;
+  #intro > div {
+    order: 1;
+    align-self: flex-end;
+    width: 80%;
   }
 
-  header .submenu li:last-of-type a {
-    margin-right: 15px;
+  #intro picture {
+    order: 2;
+    align-self: flex-start;
   }
 
-  /********** FOOTER NAVIGATION **********/
-
-  footer button {
-    font-size: 38px;
-    padding: 0 24px 15px 24px;
+  #intro picture img {
+    width: 100%;
   }
 
-  footer p {
-    font-size: 13px;
-  }
-
-  /********** PAGE CONTENT: INTRO SECTION **********/
-
-  .intro {
-    padding-top: 120px;
-  }
-
-  h2 {
-    font-size: 55px;
-  }
-
-  .intro button {
-    margin-bottom: 80px;
-  }
-
-  /********** HOME PAGE: ALL PROJECTS SECTION **********/
-
-  #allprojects article {
-    max-width: 675px;
-    display: block;
-    margin: 30px auto 60px auto;
-  }
-
-  #allprojects article h3 {
-    font-size: 22px;
-    height: 21px;
-  }
+  /********** HOME PAGE: PROJECTS **********/
 
   #allprojects .fa-angle-down {
     display: none;
   }
 
-  #allprojects nav > ul > li {
-    display: flex;
-    justify-content: center;
-  }
-
-  #allprojects nav button {
-    font-size: 17px;
-    width: 170px;
-    margin: 0 15px 0 0;
-    padding: 15px 18px;
-  }
-
-  #allprojects nav button:hover {
-    color: #fff;
-    background-color: #000;
-  }
-
-  #allprojects .submenu li:last-of-type button {
-    margin: 0;
-  }
-
+  #allprojects nav > ul > li,
   #allprojects .submenu {
     display: flex;
-  }
-
-  #allprojects .submenu li {
-    position: static;
-  }
-
-  /********** ABOUT PAGE: CATEGORY SELECTIONS **********/
-
-  #category-selections button img {
-    width: 30px;
-    margin-right: 4px;
-  }
-
-  #category-selections h3 {
-    font-size: 20px;
-  }
-
-  /********** ABOUT PAGE: SKILLS, EDUCATION, HOBBIES CONTENT **********/
-
-  #skills h4 {
-    font-size: 18px;
-  }
-
-  #skills img {
-    height: 63px;
-    padding-right: 25px;
-  }
-
-  #skills i {
-    font-size: 70px;
-    padding-right: 25px;
-  }
-
-  #education article h4 {
-    font-size: 24px;
-  }
-
-  #education article p:first-of-type {
-    font-size: 18px;
-  }
-
-  #hobbies {
-    display: flex;
-    justify-content: space-between;
-    width: 400px;
-  }
-
-  #hobbies {
-    display: flex;
-  }
-
-  #hobbies p {
-    font-size: 18px;
-  }
-
-  /********** PROJECT PAGE **********/
-
-  .project-title {
-    padding-top: 125px;
-  }
-
-  .project-title img {
-    max-width: 550px;
-    margin: auto;
-  }
-
-  .project-title h2 {
-    font-size: 34px;
-  }
-
-  .project-title h3 {
-    font-size: 18px;
-  }
-
-  .project-title .hr-line {
-    margin: 15px 0;
-  }
-
-  .project-title p {
-    font-size: 16px;
-  }
-
-  .project-content img {
-    margin: 10px auto;
-    max-width: 550px;
-  }
-
-  .project-content .small-landscape {
-    width: 72%;
-  }
-
-  .project-content .portrait {
-    width: 60%;
-  }
-
-  .project-content .zoom:hover {
-    transform: scale(1.2);
-  }
-
-  .project-content h4 {
-    font-size: 24px;
-    margin: 10px 0;
-  }
-
-  .project-content h5 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .project-content p {
-    margin: 11px 0;
-  }
-
-  /********** CONTACT PAGE **********/
-
-  #contact img {
-    width: 76%;
-    max-width: 500px;
-  }
-
-  /********** TRAVEL PLANNER PROJECT PAGE **********/
-
-  .travel-planner .wide-landscape {
-    width: 100%;
-    max-width: 700px;
-  }
-
-  .travel-planner .testing-imgs {
-    display: none;
-  }
-
-  .travel-planner img {
-    width: 63%;
-  }
-
-  #checklist-img {
-    width: 55%;
-  }
-
-  #welcomescrn-img {
-    width: 30%;
-  }
-
-  /********** BAKERSMILE PROJECT PAGE **********/
-
-  .bakersmile img {
-    width: 50%;
-  }
-
-  .bakersmile-div {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .bakersmile-div div {
-    width: 44%;
-  }
-
-  #final-draft div:first-of-type {
-    width: 68%;
-  }
-
-  #final-draft div:last-of-type {
-    width: 22%;
-  }
-
-  /********** COLLEGE EXPERIENCES PROJECT PAGE **********/
-
-  .college-exps {
-    display: flex;
-  }
-
-  .college-exps img {
-    align-self: center;
-    width: 49%;
-  }
-
-  /********** CONNECTME PROJECT PAGE **********/
-
-  .connectMe {
-    display: flex;
     justify-content: center;
   }
 
-  .project-content .connectMe img {
-    margin: 0 5px;
-  }
-
-  .connectMe img,
-  #task2 {
-    width: 30%;
-  }
-
-  /********** SNOWBOARDING PROJECT PAGE **********/
-
-  .project-content .snowboarding-imgs:last-of-type img {
-    width: 25%;
-  }
-
-  #edit-profile {
-    width: 25%;
-  }
-}
-
-@media only screen and (min-width: 850px) {
-  #blue-background {
-    height: 50vh;
-  }
-
-  /********** PAGE CONTENT: INTRO SECTION **********/
-
-  #container .intro {
-    margin-bottom: 110px;
-  }
-
-  .intro {
-    display: flex;
-    padding-top: 215px;
-  }
-
-  .intro img {
-    order: 2;
-    margin-left: 90px;
-    max-width: 250px;
-  }
-
-  .intro h2 {
-    margin-top: 50px;
-  }
-
-  .intro button {
-    margin-bottom: 0;
-  }
-
-  /********** HOME PAGE: ALL PROJECTS SECTION **********/
-
-  #allprojects nav {
-    margin-bottom: 60px;
-  }
-
   #allprojects nav button {
-    font-size: 18px;
-    width: 180px;
-    margin: 0 60px 0 0;
+    font-size: 16px;
+    margin: 0 14px;
+  }
+
+  #allprojects nav div .green-line {
+    width: 105px;
+    margin: 2px 24.5px;
+  }
+
+  #allprojects nav .submenu li:first-of-type .green-line {
+    width: 110px;
+    margin: 2px 25.5px;
+  }
+
+  #allprojects nav .submenu li:last-of-type .green-line {
+    width: 50px;
+    margin: 2px 23px;
   }
 
   #allprojects article {
     display: flex;
-    max-width: 1000px;
   }
 
   #allprojects article .landscape {
@@ -1045,80 +579,166 @@ h2 {
     align-self: center;
   }
 
-  /********** PROJECT PAGE **********/
+  /********** HOME PAGE: ABOUT, CONTACT **********/
 
-  .project-title {
+  #about,
+  #contact {
     display: flex;
-    padding-top: 175px;
-    padding-bottom: 50px;
+    justify-content: end;
   }
 
-  .project-title img {
-    width: 50%;
-    margin-right: 20px;
+  #about .content,
+  #contact .content {
+    width: 75%;
+    margin-left: 20px;
   }
 
-  .project-title > div {
-    width: 50%;
-    align-self: center;
-  }
-
-  #container .project-content {
-    width: 850px;
-  }
-
-  .project-content .small-landscape {
-    width: 65%;
-  }
-
-  .project-content .portrait {
-    width: 50%;
-  }
-
-  /********** CONTACT PAGE **********/
-
-  #contact picture {
-    margin: auto 20px auto 0;
-  }
-
-  #contact img {
-    width: 400px;
-    margin: 0;
-  }
-
-  #contact div {
-    order: 2;
-  }
-
-  #contact h2 {
+  #about .content > p:first-of-type,
+  #contact .content > p:first-of-type {
     margin-top: 0;
   }
+}
 
-  #contact button {
-    margin-bottom: 0;
+@media only screen and (min-width: 900px) {
+  /********** GENERAL **********/
+
+  #container {
+    margin: auto;
   }
 
-  /********** PORTFOLIO PROJECT PAGE **********/
-
-  .portfolio img {
-    max-width: 500px;
+  #container > section {
+    max-width: 1200px;
+    margin-left: 20%;
+    margin-right: 10%;
   }
 
-  /********** TRAVEL PLANNER PROJECT PAGE **********/
-
-  #checklist-img {
-    width: 47%;
+  h2 {
+    font-size: 36px;
   }
 
-  #welcomescrn-img {
-    width: 25%;
+  h4,
+  p {
+    font-size: 18px;
+    line-height: 26px;
   }
 
-  /********** SNOWBOARDING PROJECT PAGE **********/
+  .cta-btn {
+    font-size: 18px;
+  }
 
-  .snowboarding-imgs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /********** FOOTER NAVIGATION **********/
+
+  footer button {
+    font-size: 38px;
+    padding: 0 24px 15px 24px;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+
+  /********** HOME PAGE: INTRO **********/
+
+  #container #intro {
+    margin-left: 15%;
+  }
+
+  #intro h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+  }
+
+  #intro picture img {
+    width: 150%;
+  }
+
+  #intro > div {
+    max-width: 800px;
+  }
+
+  #intro .cta-btn {
+    margin-top: 15px;
+  }
+
+  /********** HOME PAGE: PROJECTS **********/
+
+  #allprojects nav button {
+    font-size: 19px;
+  }
+
+  #allprojects nav div .green-line {
+    width: 120px;
+    margin: 2px 30px;
+  }
+
+  #allprojects nav .submenu li:first-of-type .green-line {
+    width: 130px;
+    margin: 2px 25px;
+  }
+
+  #allprojects nav .submenu li:last-of-type .green-line {
+    width: 60px;
+    margin: 2px 22px;
+  }
+
+  #allprojects article h3 {
+    font-size: 22px;
+  }
+
+  #allprojects article button {
+    font-size: 17px;
+  }
+
+  /********** HOME PAGE: ABOUT **********/
+
+  #about .green-line {
+    width: 105px;
+    margin: 3px 0 10px 9px;
+  }
+
+  #about .content {
+    margin-left: 70px;
+  }
+
+  #resume-content #category-selections img {
+    width: 30px;
+  }
+
+  #resume-content h3 {
+    font-size: 20px;
+  }
+
+  #resume-content h4 {
+    font-size: 18px;
+  }
+
+  #skills img {
+    height: 63px;
+    padding-right: 25px;
+  }
+
+  #skills i {
+    font-size: 70px;
+    padding-right: 25px;
+  }
+
+  #experience article h4 {
+    font-size: 20px;
+  }
+
+  #experience article p:first-of-type {
+    font-size: 17px;
+    margin: 4px 0;
+  }
+
+  /********** HOME PAGE: CONTACT **********/
+
+  #contact .green-line {
+    width: 149px;
+    margin: 3px 0 10px 9px;
+  }
+
+  #contact .content {
+    margin-left: 70px;
   }
 }

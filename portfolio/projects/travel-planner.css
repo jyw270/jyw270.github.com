@@ -1,0 +1,647 @@
+/********** GENERAL **********/
+
+#container section {
+  margin: 20px 15px;
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 5px auto;
+}
+
+p {
+  margin: 6px 0;
+}
+
+ul li {
+  font-family: "Assistant", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  display: flex;
+  width: 100%;
+  margin: 2px 0;
+}
+
+ul li img {
+  align-self: flex-start;
+  padding-top: 2px;
+}
+
+ul li p {
+  width: 100%;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Assistant", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.blue-h4 {
+  color: #588de7;
+}
+
+h4 i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+h5 {
+  font-family: "Assistant", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.important-blue {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 26px;
+  color: #588de7;
+}
+
+.blue-bg {
+  background-color: #eff5ff;
+  border-radius: 20px;
+  padding: 12px 30px;
+  margin: 10px 0 30px 0;
+}
+
+.right-arrow {
+  width: 12.5px;
+  margin: 2px 6px 6px 0;
+}
+
+#container .project-content {
+  margin: 30px 15px;
+}
+
+#container article {
+  margin: 15px 0;
+}
+
+/********** PROJECT PAGE IMAGE ZOOM **********/
+
+.project-content .zoom {
+  max-width: 750px;
+  margin: auto;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease;
+}
+
+.project-content .zoom img {
+  visibility: hidden;
+  width: 100%;
+}
+
+.project-content .zoom:hover {
+  cursor: zoom-in;
+}
+
+/********** PROJECT HEADER AND USABILITY TESTS **********/
+
+#project-header #project-title .circle,
+#tests .circle {
+  width: 19px;
+  height: 19px;
+  background-color: #588de7;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  left: -0.16px;
+  top: 11px;
+}
+
+#project-header .circle,
+#tests .circle {
+  position: absolute;
+  top: 12px;
+  left: 1px;
+  width: 15px;
+  height: 15px;
+  background-color: #cecece;
+  border-radius: 50%;
+}
+
+#project-header article > div:last-of-type,
+#tests article > div:last-of-type {
+  width: 90%;
+  padding: 8px 0 8px 16px;
+}
+
+#tests .circle {
+  background-color: #588de7;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+#tests article:first-of-type .line {
+  border-radius: 16px 16px 0 0;
+}
+
+#tests article:last-of-type .line {
+  border-radius: 0 0 16px 16px;
+}
+
+#tests article:first-of-type {
+  margin-top: 5px;
+}
+
+/********** PROJECT HEADER **********/
+
+#starter-gap {
+  padding-top: 100px;
+}
+
+#project-header {
+  padding: 8px 8px 0 8px;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+}
+
+#project-header > div {
+  margin: 0 10px;
+}
+
+#project-header img {
+  margin-bottom: 0;
+  max-width: 750px;
+}
+
+#project-header article,
+#tests article {
+  display: flex;
+  position: relative;
+  margin: 0;
+}
+
+#project-header article .line,
+#tests article .line {
+  margin-left: 7px;
+  width: 4px;
+  background-color: #e5e5e5;
+}
+
+#project-header p {
+  margin: 0;
+}
+
+#project-title h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #588de7;
+  margin: 5px 0 0 0;
+}
+
+#project-header #project-title p {
+  font-size: 18px;
+  color: #588de7;
+}
+
+#project-header p {
+  font-size: 14px;
+}
+
+#project-header h2 {
+  font-family: "Assistant", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+#project-header article:last-of-type h2 {
+  padding-bottom: 8px;
+}
+
+/********** GOALS **********/
+
+#goal .important-blue {
+  text-align: left;
+}
+
+/********** EMPATHIZE **********/
+
+#empathize article {
+  max-width: 365px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#empathize-pt3 div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#empathize-pt3 div ul:first-of-type {
+  margin-right: 10px;
+}
+
+/********** DEFINE **********/
+
+#define article {
+  margin: 20px 0;
+}
+
+#define .blue-h4 {
+  text-align: center;
+}
+
+/********** SOLUTION **********/
+
+#solution img {
+  width: 70%;
+  max-width: 250px;
+}
+
+#solution .blue-h4 {
+  text-align: left;
+  margin-top: 8px;
+}
+
+#solution p {
+  margin-bottom: 30px;
+}
+
+/********** VISUAL DESIGN **********/
+
+#visual-design div > img {
+  margin-top: 6px;
+  max-width: 300px;
+}
+
+/********** PERSONALIZATION **********/
+
+#splash-screen {
+  width: 55%;
+  margin: 5px auto;
+  max-width: 200px;
+}
+
+/********** TESTERS QUOTE **********/
+
+#testers-quote {
+  text-align: left;
+  text-transform: none;
+  width: 90%;
+  margin: auto;
+}
+
+/********** VIEW PROTOTYPE BUTTON **********/
+
+.cta-btn {
+  display: block;
+  margin: auto auto 60px auto;
+}
+
+@media only screen and (min-width: 671px) {
+  /********** GENERAL **********/
+
+  #container {
+    overflow: hidden;
+  }
+
+  #container > section,
+  #container .project-content,
+  #testers-quote,
+  .important-blue,
+  #view-site-btn {
+    margin-left: 110px;
+  }
+
+  footer {
+    margin-left: 95px;
+  }
+
+  header ul li {
+    display: block;
+  }
+
+  .important-blue {
+    margin-right: 15px;
+  }
+
+  #starter-gap {
+    padding: 10px;
+  }
+
+  #container #project-header {
+    margin-top: 0;
+  }
+
+  #goal .important-blue {
+    margin-left: 5%;
+  }
+
+  #user-flow-zoom {
+    height: 200px;
+  }
+
+  #wire-flow-zoom {
+    height: 180px;
+  }
+
+  #testers-quote {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  /********** PROJECT HEADER **********/
+  #project-header {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 0;
+    max-height: 300px;
+  }
+
+  #project-header img {
+    width: 50%;
+  }
+
+  #project-header > div {
+    width: 45%;
+  }
+
+  #project-header article:first-of-type > div:last-of-type {
+    padding-top: 40px;
+  }
+
+  #project-header #project-title .circle:first-of-type {
+    top: 40px;
+  }
+
+  /********** GOAL **********/
+
+  #goal .important-blue {
+    max-width: 900px;
+  }
+
+  /********** EMPATHIZE **********/
+
+  #empathize > div {
+    display: flex;
+    margin-left: 5%;
+  }
+
+  #empathize div > div,
+  #empathize-pt3 {
+    width: 45%;
+  }
+
+  /********** DEFINE **********/
+
+  #define .blue-bg {
+    display: flex;
+    padding: 30px 15px;
+    margin-left: 5%;
+  }
+
+  #define .blue-bg article {
+    width: 30%;
+    margin: 0 10px;
+  }
+
+  /********** SOLUTION **********/
+
+  #solution article {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+  }
+
+  #solution article img {
+    width: 30%;
+  }
+
+  #solution article div {
+    width: 65%;
+  }
+
+  /********** GENERAL CONTENT **********/
+
+  #analysis,
+  #container #user-flow,
+  #container #wire-flow,
+  #testers-quote div,
+  #tests > article {
+    margin-left: 5%;
+  }
+
+  /********** VISUAL DESIGN **********/
+
+  #visual-design .blue-bg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+    padding: 15px 30px;
+  }
+
+  #visual-design .blue-bg > img {
+    width: 45%;
+    max-width: 350px;
+    margin: 0;
+  }
+
+  #visual-design .blue-bg > div {
+    width: 50%;
+  }
+
+  /********** PERSONALIZATION AND TASKS **********/
+
+  #personalization,
+  .tasks-4-imgs div,
+  .tasks-2-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+  }
+
+  #personalization #splash-screen {
+    width: 22%;
+    margin: 0;
+  }
+  #personalization div {
+    width: 50%;
+    margin-left: 15px;
+  }
+
+  .tasks-4-imgs div {
+    align-items: flex-start;
+  }
+
+  .tasks-4-imgs div > img,
+  #container .tasks-4-imgs #two-column-content article {
+    width: 47%;
+    max-width: 350px;
+  }
+
+  .tasks-4-imgs div > img {
+    margin: 5px 15px;
+  }
+
+  .tasks-4-imgs .blue-bg {
+    padding: 15px 20px;
+  }
+
+  #container .tasks-4-imgs .blue-bg article {
+    width: 30%;
+    margin: 10px 20px;
+  }
+
+  .tasks-2-imgs .blue-bg {
+    width: 48%;
+    padding: 35px;
+  }
+
+  /********** USABILITY TESTS **********/
+
+  #tests .tasks-test {
+    display: flex;
+  }
+
+  #tests .tasks-test div {
+    width: 70%;
+  }
+
+  #tests .tasks-test div:first-of-type {
+    margin-right: 25px;
+  }
+
+  /********** REVISIONS AND CONCLUSION **********/
+
+  #container #revisions-section {
+    margin-left: 13%;
+  }
+
+  #revisions,
+  #conclusion {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+  }
+
+  #revisions div,
+  #conclusion div,
+  #conclusion > article {
+    width: 48%;
+  }
+
+  #revisions div article {
+    height: 35%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #container #project-header,
+  #container .project-content {
+    margin-left: 15%;
+    margin-right: 5%;
+  }
+
+  #project-header article > div:last-of-type {
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+
+  #project-header article:first-of-type > div:last-of-type {
+    padding-top: 60px;
+  }
+
+  #project-header #project-title .circle:first-of-type {
+    top: 60px;
+  }
+
+  #project-header p {
+    font-size: 16px;
+  }
+
+  #project-header #project-title p,
+  #project-header h2 {
+    font-size: 20px;
+  }
+
+  #project-title h1 {
+    font-size: 29px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .important-blue {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  /********** PROJECT PAGE IMAGE ZOOM **********/
+
+  .project-content .zoom {
+    max-width: 900px;
+  }
+
+  #user-flow-zoom {
+    height: 280px;
+  }
+
+  #wire-flow-zoom {
+    height: 230px;
+  }
+
+  /********** VISUAL DESIGN **********/
+
+  #visual-design .blue-bg {
+    justify-content: center;
+    padding: 20px 40px;
+  }
+
+  #visual-design .blue-bg > div {
+    width: 45%;
+    margin-left: 20px;
+  }
+
+  /********** TESTERS QUOTE **********/
+
+  #testers-quote {
+    margin-left: 15%;
+    margin-right: 10%;
+  }
+
+  /********** REVISIONS **********/
+
+  #container #revisions-section {
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  #container #project-header,
+  #container .project-content {
+    margin-right: 10%;
+  }
+
+  #project-title h1 {
+    font-size: 42px;
+  }
+}

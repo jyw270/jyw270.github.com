@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jenny Wong &#124; Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
 
     <!--/ /-------- Normalize CSS --------/ /-->
     <link
@@ -22,7 +23,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -35,18 +40,17 @@
 
     <!--/ /-------- Site Styling --------/ /-->
     <link href="../styles.css" rel="stylesheet" />
+    <link href="madlibs.css" rel="stylesheet" />
 
     <!--/ /-------- JavaScript --------/ /-->
     <script src="../script.js" defer></script>
+    <script src="project.js" defer></script>
   </head>
   <body>
-    <div id="blue-background"></div>
-    <div id="transparent-background" class="hidden"></div>
     <div id="container">
       <header>
         <a href="../index.html">
           <img src="../images/svg/logo.svg" alt="logo" id="logo" />
-          <h1>Jenny</h1>
         </a>
 
         <nav>
@@ -54,104 +58,135 @@
             <li>
               <i class="fa-solid fa-bars"></i>
               <ul class="submenu">
-                <li><i class="fa-solid fa-arrow-right"></i></li>
                 <li>
-                  <a href="../index.html#start-of-allprojects">projects</a>
+                  <a href="../index.html#start-of-allprojects"
+                    ><i class="fa-solid fa-folder-open"></i>
+                    <p>projects</p></a
+                  >
                 </li>
-                <li><a href="../about.html">about</a></li>
-                <li><a href="../contact.html">contact</a></li>
+                <li>
+                  <a href="../index.html#about-starter"
+                    ><i class="fa-solid fa-user"></i>
+                    <p>about</p></a
+                  >
+                </li>
+                <li>
+                  <a href="../index.html#contact-starter"
+                    ><i class="fa-solid fa-comments"></i>
+                    <p>contact</p></a
+                  >
+                </li>
+                <li>
+                  <a href="../Jenny_Wong_Resume.pdf" target="_blank"
+                    ><i class="fa-solid fa-file-lines"></i>
+                    <p>resume</p></a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
         </nav>
       </header>
 
-      <section class="project-title">
+      <!----------------------------- TITLE HEADER ----------------------------->
+      <section id="project-title">
         <img src="../images/madlibs/madlibs.jpg" alt="mad libs website" />
 
         <div>
-          <h2>Mad Libs Bullet Journaling</h2>
-          <h3>Illustrator &#124; HTML &#124; CSS &#124; JavaScript</h3>
-          <div class="hr-line"></div>
-          <div>
-            <p>development</p>
-            <p>2021</p>
-          </div>
+          <h1>Mad Libs Bullet Journaling</h1>
+          <div class="green-line"></div>
+          <ul>
+            <li><i class="fa-solid fa-play"></i>My role: Developer</li>
+            <li><i class="fa-solid fa-play"></i>Year: 2021</li>
+            <li>
+              <i class="fa-solid fa-play"></i>Tools: Illustrator | HTML | CSS |
+              Javascript
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="project-content">
-        <h4>Background</h4>
+      <!----------------------------- OBJECTIVES ----------------------------->
+      <section id="objectives">
+        <h2>Objectives</h2>
         <p>
-          This is a school project where we were required to design a simple Mad
-          Libs webpage that takes in inputs from users and then provides them
-          with a simple story. I designed a bullet journaling mad libs because
-          journaling is something I enjoy doing. I addressed the storytelling
-          part by forming the stories in small sections: poems, happenings,
-          important dates, and a note to self.
+          Design a simple Mad Libs webpage that takes in inputs from users and
+          then provides them with a simple story.
         </p>
       </section>
 
+      <!----------------------------- IDEATION ----------------------------->
       <section class="project-content">
-        <h4>User Interface</h4>
-        <div>
-          <h5>Brainstorming</h5>
-          <img src="../images/madlibs/brainstorming.jpg" alt="sketches" />
-          <p>
-            These are some sketches I did to brainstorm some ideas. I thought of
-            themes that could result in a story: text messaging could form a
-            conversational story, recipe ingredients and instructions could form
-            a fun narrative, and fortune telling could produce a fun little
-            fortune story. But these ideas didn&#39;t seem unique enough.
-          </p>
-          <p>
-            After a few days of contemplating what creative theme I could do, I
-            finally thought of bullet journaling. However, I quickly realized
-            that bullet journaling doesn&#39;t include storytelling, so I
-            decided to form the stories in smaller sections.
-          </p>
+        <div class="subtitle">
+          <h2>Ideation</h2>
+          <img
+            src="../images/madlibs/green-flag.svg"
+            alt="green flag"
+            class="green-flag"
+          />
         </div>
+        <article id="brainstorm">
+          <img
+            src="../images/madlibs/brainstorming.jpg"
+            alt="sketches"
+            class="subtitle-divider"
+          />
+          <!----------------------------- BRAINSTORMING ----------------------------->
+          <div>
+            <h3 class="purple-h3">
+              <i class="fa-solid fa-cloud"></i>Brainstorming
+            </h3>
+            <p>
+              While brainstorming ideas, I thought of themes that could result
+              in a story: text messaging could form a conversational story,
+              recipe ingredients and instructions could form a fun narrative,
+              and fortune telling could produce a fun little fortune story.
+              After a few days of contemplating, I finally thought of bullet
+              journaling and addressed the storytelling constraint by forming
+              stories in smaller sections.
+            </p>
+          </div>
+        </article>
 
-        <div>
-          <h5>Digital Sketches</h5>
-          <img
-            src="../images/madlibs/digital-sketches-1.jpg"
-            alt="digital sketch"
-          />
-          <img
-            src="../images/madlibs/digital-sketches-2.jpg"
-            alt="digital sketch"
-          />
-          <p>
-            I designed two different interfaces for my mad libs game. The first
-            interface includes the mad libs form for users to fill out and the
-            second page presents the journal with the user&#39;s inputs.
-          </p>
-          <p>
-            Inspired by my favorite childhood book, &#34;Chicken Soup with
-            Rice&#34; by Maurice Sendak, I planned to write a unique poem for
-            each month. There would be 8 lines per poem and every other line
-            would rhyme. To fill the rest of the journal, I looked up several
-            bullet journaling ideas on Pinterest. I wasn&#39;t too satisfied
-            with how the right side of the journal looked: the color of the
-            envelope and letter didn&#39;t seem cohesive with the rest of the
-            design. I also felt like it was losing the storytelling purpose of
-            the game.
-          </p>
-          <img
-            src="../images/madlibs/digital-sketches-3.jpg"
-            alt="digital sketch"
-          />
-          <p>
-            I imagine bullet journaling to resemble a planner, so I added a
-            calendar and a section for important dates to the right side of the
-            journal. I only kept the note to self section because I felt that it
-            had the potential for a short story.
-          </p>
+        <!----------------------------- DIGITAL SKETCHES ----------------------------->
+        <h3 class="blue-h3">
+          <i class="fa-solid fa-pencil"></i>Digital Sketches
+        </h3>
+        <div class="img-caption-container" id="sketches">
+          <span>form page</span>
+          <div>
+            <img
+              src="../images/madlibs/digital-sketches-1.jpg"
+              alt="digital sketch"
+            />
+            <i class="fa-solid fa-arrow-down"></i>
+            <img src="../images/madlibs/madlibs.jpg" alt="digital sketch" />
+          </div>
+          <span>journal page</span>
+          <div>
+            <img
+              src="../images/madlibs/digital-sketches-2.jpg"
+              alt="digital sketch"
+            />
+            <i class="fa-solid fa-arrow-down"></i>
+            <img src="../images/madlibs/madlibs-pg2.jpg" alt="digital sketch" />
+          </div>
         </div>
+        <p>
+          I designed two different interfaces for my mad libs game. The first
+          interface includes the mad libs form for users to fill out and the
+          second page presents the journal with the user’s inputs.
+        </p>
+        <p>
+          Inspired by my favorite childhood book, “Chicken Soup with Rice'' by
+          Maurice Sendak, my goal was to write a unique poem for each month.
+          There would be 8 lines per poem and every other line would rhyme. To
+          fill the rest of the journal, I looked up several bullet journaling
+          ideas on Pinterest.
+        </p>
 
-        <div>
-          <h5>Challenges</h5>
+        <!----------------------------- ORGANIZING DESIGNS ----------------------------->
+        <article id="organize-designs">
           <div
             class="zoom"
             id="ui-challenges-zoom"
@@ -162,87 +197,119 @@
               alt="Illustrator workspace"
             />
           </div>
-          <p>
-            We were only given one week to complete this project, so it was a
-            challenge for me to include everything I had planned. Changing the
-            overall design for all 12 months: writing unique poems, changing the
-            calendar dates and important events, and exporting each design was
-            quite tedious and time consuming, but I was able to make it work. In
-            Illustrator, I organized my layers based on each month&#39;s theme
-            and text content and toggled with the visibility and lock tool.
-            Then, I went ahead and exported each design as an svg file because I
-            wanted my graphics to look as clear as possible.
-          </p>
-        </div>
+          <div>
+            <h3 class="teal-h3">
+              <i class="fa-solid fa-clipboard-list"></i>Organizing My Designs
+            </h3>
+            <p>
+              In order to smoothly and quickly change the overall design for all
+              12 months, write different poems, change the calendar dates and
+              important events, and export each design, I organized my layers
+              based on each month’s theme and text content and toggled with the
+              visibility and lock tool in Illustrator. Then, I went ahead and
+              exported each design as an svg file because I wanted my graphics
+              to look as clear as possible.
+            </p>
+          </div>
+        </article>
       </section>
 
-      <section class="project-content">
-        <h4>Development</h4>
-        <p>
-          This webpage was developed using HTML, CSS, and vanilla JavaScript. It
-          is specifically designed at a 1366 x 768 viewport as that is the
-          current most popular website dimension.
-        </p>
-
-        <div>
-          <h5>Challenges</h5>
+      <!----------------------------- DEVELOPMENT ----------------------------->
+      <section class="project-content" id="development">
+        <div class="subtitle">
+          <h2>Development</h2>
           <img
-            src="../images/madlibs/dev-challenges.jpg"
-            alt="mad libs screenshot"
+            src="../images/madlibs/green-flag.svg"
+            alt="green flag"
+            class="green-flag"
           />
-          <p>
-            When coding this project, I mainly struggled with the form page. I
-            couldn&#39;t figure out how to align the text and its corresponding
-            input in a single line or how to align the inputs vertically. After
-            asking for some advice from a classmate, I was able to figure it
-            out. I placed the text and input tag inside a label tag and float:
-            right on the input tags.
-          </p>
-          <p>
-            After class ended, I wasn&#39;t completely satisfied with my game.
-            The transition from the form to the journal page was very disruptive
-            and sudden, so I figured out how to have the form fade out and the
-            book fade in by setting up classes in CSS, then using JavaScript to
-            get the timing right. I also edited my code to allow users the
-            option to submit the placeholder texts if they don&#39;t want to
-            fill out the form. I had trouble trying to get the placeholders to
-            turn black for a quick second when the user hits submit. I tried
-            storing the placeholders in a variable and changing the color in
-            Javascript, but I couldn&#39;t get it to work. I thought that my
-            only solution was to set each input value to the placeholder text,
-            but that felt too tedious and inefficient. I asked a design
-            professor for advice and ended up using a class to set up and change
-            the color with CSS and JavaScript.
-          </p>
+        </div>
+        <div class="subtitle-divider"></div>
+
+        <div class="img-caption-container">
+          <div>
+            <img src="../images/madlibs/madlibs.jpg" alt="mad libs website" />
+            <img
+              src="../images/madlibs/madlibs-pg2.jpg"
+              alt="mad libs website"
+            />
+          </div>
+          <span>designed at a 1366 X 768 viewport</span>
         </div>
 
-        <div>
-          <h5>What Can Be Improved</h5>
-          <p>
-            For further development, I could allow users to submit the
-            placeholder texts for any inputs they don&#39;t fill out, instead of
-            only enabling that option when they submit a blank form.
-          </p>
-        </div>
+        <!----------------------------- CHALLENGES ----------------------------->
+        <h3 class="purple-h3"><i class="fa-solid fa-code"></i>Challenges</h3>
+        <article id="challenges">
+          <div class="challenges-container">
+            <p>
+              Figuring out how to align each input tag and field in a row and
+              how to align the tags to the right of the field.
+            </p>
+            <h4 id="first-h4">form page</h4>
+          </div>
+          <div class="challenges-container">
+            <p>
+              Trying to get the placeholders to turn black for a quick second
+              when the user hits submit.
+            </p>
+            <h4 id="second-h4">submit text</h4>
+          </div>
+          <div class="challenges-container">
+            <p>
+              Smoothing the transition from the form to the journal page by
+              using fading effect.
+            </p>
+            <h4 id="third-h4">transition</h4>
+          </div>
+        </article>
+
+        <!------------------------ IMPROVEMENTS AND LESSONS LEARNED ------------------------>
+        <article id="conclusion">
+          <div>
+            <h3 class="teal-h3">
+              <i class="fa-solid fa-arrow-up"></i>Further Improvements
+            </h3>
+            <ul>
+              <li>
+                <i class="fa-solid fa-play"></i>
+                Allow users to submit the placeholder texts for any inputs they
+                don’t fill out, not just when they submit a blank form
+              </li>
+              <li>
+                <i class="fa-solid fa-play"></i>Limit the number of characters
+                allowed
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="teal-h3">
+              <i class="fa-regular fa-star"></i>Lessons Learned
+            </h3>
+            <ul>
+              <li>
+                <i class="fa-solid fa-play"></i>
+                When CSS and JavaScript work together, it makes ideas that may
+                seem complex to be a lot simpler
+              </li>
+              <li>
+                <i class="fa-solid fa-play"></i>Helpful and efficient to keep
+                layers organized in Illustrator
+              </li>
+            </ul>
+          </div>
+        </article>
       </section>
 
-      <section class="project-content">
-        <h4>Conclusion</h4>
-        <p>
-          Given the time constraint on this project, I am most proud of being
-          able to complete 12 unique designs for each month. I learned when CSS
-          and JavaScript work together, it makes ideas that may seem complex to
-          be a lot simpler.
-        </p>
-      </section>
-
-      <button id="view-site-btn">
-        <a
-          href="https://jyw270.github.io/des157a/studio1/index.html"
-          target="_blank"
-          >View website</a
-        >
-      </button>
+      <div id="view-site-btn">
+        <button class="cta-btn">
+          <a
+            href="https://jyw270.github.io/des157a/studio1/index.html"
+            target="_blank"
+            >View website</a
+          >
+        </button>
+      </div>
 
       <footer>
         <button>
@@ -270,7 +337,7 @@
           ></a>
         </button>
 
-        <p>Jenny Wong &#124; Portfolio 2022</p>
+        <p>Jenny Wong | &#169; Portfolio 2022</p>
       </footer>
     </div>
   </body>

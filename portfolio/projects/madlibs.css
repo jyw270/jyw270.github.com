@@ -1,0 +1,426 @@
+/********** GENERAL **********/
+
+#container section {
+  margin: 0 15px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+p {
+  margin: 8px 0;
+}
+
+ul li {
+  font-family: "Assistant", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+li .fa-play {
+  font-size: 20px;
+  color: #f2eea8;
+  margin: 4px 5px 4px 0;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
+}
+
+/********** PROJECT PAGE IMAGE ZOOM **********/
+
+.project-content .zoom {
+  max-width: 550px;
+  margin: auto;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease;
+}
+
+.project-content .zoom img {
+  visibility: hidden;
+  width: 100%;
+}
+
+.project-content .zoom:hover {
+  cursor: zoom-in;
+}
+
+/********** PROJECT CONTENT **********/
+
+.project-content .subtitle {
+  position: relative;
+  margin-top: 30px;
+}
+
+.project-content h2 {
+  margin: 10px;
+  font-size: 18px;
+  position: absolute;
+  z-index: 1;
+}
+
+.project-content .subtitle .green-flag {
+  width: 185px;
+  position: absolute;
+  left: -15px;
+}
+
+.project-content .subtitle-divider {
+  padding-top: 60px;
+}
+
+.project-content i {
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.project-content h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 6px 0;
+}
+
+.project-content .purple-h3 {
+  color: #e8d0ec;
+}
+
+.project-content .blue-h3 {
+  color: #9cd0da;
+  margin-top: 30px;
+}
+
+.project-content .teal-h3 {
+  color: #a4d5b9;
+  margin-top: 30px;
+}
+
+.project-content .img-caption-container {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+  background: rgba(164, 213, 185, 0.45);
+}
+
+.project-content .img-caption-container span {
+  font-family: "Laila", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.project-content .img-caption-container img {
+  margin: 5px auto;
+  width: 100%;
+}
+
+/********** TITLE **********/
+
+#project-title {
+  padding: 110px 0 50px 0;
+}
+
+#project-title h1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+#project-title .green-line {
+  width: 125px;
+  margin-bottom: 8px;
+}
+
+.cta-btn {
+  display: block;
+  margin: 30px auto 60px auto;
+}
+
+/********** OBJECTIVES **********/
+#objectives {
+  position: relative;
+}
+
+#objectives h2 {
+  font-size: 18px;
+  padding: 0 15px;
+  background-color: #fff;
+  position: absolute;
+  top: -6px;
+  left: calc(50% - 69.4px);
+}
+
+#objectives p {
+  border: 2px solid #b0c08e;
+  border-radius: 3px;
+  padding: 25px 10px 20px 10px;
+}
+
+/********** DEVELOPMENT **********/
+#development h2 {
+  margin-left: 0;
+}
+
+#development .purple-h3 {
+  margin-top: 30px;
+}
+
+#development .challenges-container {
+  width: 75%;
+  max-width: 375px;
+  border: 2px solid #9cd0da;
+  border-radius: 3px;
+  padding: 20px 15px;
+  margin: 0 auto 30px auto;
+  position: relative;
+}
+
+#development .challenges-container h4 {
+  font-family: "Laila", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 20px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -10px;
+}
+
+#development .challenges-container #first-h4 {
+  left: calc(50% - 61.5px);
+}
+
+#development .challenges-container #second-h4 {
+  left: calc(50% - 66.5px);
+}
+
+#development .challenges-container #third-h4 {
+  left: calc(50% - 64.5px);
+}
+
+#development li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+#development ul:first-of-type li:first-of-type {
+  align-items: flex-start;
+}
+
+#development .fa-play {
+  font-size: 18px;
+  padding-right: 3px;
+}
+
+@media only screen and (min-width: 650px) {
+  #container > section,
+  #view-site-btn {
+    margin-left: 110px;
+  }
+
+  footer {
+    margin-left: 95px;
+  }
+
+  #project-title {
+    padding-top: 50px;
+  }
+
+  #development ul:first-of-type li:first-of-type {
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  #project-title {
+    display: flex;
+    align-items: center;
+  }
+
+  #project-title img {
+    width: 50%;
+  }
+
+  #objectives {
+    max-width: 965px;
+  }
+
+  .project-content img {
+    width: 50%;
+  }
+
+  .project-content #brainstorm,
+  .project-content #organize-designs {
+    display: flex;
+    align-items: center;
+  }
+
+  .project-content #brainstorm {
+    padding-top: 60px;
+  }
+
+  .project-content #organize-designs {
+    margin-top: 30px;
+  }
+
+  .project-content #organize-designs div:last-of-type {
+    margin-left: 10px;
+    width: 250%;
+  }
+
+  .project-content #organize-designs .teal-h3 {
+    margin-top: 0;
+  }
+
+  #development .img-caption-container {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #container {
+    margin: auto;
+  }
+  p,
+  ul li {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  #project-title {
+    max-width: 1200px;
+  }
+
+  #project-title .green-line {
+    width: 185px;
+  }
+
+  #project-title li {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  #objectives h2 {
+    font-size: 26px;
+    top: -8px;
+    left: calc(50% - 95px);
+  }
+
+  #objectives p {
+    font-size: 22px;
+    line-height: 28px;
+    padding: 30px 20px;
+  }
+
+  #container #objectives,
+  #container .project-content {
+    max-width: 900px;
+  }
+
+  .project-content i {
+    font-size: 24px;
+    margin-right: 8px;
+  }
+
+  .project-content h2 {
+    font-size: 26px;
+    margin: 18px;
+  }
+
+  .project-content h3 {
+    font-size: 25px;
+  }
+
+  .project-content .subtitle .green-flag {
+    width: 275px;
+  }
+
+  .project-content .img-caption-container {
+    max-width: 900px;
+  }
+
+  .project-content .img-caption-container span {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .project-content .img-caption-container div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-content .img-caption-container img {
+    margin: 8px;
+    width: 47%;
+  }
+
+  .project-content .img-caption-container i {
+    margin: auto;
+    align-self: center;
+  }
+
+  .project-content #sketches div:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  #project-title h1 {
+    font-size: 33px;
+  }
+
+  #development #challenges {
+    display: flex;
+    padding-top: 0;
+  }
+
+  #development .challenges-container {
+    height: 160px;
+    margin: 0 8px;
+  }
+
+  #development .challenges-container h4 {
+    font-size: 16px;
+    bottom: -15px;
+  }
+
+  #development .challenges-container #first-h4 {
+    left: calc(50% - 66px);
+  }
+
+  #development .challenges-container #second-h4 {
+    left: calc(50% - 73.5px);
+  }
+
+  #development .challenges-container #third-h4 {
+    left: calc(50% - 69px);
+  }
+
+  #development #conclusion {
+    display: flex;
+  }
+
+  #development #conclusion div {
+    width: 50%;
+    margin: 10px 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #container #objectives,
+  #container .project-content {
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+
+  #container .project-content .subtitle {
+    left: -180px;
+  }
+
+  #development .challenges-container {
+    padding: 2%;
+  }
+}
