@@ -1,0 +1,502 @@
+/********** GENERAL **********/
+
+#container section,
+#important-h2 {
+  margin: 30px 15px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+h2 {
+  font-family: "Assistant", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+  color: #868686;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-family: "Assistant", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: none;
+  color: #002955;
+}
+
+p,
+ul li {
+  font-family: "Assistant", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+section ul {
+  list-style-type: disc;
+  margin: 3px 15px;
+}
+
+ul li::marker {
+  color: #45537a;
+}
+
+.important-p {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #262626;
+}
+
+.gold-line {
+  background-color: #deab03;
+  border-radius: 2px;
+  height: 3px;
+}
+
+.gold-task-title {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.gold-task-title h3 {
+  font-size: 15px;
+  margin-left: 8px;
+}
+
+.gold-number {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 8px 9px;
+  color: #deab03;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #deab03;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/********** PROJECT HEADER **********/
+
+#container #project-header {
+  margin-top: 0;
+  margin-bottom: 45px;
+  padding-top: 100px;
+}
+
+#project-header article {
+  background-color: #002955;
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 60px 10px 16px 10px;
+  color: #fff;
+}
+
+#project-header h1 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+}
+
+#project-header .gold-line {
+  width: 90%;
+  margin: 10px 0 15px 0;
+}
+
+#project-header p {
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #62768c;
+  border-radius: 5px;
+  width: fit-content;
+  display: inline;
+  margin-right: 3px;
+  padding: 5px 8px;
+}
+
+/********** EMPATHIZE **********/
+
+#empathize img {
+  width: 85%;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+#empathize .gold-line {
+  width: 80%;
+  margin: 10px auto;
+}
+
+#empathize .gold-line:first-of-type {
+  display: none;
+}
+
+#empathize article div {
+  display: flex;
+}
+
+#empathize article div ul:first-of-type {
+  width: 30%;
+}
+
+/********** IDEATE **********/
+
+#ideate .main-h3 {
+  width: fit-content;
+  color: #262626;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+#ideate article > div {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+}
+
+#ideate > article:last-of-type > div {
+  display: block;
+}
+
+#ideate #grid > article img {
+  max-width: 450px;
+}
+
+#grid div article:first-of-type {
+  margin: 15px 0;
+  text-align: center;
+}
+
+#grid div article:first-of-type img {
+  width: 110px;
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+#grid div article:first-of-type div,
+#grid div article:last-of-type div {
+  justify-content: center;
+}
+
+#grid div article:last-of-type img {
+  width: 100px;
+  margin-left: 0;
+  margin-right: 5%;
+}
+
+/********** USER FLOWS AND WIRE FLOWS **********/
+
+#user-flows img,
+#wire-flows img {
+  margin-bottom: 15px;
+}
+
+#task01-wireflow {
+  width: 85%;
+  max-width: 450px;
+}
+
+/********** PROTOTYPE **********/
+
+#prototype #section01 img {
+  max-width: 400px;
+}
+
+#prototype > div > article img {
+  max-width: 525px;
+}
+
+/********** CHALLENGES AND FURTHER DEVELOPMENT **********/
+
+#conclusion article {
+  margin: 7px 0 12px 0;
+}
+
+.cta-btn {
+  display: block;
+  margin: auto;
+  margin-bottom: 55px;
+}
+
+@media only screen and (min-width: 671px) {
+  #container > section,
+  #important-h2 {
+    margin-left: 110px;
+  }
+
+  #container #project-header {
+    padding-top: 0;
+  }
+
+  #view-site-btn {
+    margin-left: 95px;
+  }
+}
+
+@media only screen and (min-width: 875px) {
+  /********** GENERAL **********/
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p,
+  ul li,
+  .gold-task-title h3 {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .important-p {
+    font-size: 24px;
+    line-height: 32px;
+    margin-left: 5%;
+  }
+
+  .gold-line {
+    height: 4px;
+  }
+
+  /********** PROJECT HEADER **********/
+
+  #container #project-header {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #project-header img {
+    width: 50%;
+    order: 2;
+  }
+
+  #project-header article {
+    margin: 0;
+    width: 47%;
+  }
+
+  #project-header h1 {
+    font-size: 44px;
+  }
+
+  #project-header p {
+    font-size: 16px;
+  }
+
+  /********** EMPATHIZE **********/
+
+  #empathize > div {
+    margin-left: 5%;
+    width: 95%;
+    height: 500px;
+    position: relative;
+  }
+
+  #empathize img,
+  #empathize article {
+    position: absolute;
+    width: 320px;
+  }
+
+  #empathize img {
+    bottom: calc(50% - 70px);
+    left: calc(48.5% - 150px);
+  }
+
+  #empathize article:nth-of-type(2) {
+    bottom: 0;
+  }
+
+  #empathize article:nth-of-type(3) {
+    top: 0;
+    right: 0;
+  }
+
+  #empathize article:last-of-type {
+    right: 0;
+    bottom: 0;
+  }
+
+  #empathize .gold-line {
+    position: absolute;
+  }
+
+  #empathize .gold-line:first-of-type {
+    display: block;
+    width: 24%;
+    bottom: calc(50% - 2px);
+    left: 0;
+  }
+
+  #empathize .gold-line:nth-of-type(2) {
+    width: 25%;
+    bottom: calc(50% - 2px);
+    right: 0;
+  }
+
+  #empathize .gold-line:nth-of-type(3) {
+    width: 4px;
+    height: 150px;
+    top: 0;
+    left: calc(50% - 2px);
+  }
+
+  #empathize .gold-line:last-of-type {
+    width: 4px;
+    height: 150px;
+    bottom: 0;
+    left: calc(50% - 2px);
+  }
+
+  /********** DEFINE **********/
+
+  #define > div,
+  #quote {
+    margin-left: 5%;
+  }
+
+  /********** COMPARATIVE ANALYSIS **********/
+
+  #analysis > div {
+    margin-left: 5%;
+    display: flex;
+  }
+
+  #analysis article {
+    width: 50%;
+  }
+
+  /********** IDEATE **********/
+
+  #ideate > div,
+  #ideate > article {
+    margin-left: 5%;
+  }
+
+  #ideate #grid {
+    display: flex;
+  }
+
+  #grid > div {
+    margin-left: 15px;
+  }
+
+  #grid div:last-of-type article img {
+    width: 110px;
+  }
+
+  #ideate > article:last-of-type > div {
+    display: flex;
+  }
+
+  #ideate > article:last-of-type h3 {
+    margin-top: 10px;
+  }
+
+  #ideate > article:last-of-type #task-list-pt1 {
+    margin-right: 25px;
+  }
+
+  /********** USER FLOWS AND WIRE FLOWS **********/
+
+  #user-flows article,
+  #wire-flows > article {
+    margin-left: 5%;
+  }
+
+  #user-flows article img:nth-of-type(2) {
+    max-width: 650px;
+    margin: 0;
+  }
+
+  #wire-flow-pt3 {
+    display: none;
+  }
+
+  #wire-flows article > div {
+    display: flex;
+  }
+
+  #wire-flows article > div article:first-of-type {
+    margin-right: 10px;
+  }
+
+  #wire-flows article > div article:first-of-type img {
+    max-width: 475px;
+  }
+
+  #wire-flows article > div article:last-of-type img,
+  #wire-flows > article > img:last-of-type {
+    max-width: 600px;
+  }
+
+  /********** PROTOTYPE **********/
+
+  #prototype > div {
+    margin-left: 5%;
+  }
+
+  #prototype > div > article:first-of-type .content,
+  #prototype > div > article:last-of-type .content {
+    display: flex;
+    align-items: center;
+  }
+
+  #prototype > div > article:first-of-type .content p,
+  #prototype > div > article:last-of-type .content p {
+    margin-left: 15px;
+  }
+
+  #prototype > div > article img {
+    max-width: 700px;
+    width: 55%;
+  }
+
+  #prototype #section01 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #prototype #section01 article img {
+    max-width: 450px;
+  }
+
+  #prototype #section01 article {
+    width: 47%;
+  }
+
+  /********** CONCLUSION **********/
+
+  #conclusion > div {
+    margin-left: 5%;
+    display: flex;
+  }
+
+  #conclusion article {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #container section,
+  #quote {
+    max-width: 1200px;
+    margin-left: 15%;
+    margin-right: 10%;
+  }
+
+  #important-h2 {
+    margin-left: 5%;
+  }
+
+  #ideate #grid > div {
+    margin-left: 5%;
+  }
+}

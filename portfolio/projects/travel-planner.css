@@ -234,8 +234,6 @@ h5 {
 
 #empathize article {
   max-width: 365px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #empathize-pt3 div {
@@ -340,7 +338,7 @@ h5 {
   }
 
   #goal .important-blue {
-    margin-left: 5%;
+    margin-left: 0;
   }
 
   #user-flow-zoom {
@@ -384,10 +382,16 @@ h5 {
   /********** GOAL **********/
 
   #goal .important-blue {
+    margin-left: 5%;
     max-width: 900px;
   }
 
   /********** EMPATHIZE **********/
+
+  #empathize article {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   #empathize > div {
     display: flex;
@@ -557,7 +561,7 @@ h5 {
   }
 
   #project-header article:first-of-type > div:last-of-type {
-    padding-top: 60px;
+    padding-top: 70px;
   }
 
   #project-header #project-title .circle:first-of-type {
@@ -574,7 +578,7 @@ h5 {
   }
 
   #project-title h1 {
-    font-size: 29px;
+    font-size: 28px;
   }
 
   h3 {
@@ -641,7 +645,11 @@ h5 {
     margin-right: 10%;
   }
 
+  #project-header article:first-of-type > div:last-of-type {
+    padding-top: 60px;
+  }
+
   #project-title h1 {
-    font-size: 42px;
+    font-size: 40px;
   }
 }

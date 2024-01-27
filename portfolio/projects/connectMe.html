@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jenny Wong &#124; Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
 
     <!--/ /-------- Normalize CSS --------/ /-->
     <link
@@ -22,7 +23,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -35,18 +40,16 @@
 
     <!--/ /-------- Site Styling --------/ /-->
     <link href="../styles.css" rel="stylesheet" />
+    <link href="connectMe.css" rel="stylesheet" />
 
     <!--/ /-------- JavaScript --------/ /-->
     <script src="../script.js" defer></script>
   </head>
   <body>
-    <div id="blue-background"></div>
-    <div id="transparent-background" class="hidden"></div>
     <div id="container">
       <header>
         <a href="../index.html">
           <img src="../images/svg/logo.svg" alt="logo" id="logo" />
-          <h1>Jenny</h1>
         </a>
 
         <nav>
@@ -54,204 +57,482 @@
             <li>
               <i class="fa-solid fa-bars"></i>
               <ul class="submenu">
-                <li><i class="fa-solid fa-arrow-right"></i></li>
                 <li>
-                  <a href="../index.html#start-of-allprojects">projects</a>
+                  <a href="../index.html#start-of-allprojects"
+                    ><i class="fa-solid fa-folder-open"></i>
+                    <p>projects</p></a
+                  >
                 </li>
-                <li><a href="../about.html">about</a></li>
-                <li><a href="../contact.html">contact</a></li>
+                <li>
+                  <a href="../index.html#about-starter"
+                    ><i class="fa-solid fa-user"></i>
+                    <p>about</p></a
+                  >
+                </li>
+                <li>
+                  <a href="../index.html#contact-starter"
+                    ><i class="fa-solid fa-comments"></i>
+                    <p>contact</p></a
+                  >
+                </li>
+                <li>
+                  <a href="../Jenny_Wong_Resume.pdf" target="_blank"
+                    ><i class="fa-solid fa-file-lines"></i>
+                    <p>resume</p></a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
         </nav>
       </header>
 
-      <section class="project-title" id="travel-planner">
+      <!----------------------------- TITLE HEADER ----------------------------->
+      <section id="project-header">
         <img
-          src="../images/connectMe/connectMe-phone.png"
+          src="../images/connectMe/connectMe-phone.jpg"
           alt="connectMe design on phone"
         />
+        <article>
+          <h1>ConnectMe</h1>
+          <div class="gold-line"></div>
+          <p>My role: Designer</p>
+          <p>Year: 2022</p>
+          <p>Tools: Figma</p>
+        </article>
+      </section>
 
+      <!----------------------------- OVERVIEW ----------------------------->
+      <section>
+        <h2>Overview</h2>
+        <p class="important-p">
+          A social app for UC Davis students to be able to find friends and
+          connect with other people of similar interests. Group project
+          prototyping done over the course of 10 weeks.
+        </p>
+      </section>
+
+      <!----------------------------- EMPATHIZE ----------------------------->
+      <section id="empathize">
+        <h2>Empathize</h2>
         <div>
-          <h2>ConnectMe</h2>
-          <h3>Figma</h3>
-          <div class="hr-line"></div>
+          <img src="../images/connectMe/empathize.svg" alt="graphic of users" />
+          <article>
+            <h3>What are some qualities you look for in a friend?</h3>
+            <div>
+              <ul>
+                <li>Kindness</li>
+                <li>Caring</li>
+                <li>Funny</li>
+                <li>Humble</li>
+              </ul>
+              <ul>
+                <li>Genuine</li>
+                <li>Compassion</li>
+                <li>Honesty</li>
+                <li>Share common interests</li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="gold-line"></div>
+          <div class="gold-line"></div>
+
+          <article>
+            <h3>What are some of your concerns when making friends?</h3>
+            <ul>
+              <li>Curious of their morals</li>
+              <li>Afraid of not getting along</li>
+              <li>Long-term or short-term friendship</li>
+              <li>Having trust issues</li>
+              <li>Feeling judged</li>
+            </ul>
+          </article>
+
+          <div class="gold-line"></div>
+
+          <article>
+            <h3>
+              How has COVID affected your ability to make or keep in touch with
+              friends?
+            </h3>
+            <ul>
+              <li>Online classes</li>
+              <li>Everyone's busy schedule</li>
+              <li>Not many in-person events</li>
+              <li>Awkward and uncomfortable with masks</li>
+            </ul>
+          </article>
+
+          <div class="gold-line"></div>
+
+          <article>
+            <h3>
+              What kinds of tools would be useful in helping you find friends?
+            </h3>
+            <ul>
+              <li>An app similar to dating apps</li>
+              <li>Clubs with group activities</li>
+              <li>Easy way to find people of similar interests</li>
+              <li>Better conversational skills</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!----------------------------- DEFINE ----------------------------->
+      <section id="define">
+        <h2>Define</h2>
+        <div>
+          <img
+            src="../images/connectMe/persona-1.svg"
+            alt="first year persona"
+          />
+          <img
+            src="../images/connectMe/persona-2.svg"
+            alt="fourth year persona"
+          />
+          <img src="../images/connectMe/persona-3.svg" alt="transfer persona" />
+        </div>
+      </section>
+
+      <div id="quote">
+        <h2 class="important-p" id="important-h2">
+          We understood that the main frustration was that students struggled to
+          create and maintain friendships virtually because they were not
+          familiar with this form of communication.
+        </h2>
+      </div>
+
+      <!----------------------------- COMPARATIVE ANALYSIS ----------------------------->
+      <section id="analysis">
+        <h2>Comparative Analysis</h2>
+        <div>
+          <article>
+            <h3>Wink</h3>
+            <ul>
+              <li>Can add bio, interests and socials to profile</li>
+              <li>Limited filter options</li>
+              <li>
+                Too many buttons everywhere, hard to navigate through the app
+              </li>
+              <li>
+                No sense of security to display personal information to the
+                public
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Yubo</h3>
+            <ul>
+              <li>Can find friends by interests</li>
+              <li>Interface is very confusing, too much going on</li>
+              <li>Too many things to click on per page</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!----------------------------- IDEATE ----------------------------->
+      <section id="ideate">
+        <h2>Ideate</h2>
+        <div>
+          <div id="grid">
+            <article>
+              <h3 class="main-h3">Brainstorming</h3>
+              <img
+                src="../images/connectMe/brainstorm.svg"
+                alt="brainstorming notes"
+              />
+            </article>
+
+            <div>
+              <article>
+                <h3 class="main-h3">
+                  How might we provide a sense of security?
+                </h3>
+                <div>
+                  <img
+                    src="../images/connectMe/lock-icon.svg"
+                    alt="lock icon"
+                  />
+                  <h3>Authenticate users with UCD login</h3>
+                </div>
+              </article>
+
+              <article>
+                <h3 class="main-h3">
+                  How might we bring a “human” aspect to each profile?
+                </h3>
+                <div>
+                  <img
+                    src="../images/connectMe/user-icon.svg"
+                    alt="user icon"
+                  />
+                  <div>
+                    <h3>User profile should include...</h3>
+                    <ul>
+                      <li>UCD photo</li>
+                      <li>Name, gender, school year</li>
+                      <li>Major/minor</li>
+                      <li>Favorite photos/videos, hobbies</li>
+                      <li>Classes taking</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <article>
+          <h3 class="main-h3">Tasks</h3>
           <div>
-            <p>UX &#47; UI</p>
-            <p>2022</p>
+            <div id="task-list-pt1">
+              <div class="gold-task-title">
+                <span class="gold-number">01</span>
+                <h3>Creating an account/setting up profile</h3>
+              </div>
+              <div class="gold-task-title">
+                <span class="gold-number">02</span>
+                <h3>Add additional information to their profile</h3>
+              </div>
+            </div>
+            <div>
+              <div class="gold-task-title">
+                <span class="gold-number">03</span>
+                <h3>Find a friend through filter options</h3>
+              </div>
+              <div class="gold-task-title">
+                <span class="gold-number">04</span>
+                <h3>Interactions with a new friend</h3>
+              </div>
+            </div>
           </div>
+        </article>
+      </section>
+
+      <!----------------------------- USER FLOWS ----------------------------->
+      <section id="user-flows">
+        <h2>User Flows</h2>
+        <article>
+          <div class="gold-task-title">
+            <span class="gold-number">01</span>
+            <h3>Creating an account/setting up profile</h3>
+          </div>
+          <img
+            src="../images/connectMe/user-flow-1.svg"
+            alt="user flow for task 1"
+          />
+          <div class="gold-task-title">
+            <span class="gold-number">02</span>
+            <h3>Add additional information to their profile</h3>
+          </div>
+          <img
+            src="../images/connectMe/user-flow-2.svg"
+            alt="user flow for task 2"
+          />
+          <div class="gold-task-title">
+            <span class="gold-number">03</span>
+            <h3>Find a friend through filter options</h3>
+          </div>
+          <img
+            src="../images/connectMe/user-flow-3.svg"
+            alt="user flow for task 3"
+          />
+          <div class="gold-task-title">
+            <span class="gold-number">04</span>
+            <h3>Interactions with a new friend</h3>
+          </div>
+          <img
+            src="../images/connectMe/user-flow-4.svg"
+            alt="user flow for task 4"
+          />
+        </article>
+      </section>
+
+      <!----------------------------- WIRE FLOWS ----------------------------->
+      <section id="wire-flows">
+        <h2>Wire Flows</h2>
+        <article>
+          <div>
+            <article>
+              <div class="gold-task-title">
+                <span class="gold-number">01</span>
+                <h3>Creating an account/setting up profile</h3>
+              </div>
+              <img
+                src="../images/connectMe/wire-flow-1.svg"
+                alt="wire flow for task 1"
+                id="task01-wireflow"
+              />
+            </article>
+
+            <article>
+              <div class="gold-task-title">
+                <span class="gold-number">02</span>
+                <h3>Add additional information to their profile</h3>
+              </div>
+              <img
+                src="../images/connectMe/wire-flow-2.svg"
+                alt="wire flow for task 2"
+              />
+            </article>
+          </div>
+
+          <div class="gold-task-title">
+            <span class="gold-number">03</span>
+            <h3>Find a friend through filter options</h3>
+          </div>
+          <picture>
+            <source
+              srcset="../images/connectMe/wire-flow-3.svg"
+              media="(min-width: 875px)"
+            />
+            <img
+              src="../images/connectMe/wire-flow-3-pt1.svg"
+              alt="wire flow for task 3"
+            />
+          </picture>
+          <img
+            src="../images/connectMe/wire-flow-3-pt2.svg"
+            alt="wire flow for task 3"
+            id="wire-flow-pt3"
+          />
+
+          <div class="gold-task-title">
+            <span class="gold-number">04</span>
+            <h3>Interactions with a new friend</h3>
+          </div>
+          <img
+            src="../images/connectMe/wire-flow-4.svg"
+            alt="wire flow for task 4"
+          />
+        </article>
+      </section>
+
+      <!----------------------------- PROTOTYPE ----------------------------->
+      <section id="prototype">
+        <h2>Prototype</h2>
+        <div>
+          <div id="section01">
+            <article>
+              <div class="gold-task-title">
+                <span class="gold-number">01</span>
+                <h3>Creating an account/setting up profile</h3>
+              </div>
+              <div class="content">
+                <img src="../images/connectMe/task01.jpg" alt="task 1" />
+                <p>
+                  We followed common design patterns to make the log in process
+                  feel familiar to users. To create an account, one must have a
+                  valid UC Davis email, in order to limit the app to UC Davis
+                  students only.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <div class="gold-task-title">
+                <span class="gold-number">02</span>
+                <h3>Add additional information to their profile</h3>
+              </div>
+              <div class="content">
+                <img src="../images/connectMe/task02.jpg" alt="task 2" />
+                <p>
+                  Once a user creates their profile, they can further customize
+                  it by adding their pronouns, bio, hobbies, pictures, and tags
+                  about their interests, which is used to filter potential
+                  friends with similar information.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <article>
+            <div class="gold-task-title">
+              <span class="gold-number">03</span>
+              <h3>Find a friend through filter options</h3>
+            </div>
+            <div class="content">
+              <img src="../images/connectMe/task03.jpg" alt="task 3" />
+              <p>
+                When searching for potential friends, we decided to tailor the
+                filter options based on the user’s interests. Then, based on the
+                filters selected, we implemented the match percentage to result
+                in more meaningful matches.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <div class="gold-task-title">
+              <span class="gold-number">04</span>
+              <h3>Interactions with a new friend</h3>
+            </div>
+            <div class="content">
+              <img src="../images/connectMe/task04.jpg" alt="task 4" />
+              <p>
+                In the chat feature, once a user accepts a friend request, they
+                are given a certain amount of time to decide whether they bond
+                with that person or not. If not, the app will automatically
+                remove that person when the timer expires, designed to avoid
+                hurt feelings. If a user deicides to keep a friend, additional
+                features such as a recommended activities list becomes available
+                to encourage in-person interaction.
+              </p>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section class="project-content">
-        <h4>Background</h4>
-        <p>
-          ConnectMe is a UI design project I worked on as a group in my
-          human-computer interaction class. The purpose was to design a social
-          app for UC Davis students to be able to find friends and connect with
-          other people of similar interests because we recognized from personal
-          experiences or online forums that many students find social
-          connections to be challenging due to the COVID pandemic and limited
-          in-person interaction. My role in this project was to focus on
-          designing the task to demonstrate how a user would interact with new
-          friends through our app.
-        </p>
+      <!----------------------------- CHALLENGES AND FURTHER DEVELOPMENT ----------------------------->
+      <section id="conclusion">
+        <h2>Challenges and Further Development</h2>
+        <div>
+          <article>
+            <h3>Challenges</h3>
+            <ul>
+              <li>
+                Simulating an in-person friendship online through limited
+                interaction was difficult
+              </li>
+              <li>
+                Majority of team members weren’t familiar with Figma and other
+                design tools
+              </li>
+              <li>Time constraint</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Further Development</h3>
+            <ul>
+              <li>Conduct usability tests and revisions</li>
+              <li>Expanding our audience to students in other universities</li>
+              <li>
+                Refine our prototype and including more details, such as sharing
+                life experiences and class schedules
+              </li>
+              <li>
+                Promote school events for students to join and explore their
+                interests
+              </li>
+            </ul>
+          </article>
+        </div>
       </section>
 
-      <section class="project-content">
-        <h4>Proposal</h4>
-        <p>
-          In
+      <div id="view-site-btn">
+        <button class="cta-btn">
           <a
-            href="https://drive.google.com/file/d/1FTsIxamUgMKMmXvl6fIYIpLza2hqBurK/view?usp=sharing"
+            href="https://www.figma.com/proto/tZbO8ys7NEWEaPESwvanCU/ECS164%3A-ConnectMe?page-id=0%3A1&type=design&node-id=124-159&viewport=-1070%2C-423%2C0.28&t=chC5lySXmGlUq3om-1&scaling=scale-down&starting-point-node-id=124%3A159&show-proto-sidebar=1&mode=design"
             target="_blank"
-            class="connectMe-hyperlinks"
-            >this project proposal</a
-          >, we discuss the problem at hand, the background and significance,
-          the benefits of addressing the problem, the requirements, solutions
-          and reasons, requirements, and our milestones.
-        </p>
-      </section>
-
-      <section class="project-content">
-        <h4>Progress</h4>
-        <p>
-          In
-          <a
-            href="https://drive.google.com/drive/u/3/folders/1mj7xfkYwpzBOnIBvu6Ebla8Oltl-C_sz"
-            target="_blank"
-            class="connectMe-hyperlinks"
-            >this progress report</a
-          >, we update our project description, discuss the HCI design process
-          we used: empathize, define, ideate, and prototype, and our tentative
-          plans.
-        </p>
-
-        <div>
-          <h5>Survey Data Collection</h5>
-          <div
-            class="zoom"
-            id="survey-zoom"
-            style="background-image: url(../images/connectMe/survey.jpg)"
+            >View prototype</a
           >
-            <img src="../images/connectMe/survey.jpg" alt="survey data" />
-          </div>
-        </div>
-
-        <div>
-          <h5>User Personas</h5>
-          <img
-            src="../images/connectMe/user-persona-1st-year.jpg"
-            alt="user persona"
-          />
-          <img
-            src="../images/connectMe/user-persona-4th-year.jpg"
-            alt="user persona"
-          />
-          <img
-            src="../images/connectMe/user-persona-transfer.jpg"
-            alt="user persona"
-          />
-        </div>
-
-        <div>
-          <h5>User Flows and Wireframes</h5>
-          <div
-            class="zoom"
-            id="user-flow-zoom"
-            style="background-image: url(../images/connectMe/user-flows.jpg)"
-          >
-            <img src="../images/connectMe/user-flows.jpg" alt="user flows" />
-          </div>
-          <div
-            class="zoom"
-            id="wire-flow-zoom"
-            style="background-image: url(../images/connectMe/wireframes.jpg)"
-          >
-            <img src="../images/connectMe/wireframes.jpg" alt="wireframes" />
-          </div>
-        </div>
-      </section>
-
-      <section class="project-content">
-        <h4>Prototype</h4>
-        <p>
-          There are 4 different tasks that we demonstrate: creating an account,
-          adding additional information to a profile, finding friends based on
-          filters and match percentage, and interactions with new friends. I
-          worked on the 4th task: interactions with new friends.
-        </p>
-
-        <div>
-          <h5>Task 1&#58; Creating An Account</h5>
-          <div class="connectMe">
-            <img src="../images/connectMe/task1-1.jpg" alt="task 1 interface" />
-            <img src="../images/connectMe/task1-2.jpg" alt="task 1 interface" />
-          </div>
-        </div>
-
-        <div>
-          <h5>Task 2&#58; Adding Additional Information To A Profile</h5>
-          <img
-            src="../images/connectMe/task2.jpg"
-            alt="task 2 interface"
-            id="task2"
-          />
-        </div>
-
-        <div>
-          <h5>
-            Task 3&#58; Finding Friends Based on Filters and Match Percentage
-          </h5>
-          <div class="connectMe">
-            <img src="../images/connectMe/task3-1.jpg" alt="task 3 interface" />
-            <img src="../images/connectMe/task3-2.jpg" alt="task 3 interface" />
-          </div>
-        </div>
-
-        <div>
-          <h5>Task 4&#58; Interactions with New Friends</h5>
-          <div class="connectMe">
-            <img src="../images/connectMe/task4-1.jpg" alt="task 4 interface" />
-            <img src="../images/connectMe/task4-2.jpg" alt="task 4 interface" />
-            <img src="../images/connectMe/task4-3.jpg" alt="task 4 interface" />
-          </div>
-        </div>
-      </section>
-
-      <section class="project-content">
-        <h4>Final Report</h4>
-        <p>
-          In
-          <a
-            href="https://drive.google.com/file/d/1oWEvANVbZVwm4zxgz3UZOF3Vq1XrpvLc/view?usp=sharing"
-            target="_blank"
-            class="connectMe-hyperlinks"
-            >this final report</a
-          >, we compose an abstract, introduction, background, conceptual model,
-          prototype and implementation: low and high fidelity, user testing,
-          discussion, and future works.
-        </p>
-      </section>
-
-      <section class="project-content">
-        <h4>Conclusion</h4>
-        <p>
-          Through this project, I was able to continue utilizing Figma:
-          practicing what I know and learning new things like setting flows
-          properly in the prototype mode. Working as a group has also allowed me
-          to experience the collaboration and communication needed to develop a
-          consistent and well designed product.
-        </p>
-      </section>
-
-      <button id="view-site-btn">
-        <a
-          href="https://www.figma.com/proto/tZbO8ys7NEWEaPESwvanCU/ECS164%3A-ConnectMe?page-id=0%3A1&type=design&node-id=124-159&viewport=-1070%2C-423%2C0.28&t=chC5lySXmGlUq3om-1&scaling=scale-down&starting-point-node-id=124%3A159&show-proto-sidebar=1&mode=design"
-          target="_blank"
-          >View prototype</a
-        >
-      </button>
+        </button>
+      </div>
 
       <footer>
         <button>
@@ -279,7 +560,7 @@
           ></a>
         </button>
 
-        <p>Jenny Wong &#124; Portfolio 2022</p>
+        <p>Jenny Wong &#124; &#169; Portfolio 2022</p>
       </footer>
     </div>
   </body>
