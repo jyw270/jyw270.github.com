@@ -1,0 +1,417 @@
+/********** GENERAL **********/
+
+#container > section {
+  margin: 35px 15px;
+}
+
+#starter-gap {
+  padding: 35px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+h2 {
+  font-family: "Assistant", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: none;
+  color: #9ec7b9;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-family: "Assistant", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: none;
+  color: #262626;
+}
+
+section ul li {
+  display: flex;
+}
+
+section ul li p {
+  font-family: "Assistant", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+ul li .list-arrow {
+  width: 10.5px;
+  margin: 2px 6px 6px 0;
+  align-self: flex-start;
+  padding-top: 2px;
+}
+
+/********** PROJECT TITLE **********/
+
+#project-title {
+  background-color: #a8cdc0;
+  color: #fff;
+  border-radius: 30px;
+  padding: 15px;
+}
+
+#project-title img {
+  max-width: 450px;
+}
+
+#project-title h1 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+#project-title hr {
+  max-width: 300px;
+  border: none;
+  border-top: 4px dotted #fff;
+  margin-bottom: 6px;
+}
+
+#project-title div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#project-title p {
+  width: fit-content;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #ef8184;
+  border-radius: 20px;
+  padding: 5px 14px;
+  margin: 5px 8px 4px 0;
+}
+
+/********** OVERVIEW **********/
+
+#overview h2 {
+  text-align: center;
+}
+
+#overview p {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+/********** OVERVIEW **********/
+
+#target-audience > img {
+  width: 80%;
+  max-width: 320px;
+}
+
+#target-audience article {
+  margin-top: 15px;
+}
+
+/********** COMPARATIVE ANALYSIS **********/
+
+#analysis div > img {
+  width: 20%;
+  max-width: 85px;
+  margin: 10px auto;
+}
+
+#analysis > p {
+  font-size: 16px;
+  line-height: 23px;
+  margin-top: 10px;
+}
+
+/********** WIREFRAME & FIRST AND SECOND PROTOTYPE **********/
+
+#wireframe div div,
+.prototype-draft div div {
+  width: 100%;
+  height: 320px;
+  overflow: scroll;
+  border: 0.5px solid #262626;
+}
+
+#wireframe article,
+.prototype-draft article {
+  margin-top: 10px;
+}
+
+/********** FINAL PROTOTYPE **********/
+
+#final-prototype article {
+  position: relative;
+  width: 320px;
+  margin: auto;
+}
+
+#final-prototype div {
+  position: absolute;
+  overflow: scroll;
+}
+
+#final-prototype article:first-of-type div {
+  top: 17px;
+  left: 13px;
+  width: 91.9%;
+  height: 165px;
+}
+
+#final-prototype article:last-of-type div {
+  top: 78px;
+  left: 39px;
+  width: 75.6%;
+  height: 430px;
+}
+
+#final-prototype h3 {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 6px 0 10px 0;
+}
+
+/********** CONCLUSION **********/
+
+#conclusion article {
+  margin-bottom: 10px;
+}
+
+.cta-btn {
+  display: block;
+  margin: auto auto 60px auto;
+}
+
+@media only screen and (min-width: 671px) {
+  #container > section {
+    margin: 50px 15px 50px 110px;
+  }
+
+  #starter-gap {
+    padding: 10px;
+  }
+
+  #container #project-title {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  /********** GENERAL **********/
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  section ul li p {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  /********** PROJECT TITLE **********/
+  #project-title {
+    display: flex;
+  }
+
+  #project-title article {
+    order: 1;
+    width: 65%;
+    align-self: flex-end;
+  }
+
+  #project-title img {
+    order: 2;
+    width: 35%;
+  }
+
+  #project-title h1 {
+    font-size: 52px;
+  }
+
+  #project-title hr {
+    max-width: 410px;
+  }
+
+  /********** OVERVIEW **********/
+
+  #overview p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  /********** TARGET AUDIENCE **********/
+
+  #target-audience {
+    display: flex;
+  }
+
+  #target-audience > img {
+    width: 40%;
+  }
+
+  #target-audience article {
+    width: 50%;
+  }
+
+  /********** COMPARATIVE ANALYSIS **********/
+
+  #analysis div {
+    display: flex;
+  }
+
+  #analysis div > img {
+    max-width: 65px;
+    margin-right: 15px;
+  }
+
+  #analysis article {
+    width: 44%;
+  }
+
+  #analysis > p {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  /********** WIREFRAME & FIRST AND SECOND PROTOTYPE **********/
+
+  #wireframe > div,
+  .prototype-draft > div {
+    display: flex;
+  }
+
+  #wireframe div div {
+    height: 360px;
+  }
+
+  .prototype-draft div div {
+    height: 430px;
+  }
+
+  #wireframe article,
+  .prototype-draft article {
+    margin-top: 0;
+    margin-left: 15px;
+    width: 80%;
+  }
+
+  /********** FINAL PROTOTYPE **********/
+
+  #final-prototype section {
+    display: flex;
+    margin: auto;
+    width: 725px;
+  }
+
+  #final-prototype article:first-of-type {
+    width: 550px;
+  }
+
+  #final-prototype article:first-of-type div {
+    top: 25px;
+    left: 20px;
+    width: 449.5px;
+    height: 255px;
+  }
+
+  #final-prototype article:last-of-type {
+    width: 275px;
+  }
+
+  #final-prototype article:last-of-type div {
+    top: 59px;
+    left: 29.5px;
+    width: 182.5px;
+    height: 325px;
+  }
+
+  /********** CONCLUSION **********/
+
+  #conclusion > div {
+    display: flex;
+  }
+
+  #conclusion div div,
+  #conclusion > div > article {
+    width: 48%;
+  }
+
+  #conclusion div div {
+    margin-right: 15px;
+  }
+
+  #conclusion div div article:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  #view-site-btn {
+    margin-left: 110px;
+    margin-right: 15px;
+  }
+
+  .cta-btn {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /********** GENERAL **********/
+
+  #container > section {
+    margin-left: 15%;
+    margin-right: 10%;
+  }
+
+  /********** PROJECT TITLE **********/
+
+  #project-title p {
+    font-size: 16px;
+  }
+
+  #project-title img {
+    max-width: 350px;
+  }
+
+  #project-title article {
+    width: 52%;
+  }
+
+  /********** WIREFRAME & FIRST AND SECOND PROTOTYPE **********/
+
+  #wireframe div div {
+    height: 300px;
+  }
+
+  .prototype-draft div div {
+    height: 340px;
+  }
+
+  /********** FINAL PROTOTYPE **********/
+
+  #final-prototype section {
+    width: 800px;
+  }
+
+  #final-prototype article:first-of-type div {
+    top: 28px;
+    left: 22px;
+    width: 490px;
+    height: 276px;
+  }
+
+  #final-prototype article:last-of-type div {
+    top: 65px;
+    left: 32.5px;
+    width: 201.5px;
+    height: 360px;
+  }
+}
