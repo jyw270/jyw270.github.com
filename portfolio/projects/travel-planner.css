@@ -11,11 +11,11 @@ img {
   margin: 5px auto;
 }
 
-p {
+section p {
   margin: 6px 0;
 }
 
-ul li {
+section ul li {
   font-family: "Assistant", sans-serif;
   font-size: 15px;
   line-height: 22px;
@@ -24,12 +24,12 @@ ul li {
   margin: 2px 0;
 }
 
-ul li img {
+section ul li img {
   align-self: flex-start;
   padding-top: 2px;
 }
 
-ul li p {
+section ul li p {
   width: 100%;
   margin: 0;
 }
@@ -589,7 +589,7 @@ h5 {
     font-size: 20px;
   }
 
-  p {
+  section p {
     font-size: 17px;
     line-height: 24px;
   }

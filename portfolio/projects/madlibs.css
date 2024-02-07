@@ -4,17 +4,17 @@
   margin: 0 15px;
 }
 
-img {
+section img {
   width: 100%;
   display: block;
   margin: auto;
 }
 
-p {
+section p {
   margin: 8px 0;
 }
 
-ul li {
+section ul li {
   font-family: "Assistant", sans-serif;
   font-size: 15px;
   line-height: 22px;
@@ -286,8 +286,9 @@ li .fa-play {
   #container {
     margin: auto;
   }
-  p,
-  ul li {
+
+  section p,
+  section ul li {
     font-size: 17px;
     line-height: 24px;
   }
