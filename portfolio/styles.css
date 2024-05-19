@@ -354,7 +354,8 @@ footer p {
 }
 
 #circle1,
-#circle2 {
+#circle2,
+#circle3 {
   position: absolute;
   left: -0.16px;
   width: 19px;
@@ -369,10 +370,18 @@ footer p {
 }
 
 #experience article p:first-of-type {
-  color: #c4c2c3;
+  color: #9f9d9d;
   font-size: 14px;
   font-weight: 600;
   margin: 2px 0;
+}
+
+#experience ul {
+  list-style-type: circle;
+  font-family: "Assistant", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  padding-left: 14px;
 }
 
 /********** HOME PAGE: CONTACT **********/
@@ -729,6 +738,11 @@ footer p {
   #experience article p:first-of-type {
     font-size: 17px;
     margin: 4px 0;
+  }
+
+  #experience ul {
+    font-size: 17px;
+    line-height: 24px;
   }
 
   /********** HOME PAGE: CONTACT **********/
