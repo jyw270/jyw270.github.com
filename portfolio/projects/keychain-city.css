@@ -1,0 +1,283 @@
+/********** GENERAL **********/
+
+#container > section {
+  margin: 0 15px;
+}
+
+section img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: auto;
+}
+
+.project-content img {
+  max-width: 400px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #f197d7;
+  margin: 30px 0 5px 0;
+}
+
+#starter-gap {
+  padding-top: 110px;
+}
+
+/********** TITLE **********/
+
+#project-title article {
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 7px;
+  color: #fff;
+}
+
+#project-title h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 35px 0 8px 0;
+  text-shadow: rgba(250, 145, 232, 0.8) 2px 3px 3px;
+}
+
+#project-title hr {
+  max-width: 300px;
+  border: none;
+  border-top: 4px dotted #fff;
+  margin-bottom: 6px;
+}
+
+#project-title div p {
+  display: inline-block;
+  width: fit-content;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 3px 7px;
+  margin: 5px 5px 5px 0;
+  border: 2px solid #f197d7;
+  border-radius: 5px;
+}
+
+/********** OVERVIEW **********/
+
+#overview p {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+/********** CONCEPT **********/
+
+#concept p {
+  margin-top: 5px;
+}
+
+/********** DEVELOPMENT **********/
+
+#development p {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 5px 0 30px 0;
+}
+
+#development h3 {
+  font-family: "Assistant", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: none;
+  margin: 15px 0 2px 0;
+}
+
+#development ul {
+  font-family: "Assistant", sans-serif;
+  list-style-type: disc;
+  margin-left: 15px;
+}
+
+#development li::marker {
+  color: #f197d7;
+  font-size: 18px;
+}
+
+#development li {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.cta-btn {
+  display: block;
+  margin: 35px auto 60px auto;
+}
+
+@media only screen and (min-width: 671px) {
+  #container > section {
+    margin: 30px 15px 30px 110px;
+  }
+
+  #starter-gap {
+    padding-top: 10px;
+  }
+
+  #container #project-title {
+    margin-top: 0;
+  }
+
+  #view-site-btn {
+    margin-left: 110px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  /********** TITLE **********/
+
+  #project-title {
+    display: flex;
+  }
+
+  #project-title img {
+    width: 48%;
+  }
+
+  #project-title article {
+    margin: 0 0 0 10px;
+  }
+
+  /********** BRAINSTORMING AND CONCEPT **********/
+
+  #two-sections h2 {
+    margin-top: 0;
+  }
+
+  #two-sections {
+    display: flex;
+  }
+
+  #two-sections section {
+    width: 50%;
+  }
+
+  #concept {
+    margin-left: 15px;
+  }
+
+  #concept img {
+    max-width: 350px;
+  }
+
+  /********** DEVELOPMENT **********/
+
+  #development > div {
+    display: flex;
+  }
+
+  #development #part2 {
+    width: 50%;
+    margin-left: 15px;
+  }
+
+  #part2 article:first-of-type h3 {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  /********** GENERAL **********/
+
+  p,
+  #development li {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  /********** TITLE **********/
+
+  #project-title article {
+    padding: 15px;
+    border-radius: 28px;
+  }
+
+  #project-title h1 {
+    font-size: 42px;
+  }
+
+  #project-title hr {
+    max-width: 400px;
+  }
+
+  #project-title div p {
+    font-size: 15px;
+  }
+
+  /********** OVERVIEW **********/
+
+  #overview p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 5%;
+  }
+
+  /********** BRAINSTORMING **********/
+
+  #brainstorming img {
+    margin-left: 10%;
+  }
+
+  /********** CONCEPT **********/
+
+  #two-sections #concept {
+    width: 41%;
+    margin-left: auto;
+  }
+
+  /********** CHALLENGE **********/
+
+  #challenge p {
+    margin-left: 5%;
+  }
+
+  /********** DEVELOPMENT **********/
+
+  #development > div {
+    margin-left: 5%;
+  }
+
+  #development h3 {
+    font-size: 20px;
+    margin: 18px 0 5px 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /********** GENERAL **********/
+  #container > section {
+    max-width: 1200px;
+    margin-left: 15%;
+    margin-right: 10%;
+  }
+
+  /********** TITLE **********/
+
+  #project-title article {
+    align-self: flex-end;
+    height: fit-content;
+  }
+
+  #project-title h1 {
+    margin-top: 10%;
+  }
+
+  /********** BRAINSTORMING **********/
+
+  #brainstorming img {
+    max-width: 500px;
+  }
+
+  /********** DEVELOPMENT **********/
+
+  #development img {
+    max-width: 450px;
+  }
+}

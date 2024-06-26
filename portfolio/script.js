@@ -28,6 +28,9 @@
   let currentBtnNum = 0;
   let buttonNumber = 0;
 
+  // Displays initial UX/UI Projects on initial page
+  displayProjects(false);
+
   // When project nav button is clicked, display/close navigation menu
   if (projNavBtn != null) {
     projNavBtn.addEventListener("click", function () {
@@ -57,14 +60,13 @@
         eachProject.setAttribute("data-aos", "zoom-in");
 
         // If allProjectsBtn is selected, then will show all projects
-        if (devProjectsBtn == null) {
-          eachProject.style.removeProperty("display");
-          eachProject.setAttribute("data-aos", "zoom-in");
-          // If devProjectsBtn is selected, then will only hide ux-ui projects
-        } else if (
-          devProjectsBtn &&
-          eachProject.className.includes("ux-ui-only")
-        ) {
+        // if (devProjectsBtn == null) {
+        //   eachProject.style.removeProperty("display");
+        //   eachProject.setAttribute("data-aos", "zoom-in");
+        // } else
+
+        // If devProjectsBtn is selected, then will only hide ux-ui projects
+        if (devProjectsBtn && eachProject.className.includes("ux-ui-only")) {
           eachProject.style.display = "none";
           // If UXProjectsBtn is selected, then will only hide dev projects
         } else if (
@@ -72,6 +74,9 @@
           eachProject.className.includes("dev-only")
         ) {
           eachProject.style.display = "none";
+          console.log("here");
+          console.log(eachProject);
+          console.log(devProjectsBtn);
         }
         eachProject.className = eachProject.className.replace(
           "hidden",
@@ -88,37 +93,39 @@
     projNavSubmenu.style.top = "-9999px";
 
     // For whichever submenu button that is clicked, replaces the newly selected button text with the selectedBtn text, re-adjusts the other buttons, and displays the projects
-    if (event.target.textContent == "all projects") {
-      selectedBtn.textContent = "all projects";
+    if (event.target.textContent == "UX / UI") {
+      selectedBtn.textContent = "UX / UI";
       allButtons[1].textContent = "development";
-      allButtons[2].textContent = "UX / UI";
-      displayProjects();
+      // allButtons[2].textContent = "UX / UI";
+      displayProjects(false);
     } else if (event.target.textContent == "development") {
       selectedBtn.textContent = "development";
-      allButtons[1].textContent = "all projects";
-      allButtons[2].textContent = "UX / UI";
+      allButtons[1].textContent = "UX / UI";
+      // allButtons[2].textContent = "UX / UI";
       displayProjects(true);
-    } else {
-      selectedBtn.textContent = "UX / UI";
-      allButtons[1].textContent = "all projects";
-      allButtons[2].textContent = "development";
-      displayProjects(false);
     }
+    // else {
+    //   selectedBtn.textContent = "UX / UI";
+    //   allButtons[1].textContent = "featured";
+    //   allButtons[2].textContent = "development";
+    //   displayProjects(false);
+    // }
   }
 
   // Changes the all projects nav and displays the matching content for desktop view
   function allProjectsDesktopNav(event) {
     // Checks the selected button text, sets the buttonNumber to match, and displays projects
-    if (event.target.textContent == "all projects") {
+    if (event.target.textContent == "UX / UI") {
       buttonNumber = 0;
-      displayProjects();
+      displayProjects(false);
     } else if (event.target.textContent == "development") {
       buttonNumber = 1;
       displayProjects(true);
-    } else {
-      buttonNumber = 2;
-      displayProjects(false);
     }
+    // else {
+    //   buttonNumber = 2;
+    //   displayProjects(false);
+    // }
 
     // Removes the black highlight on the previous button and adds it to the newly selected button
     allBtnsGreenLines[currentBtnNum].style.height = "0";
@@ -139,9 +146,9 @@
       // Sets the selectedBtn to the currentButton (that was from the desktop version) and checks if the currentButton from the desktop version is development or ux/ui, so that it can switch 'all projects' (which is the selectedBtn) with it
       selectedBtn.textContent = currentButton.textContent;
       if (currentButton.textContent == "development") {
-        allButtons[1].textContent = "all projects";
+        allButtons[1].textContent = "UX / UI";
       } else if (currentButton.textContent == "UX / UI") {
-        allButtons[2].textContent = "all projects";
+        allButtons[1].textContent = "development";
       }
 
       // Removes the black highlight on the currentButton that was from the desktop version
@@ -175,23 +182,24 @@
       }
 
       // Checks what is the selectedBtn text from mobile version and sets the currentButton to match for the desktop version
-      if (selectedBtn.textContent == "all projects") {
+      if (selectedBtn.textContent == "UX / UI") {
         currentButton = allButtons[0];
         currentBtnNum = 0;
       } else if (selectedBtn.textContent == "development") {
         currentButton = allButtons[1];
         currentBtnNum = 1;
-      } else if (selectedBtn.textContent == "UX / UI") {
-        currentButton = allButtons[2];
-        currentBtnNum = 2;
       }
+      // else if (selectedBtn.textContent == "UX / UI") {
+      //   currentButton = allButtons[2];
+      //   currentBtnNum = 2;
+      // }
 
       // Sets the black highlight on the current button and sets each button's text content to it's proper text for the desktop version
       allBtnsGreenLines[currentBtnNum].style.height = "4px";
       allButtons[currentBtnNum].style.fontWeight = "500";
-      selectedBtn.textContent = "all projects";
+      selectedBtn.textContent = "UX / UI";
       allButtons[1].textContent = "development";
-      allButtons[2].textContent = "UX / UI";
+      // allButtons[2].textContent = "UX / UI";
 
       // For each submenu button that is clicked, switches the text with the selector button text and closes the drop down menu
       for (let i = 0; i < allButtons.length; i++) {

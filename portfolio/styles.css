@@ -554,18 +554,13 @@ footer p {
   }
 
   #allprojects nav div .green-line {
-    width: 105px;
-    margin: 2px 24.5px;
-  }
-
-  #allprojects nav .submenu li:first-of-type .green-line {
-    width: 110px;
-    margin: 2px 25.5px;
+    width: 50px;
+    margin: 2px 23px;
   }
 
   #allprojects nav .submenu li:last-of-type .green-line {
-    width: 50px;
-    margin: 2px 23px;
+    width: 110px;
+    margin: 2px 25.5px;
   }
 
   #allprojects article {
@@ -676,18 +671,13 @@ footer p {
   }
 
   #allprojects nav div .green-line {
-    width: 120px;
-    margin: 2px 30px;
-  }
-
-  #allprojects nav .submenu li:first-of-type .green-line {
-    width: 130px;
-    margin: 2px 25px;
+    width: 60px;
+    margin: 2px 23px;
   }
 
   #allprojects nav .submenu li:last-of-type .green-line {
-    width: 60px;
-    margin: 2px 22px;
+    width: 130px;
+    margin: 2px 26px;
   }
 
   #allprojects article h3 {
