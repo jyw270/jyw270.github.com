@@ -38,6 +38,7 @@
   //  Cake Sound Interactions
   //   If spacebar is pressed, checks if music is paused and plays/pauses sound and displays matching icon
   document.addEventListener("keydown", function (event) {
+    event.preventDefault();
     if (event.key === " ") {
       if (bday_melody.paused) {
         bday_melody.play();
@@ -140,6 +141,7 @@
 
   // 'ecs' key event listener for close button in overlay
   document.addEventListener("keydown", function (event) {
+    event.preventDefault();
     if (
       letter_overlay.className == "overlay showing" &&
       event.key === "Escape"
