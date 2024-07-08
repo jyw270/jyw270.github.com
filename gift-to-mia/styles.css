@@ -1,0 +1,238 @@
+/* GENERAL */
+
+body {
+  margin: 0;
+  background-color: #c8e3bc;
+  font-family: "Laila", sans-serif;
+  overflow: hidden;
+}
+
+#container {
+  margin: auto;
+  min-width: 1200px;
+  max-width: 1600px;
+  position: relative;
+}
+
+#container > section {
+  display: flex;
+  justify-content: center;
+}
+
+/* OVERLAY */
+
+.overlay {
+  width: 100%;
+  background-color: rgba(80, 80, 80, 0.6);
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-property: visibility, opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+}
+
+.showing {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+
+.close-btn {
+  font-size: 40px;
+  color: #ffffff;
+  border: none;
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 12px;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transform: scale(1.2);
+}
+
+/* PLANTS */
+
+#plants-div img {
+  width: 14%;
+  margin: 0 50px 20px 50px;
+  animation: plants 800ms linear infinite alternate;
+}
+
+@keyframes plants {
+  from {
+    transform: skewX(0);
+  }
+  to {
+    transform: skewX(1deg);
+  }
+}
+
+#plants-div img:hover {
+  cursor: pointer;
+}
+
+/* CELEBRATION */
+
+#mia-div {
+  position: relative;
+  width: 24%;
+  margin: 0 28px;
+}
+
+#envelope {
+  width: 6.5%;
+  height: 6%;
+  rotate: 11.4deg;
+  position: absolute;
+  bottom: 7.6%;
+  left: 62.5%;
+}
+
+#envelope:hover {
+  cursor: pointer;
+}
+
+#jenny-div {
+  position: relative;
+  width: 24%;
+  margin: 0 28px;
+}
+
+#jenny-clicker {
+  position: absolute;
+  width: 75%;
+  height: 86%;
+  top: 15%;
+  left: 20%;
+}
+
+#jenny-clicker:hover {
+  cursor: pointer;
+}
+
+#cake-div {
+  position: relative;
+  align-self: flex-end;
+}
+
+#cake {
+  width: 87%;
+  margin: 0 28px;
+}
+
+#cake:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+#cake-btn {
+  font-size: 38px;
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  bottom: 60px;
+  left: 49%;
+  transition-property: visibility, opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+/* SOURCE CODE FROM: https://codepen.io/jsonyeung/pen/BvZmPR */
+
+#canvas {
+  position: absolute;
+  top: -22px;
+  left: calc(43.8% - 14px);
+  z-index: -1;
+  transform: scale(0.6);
+  display: block;
+  margin: 0 auto -500px;
+
+  filter: url("#blur") blur(1px);
+  opacity: 0.9;
+
+  &::before {
+    content: "text";
+  }
+}
+
+#filter {
+  position: fixed;
+}
+
+/* END OF SOURCE CODE */
+
+/* POP UP OVERLAY LETTER */
+
+#letter-overlay img {
+  width: 30%;
+  display: block;
+  margin: 15px auto;
+}
+
+/* POP UP OVERLAY PLANT */
+
+#plant-msg-overlay {
+  padding: 85px 0;
+}
+
+#plant-msg-overlay div {
+  display: flex;
+  justify-content: center;
+}
+
+#plant-msg-overlay img {
+  width: 25.5%;
+  background-color: #ffffff;
+  border-radius: 25px 0 0 25px;
+}
+
+#plant-msg-overlay textarea {
+  width: 40%;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgb(51, 51, 51);
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  resize: none;
+  padding: 25px 25px 25px 0;
+  overflow: scroll;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  font-size: 24px;
+  color: #c3c3c3;
+}
+
+#plant-msg-overlay #buttons button {
+  width: 100px;
+  font-size: 20px;
+  color: rgb(51, 51, 51);
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin: 20px 15px;
+  box-shadow: 0 0 3px rgba(60, 60, 60, 0.5);
+}
+
+#plant-msg-overlay #buttons button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  font-weight: 600;
+}

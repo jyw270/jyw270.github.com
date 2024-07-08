@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift to Mia</title>
+
+    <!--/ /-------- Normalize CSS --------/ /-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <!--/ /-------- Google Fonts --------/ /-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--/ /-------- Font Awesome --------/ /-->
+    <script
+      src="https://kit.fontawesome.com/53462d0482.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="styles.css" rel="stylesheet" />
+
+    <script src="volume-meter.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <section id="plants-div">
+        <img
+          src="graphics/plant01.svg"
+          alt="plant"
+          id="plant01"
+          draggable="false"
+        />
+        <img
+          src="graphics/plant02.svg"
+          alt="plant"
+          id="plant02"
+          draggable="false"
+        />
+        <img
+          src="graphics/plant03.svg"
+          alt="plant"
+          id="plant03"
+          draggable="false"
+        />
+      </section>
+      <section id="bday-div">
+        <div id="mia-div">
+          <img src="graphics/mia.svg" alt="Mia" id="mia" draggable="false" />
+          <div id="envelope"></div>
+        </div>
+        <div id="cake-div">
+          <img
+            src="graphics/bday-cake.svg"
+            alt="cake"
+            id="cake"
+            draggable="false"
+          />
+          <!-- FLAME -->
+          <canvas id="canvas"></canvas>
+          <!-- Cake Play/Pause Button -->
+          <i class="fa-solid fa-pause hidden" id="cake-btn"></i>
+        </div>
+        <div id="jenny-div">
+          <img
+            src="graphics/jenny.svg"
+            alt="Jenny"
+            id="jenny"
+            draggable="false"
+          />
+          <div id="jenny-clicker"></div>
+        </div>
+      </section>
+
+      <!-- Letter Gift Overlay -->
+      <div class="overlay hidden" id="letter-overlay">
+        <button class="close-btn">&otimes;</button>
+        <img src="images/letter.jpg" alt="letter" draggable="false" />
+      </div>
+
+      <!-- Plant Memory Note Overlay -->
+      <div class="overlay hidden" id="plant-msg-overlay">
+        <div>
+          <button class="close-btn">&otimes;</button>
+          <img src="" alt="plant" draggable="false" />
+          <textarea
+            placeholder="What's a happy memory from this year?"
+          ></textarea>
+        </div>
+        <div id="buttons">
+          <button id="save-btn">save</button>
+          <button id="clear-btn">clear</button>
+        </div>
+      </div>
+
+      <!-- SOURCE CODE FROM: https://codepen.io/jsonyeung/pen/BvZmPR -->
+
+      <!-- FILTER -->
+      <svg id="filter">
+        <defs>
+          <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0.05" />
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+              result="goo"
+            />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+  </body>
+</html>
