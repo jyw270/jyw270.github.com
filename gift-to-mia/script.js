@@ -38,7 +38,7 @@
   //  Cake Sound Interactions
   //   If spacebar is pressed, checks if music is paused and plays/pauses sound and displays matching icon
   document.addEventListener("keydown", function (event) {
-    if (event.key === " ") {
+    if (event.key === " " && plant_msg_overlay.className.includes("hidden")) {
       if (bday_melody.paused) {
         bday_melody.play();
         sound_btn.className = "fa-solid fa-pause showing";
