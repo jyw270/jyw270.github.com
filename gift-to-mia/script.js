@@ -38,7 +38,6 @@
   //  Cake Sound Interactions
   //   If spacebar is pressed, checks if music is paused and plays/pauses sound and displays matching icon
   document.addEventListener("keydown", function (event) {
-    event.preventDefault();
     if (event.key === " ") {
       if (bday_melody.paused) {
         bday_melody.play();
@@ -141,7 +140,6 @@
 
   // 'ecs' key event listener for close button in overlay
   document.addEventListener("keydown", function (event) {
-    event.preventDefault();
     if (
       letter_overlay.className == "overlay showing" &&
       event.key === "Escape"
@@ -170,16 +168,15 @@
 
   //   Saves overlay message to local storage
   save_btn.addEventListener("click", function () {
+    save_btn.blur();
     localStorage.setItem(`plant0${plant_display_num}`, plant_msg.value);
     setTimeout(function () {
       alert("Saved successfully!");
-      //   setTimeout(function () {
-      //     plant_msg_overlay.className = "overlay hidden";
-      //   }, 650);
     }, 500);
   });
 
   clear_btn.addEventListener("click", function () {
+    clear_btn.blur();
     plant_msg.value = "";
     localStorage.removeItem(`plant0${plant_display_num}`);
     setTimeout(function () {
