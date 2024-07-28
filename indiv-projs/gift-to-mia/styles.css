@@ -174,10 +174,22 @@ body {
 
 /* POP UP OVERLAY LETTER */
 
+#letter-overlay article {
+  width: 50%;
+  height: 90vh;
+  padding: 20px;
+  margin: 10px auto;
+  color: rgba(224, 104, 158, 0.85);
+  line-height: 24px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  overflow: scroll;
+}
+
 #letter-overlay img {
-  width: 30%;
+  width: 75%;
   display: block;
-  margin: 15px auto;
+  margin: 20px auto;
 }
 
 /* POP UP OVERLAY PLANT */
