@@ -15,6 +15,7 @@
   const envelope = document.getElementById("envelope");
   const letter_overlay = document.getElementById("letter-overlay");
   const letter_exit_btn = document.querySelector(".close-btn");
+  let mouse_on_cake = false;
 
   // Plant Message Overlay Variables
   const plant_msg_overlay = document.getElementById("plant-msg-overlay");
@@ -42,43 +43,66 @@
       if (bday_melody.paused) {
         bday_melody.play();
         sound_btn.className = "fa-solid fa-pause showing";
-        setTimeout(function () {
-          sound_btn.className = "fa-solid fa-pause hidden";
-        }, 1000);
+        if (!mouse_on_cake) {
+          setTimeout(function () {
+            sound_btn.className = "fa-solid fa-pause hidden";
+          }, 1000);
+        }
       } else {
         bday_melody.pause();
         sound_btn.className = "fa-solid fa-play showing";
-        setTimeout(function () {
-          sound_btn.className = "fa-solid fa-play hidden";
-        }, 1000);
+        if (!mouse_on_cake) {
+          setTimeout(function () {
+            sound_btn.className = "fa-solid fa-play hidden";
+          }, 1000);
+        }
       }
     }
   });
 
   //   If bday cake is clicked, checks if music is paused and plays/pauses sound and displays matching icon
-  bday_cake.addEventListener("click", function () {
-    if (bday_melody.paused) {
-      bday_melody.play();
-      sound_btn.className = "fa-solid fa-pause showing";
-    } else {
-      bday_melody.pause();
-      sound_btn.className = "fa-solid fa-play showing";
-    }
-  });
+  function cake_click(element) {
+    element.addEventListener("click", function () {
+      if (bday_melody.paused) {
+        bday_melody.play();
+        sound_btn.className = "fa-solid fa-pause showing";
+      } else {
+        bday_melody.pause();
+        sound_btn.className = "fa-solid fa-play showing";
+      }
+    });
+  }
+
+  cake_click(bday_cake);
+  cake_click(sound_btn);
 
   //   When mouse hovering over cake checks if music is paused and displays matching icon
-  bday_cake.addEventListener("mouseover", function () {
-    bday_melody.paused
-      ? (sound_btn.className = "fa-solid fa-play showing")
-      : (sound_btn.className = "fa-solid fa-pause showing");
-  });
+  function mouseover_cake(element) {
+    element.addEventListener("mouseover", function () {
+      mouse_on_cake = true;
+      bday_cake.style.opacity = 0.75;
+      bday_melody.paused
+        ? (sound_btn.className = "fa-solid fa-play showing")
+        : (sound_btn.className = "fa-solid fa-pause showing");
+    });
+  }
+
+  mouseover_cake(bday_cake);
+  mouseover_cake(sound_btn);
 
   //   When mouse not hovering over cake checks if music is paused and hides matching icon
-  bday_cake.addEventListener("mouseout", function () {
-    bday_melody.paused
-      ? (sound_btn.className = "fa-solid fa-play hidden")
-      : (sound_btn.className = "fa-solid fa-pause hidden");
-  });
+  function mouseout_cake(element) {
+    element.addEventListener("mouseout", function () {
+      mouse_on_cake = false;
+      bday_cake.style.opacity = 1;
+      bday_melody.paused
+        ? (sound_btn.className = "fa-solid fa-play hidden")
+        : (sound_btn.className = "fa-solid fa-pause hidden");
+    });
+  }
+
+  mouseout_cake(bday_cake);
+  mouseout_cake(sound_btn);
 
   //   Functions
   function animateGraphic(name, graphic, sec) {
