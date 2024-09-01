@@ -200,6 +200,27 @@ section ul li::marker {
   max-width: 450px;
 }
 
+/********** DESIGN SYSTEM **********/
+
+#design-system h2 {
+  margin-bottom: 10px;
+}
+
+#design-system article {
+  display: block;
+}
+
+#design-system div {
+  width: 90%;
+  margin: auto;
+  height: 300px;
+  overflow: scroll;
+}
+
+#design-system p {
+  margin-top: 10px;
+}
+
 /********** PROTOTYPE **********/
 
 #prototype #section01 img {
@@ -435,6 +456,22 @@ section ul li::marker {
   #wire-flows article > div article:last-of-type img,
   #wire-flows > article > img:last-of-type {
     max-width: 600px;
+  }
+
+  /********** DESIGN SYSTEM **********/
+
+  #design-system article {
+    display: flex;
+    align-items: center;
+  }
+
+  #design-system div {
+    height: 500px;
+  }
+
+  #design-system p {
+    margin-top: 0;
+    width: 50%;
   }
 
   /********** PROTOTYPE **********/
