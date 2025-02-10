@@ -59,12 +59,6 @@
         eachProject.style.removeProperty("display");
         eachProject.setAttribute("data-aos", "zoom-in");
 
-        // If allProjectsBtn is selected, then will show all projects
-        // if (devProjectsBtn == null) {
-        //   eachProject.style.removeProperty("display");
-        //   eachProject.setAttribute("data-aos", "zoom-in");
-        // } else
-
         // If devProjectsBtn is selected, then will only hide ux-ui projects
         if (devProjectsBtn && eachProject.className.includes("ux-ui-only")) {
           eachProject.style.display = "none";
@@ -74,9 +68,6 @@
           eachProject.className.includes("dev-only")
         ) {
           eachProject.style.display = "none";
-          console.log("here");
-          console.log(eachProject);
-          console.log(devProjectsBtn);
         }
         eachProject.className = eachProject.className.replace(
           "hidden",
@@ -96,20 +87,12 @@
     if (event.target.textContent == "UX / UI") {
       selectedBtn.textContent = "UX / UI";
       allButtons[1].textContent = "development";
-      // allButtons[2].textContent = "UX / UI";
       displayProjects(false);
     } else if (event.target.textContent == "development") {
       selectedBtn.textContent = "development";
       allButtons[1].textContent = "UX / UI";
-      // allButtons[2].textContent = "UX / UI";
       displayProjects(true);
     }
-    // else {
-    //   selectedBtn.textContent = "UX / UI";
-    //   allButtons[1].textContent = "featured";
-    //   allButtons[2].textContent = "development";
-    //   displayProjects(false);
-    // }
   }
 
   // Changes the all projects nav and displays the matching content for desktop view
@@ -122,10 +105,6 @@
       buttonNumber = 1;
       displayProjects(true);
     }
-    // else {
-    //   buttonNumber = 2;
-    //   displayProjects(false);
-    // }
 
     // Removes the black highlight on the previous button and adds it to the newly selected button
     allBtnsGreenLines[currentBtnNum].style.height = "0";
@@ -189,17 +168,12 @@
         currentButton = allButtons[1];
         currentBtnNum = 1;
       }
-      // else if (selectedBtn.textContent == "UX / UI") {
-      //   currentButton = allButtons[2];
-      //   currentBtnNum = 2;
-      // }
 
       // Sets the black highlight on the current button and sets each button's text content to it's proper text for the desktop version
       allBtnsGreenLines[currentBtnNum].style.height = "4px";
       allButtons[currentBtnNum].style.fontWeight = "500";
       selectedBtn.textContent = "UX / UI";
       allButtons[1].textContent = "development";
-      // allButtons[2].textContent = "UX / UI";
 
       // For each submenu button that is clicked, switches the text with the selector button text and closes the drop down menu
       for (let i = 0; i < allButtons.length; i++) {
